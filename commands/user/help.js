@@ -23,6 +23,7 @@ const yardım = new MessageEmbed()
 <:degnek:809142151770275921> **${ayarlar.prefix}yardım kayıt**
 <:kullanici:809143152858497095> **Kayıt Sistemi** menüsünde ki komutları gösterir.
 
+
 <:degnek:809142151770275921> **${ayarlar.prefix}yardım karşılama**
 <:jail:809139843287482379> **Karşılama** menüsünde ki komutları gösterir.
 
