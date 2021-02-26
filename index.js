@@ -183,9 +183,9 @@ if (!re || re === null) re = "https://i.imgur.com/2gKDB9w.png"
   ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
   ctx.fillStyle = `#D3D3D3`;
-  ctx.font = `37px Lilita One`;
+  ctx.font = `37px Como Heavy`;
   ctx.textAlign = "center";
-  ctx.fillText(`Görüşürüz ${member.user.username}`, 300, 230);
+  ctx.fillText(`${member.user.username}`, 300, 230);
 
   let avatarURL = member.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 });
   const { body } = await request.get(avatarURL);
@@ -230,8 +230,7 @@ if (!re || re === null) re = "https://i.imgur.com/uMOveOe.png"
   const canvas = Canvas.createCanvas(640, 270);
   const ctx = canvas.getContext("2d");
 
-  const background = await Canvas.loadImage(re) || await Canvas.loadImage(
-   "https://i.imgur.com/uMOveOe.png")
+  const background = await Canvas.loadImage(re) || await Canvas.loadImage("https://i.imgur.com/uMOveOe.png")
   
   ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
@@ -239,9 +238,9 @@ if (!re || re === null) re = "https://i.imgur.com/uMOveOe.png"
   ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
   ctx.fillStyle = `#D3D3D3`;
-  ctx.font = `37px Lilita One`;
+  ctx.font = `37px Como Heavy`;
   ctx.textAlign = "center"
-  ctx.fillText(`Hoş Geldin ${member.user.username}`, 300, 230);
+  ctx.fillText(`${member.user.username}`, 300, 230);
 
   let avatarURL = member.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }) ;
   const { body } = await request.get(avatarURL);
