@@ -1,0 +1,36 @@
+const Discord = require('discord.js');
+
+module.exports = {
+ name: 'unmute',
+ aliases: ["süperunmute", "superunmute", "super-unmute", "süper-unmute", "un-mute"] ,
+ description: 'Kanal mesaj sistemini ayarlarsınız.',
+ usage: ['unmute [ @kullanıcı ] { sebep }'],
+/** 
+* @param {Discord.Client} client
+* @param {Discord.Message} message
+* @param {String[]} args
+*/
+run: async (client , message ,args) => {
+  
+var mutelirolu = "Muted";
+
+let mutekisi = message.mentions.members.first()
+
+let userlar = message.mentions.members.map(user => message.guild.members.cache.get(user.id))
+
+
+  if (!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(new Discord.MessageEmbed().setTitle('Hata').setColor("RED").setDescription(`<:moldup_sinirli:783582342643056661> Bu komutu kullanmak için \`Rolleri Yönet\` iznine sahip olman gerekli.`))
+
+  
+  if (!mutekisi) return message.channel.send(new Discord.MessageEmbed().setTitle('Hata').setColor("RED").setColor("RED").setDescription(`<:moldup_hayir:783582180113907742> Bir kullanıcı etiketleyerek tekrar deneyiniz.`))
+  
+  
+    let muterol = message.guild.roles.cache.find(role => role.name == mutelirolu);
+  userlar.forEach(async u => await u.roles.remove(muterol.id, `[ ${message.author.tag}: Un-Mute ] Şu kişilerden alındı: ${args.slice(0).join(" ")}`).catch(err => message.channel.send(`\`\`\`Bir hata oluştu: ${err}\`\`\``)))
+    let tagm = message.mentions.members.map(user => message.guild.members.cache.get(user.id).user.tag).join(", ")
+  userlar.forEach(async u => await db.delete(`supermute.${message.guild.id}.${u.id}`))
+  
+  return message.channel.send("**" + tagm + "** kullanıcılarının muteleri başarıyla kaldırıldı.")
+
+}
+}

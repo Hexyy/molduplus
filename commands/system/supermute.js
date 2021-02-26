@@ -1,0 +1,55 @@
+const Discord = require('discord.js');
+
+module.exports = {
+ name: 'süper-mute',
+ aliases: ["süpermute", "supermute", "super-mute", "sm"] ,
+ description: 'Birden fazla kullanıcıyı aynı anda susturabilirsiniz.',
+ usage: ['süper-mute [ @kullanıcılar ] { sebep }'],
+/** 
+* @param {Discord.Client} client
+* @param {Discord.Message} message
+* @param {String[]} args
+*/
+run: async (client , message ,args) => {
+
+var mutelirolu = "Muted";
+
+let mutekisi = message.mentions.members.first()
+
+let userlar = message.mentions.members.map(user => message.guild.members.cache.get(user.id))
+
+if(!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(new Discord.MessageEmbed().setTitle('Hata').setColor("RED").setDescription(`<:moldup_sinirli:783582342643056661> Bu komutu kullanmak için \`Rolleri Yönet\` iznine sahip olman gerekli.`))
+
+  
+if (!mutekisi) return message.channel.send(new Discord.MessageEmbed().setTitle('Hata').setColor("RED").setColor("RED").setDescription(`<:moldup_hayir:783582180113907742> Bir kullanıcı etiketleyerek tekrar deneyiniz.`))
+  
+    let muterol = message.guild.roles.cache.find(role => role.name == mutelirolu);
+  if (!muterol) {
+    try {
+      muterol = await message.guild.roles.create({
+        name: mutelirolu,
+        color: "#313136",
+        permissions: [],
+        reason: message.author.tag + ' - Süper Mute'
+      });
+      message.guild.channels.forEach(async (channel, id) => {
+        await channel.createOverwrite(muterol, {
+          SEND_MESSAGES: false,
+          ADD_REACTIONS: false
+        });
+      });
+    } catch (e) {
+      console.log(e.stack);
+    }
+  }
+  
+  let numero = message.mentions.members.map(user => message.guild.members.cache.get(user.id).user.tag).size
+  
+  let tagm = message.mentions.members.map(user => message.guild.members.cache.get(user.id).user.tag).join(", ")
+                                          
+  userlar.forEach(async u => await u.roles.add(muterol.id, `[ ${message.author.tag}: Süper Mute ] Şu kişilere atıldı: ${args.slice(0).join(" ")}`).catch(err => message.channel.send(`\`\`\`Bir hata oluştu: ${err}\`\`\``)))
+  
+  return message.channel.send("**" + tagm + "** başarıyla süper mutelendi.")
+  
+  }
+  }

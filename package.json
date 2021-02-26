@@ -1,0 +1,42 @@
+{
+  "name": "moldup",
+  "version": "0.0.1",
+  "description": "Moldup",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Hexy , AlpuTV",
+  "license": "ISC",
+  "engines": {
+    "node": "14.x"
+  },
+  "dependencies": {
+    "@discordjs/opus": "^0.4.0",
+    "canvacord": "^5.0.8",
+    "canvas": "^2.6.1",
+    "chalk": "^4.1.0",
+    "cords-handler": "^1.2.12",
+    "discord-giveaways": "^4.4.3",
+    "discord-logs": "^1.9.0",
+    "discord-player": "^3.3.2",
+    "discord.js": "^12.5.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "ffmpeg": "0.0.4",
+    "ffmpeg-static": "^4.2.7",
+    "g9-collection": "0.0.3",
+    "g9db": "^1.0.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2",
+    "mongoose": "^5.11.4",
+    "ms": "^2.1.3",
+    "node-fetch": "^2.6.1",
+    "node-superfetch": "^0.1.11",
+    "os": "^0.1.1",
+    "passport-discord": "^0.1.4",
+    "rhino-ms": "^0.4.0"
+  }
+}
