@@ -12,7 +12,7 @@ module.exports = (client) => {
     client.user.setPresence( { 
         activity: {
     name: 'bot.moldup.tk | ?yardım',
-    type: 'LISTENING'
+    type: 'WATCHING'
         }, status: 'online'
     })    
     
