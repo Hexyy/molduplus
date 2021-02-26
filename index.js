@@ -183,7 +183,7 @@ if (!re || re === null) re = "https://cdn.glitch.com/3025a41d-a9e2-4425-a95c-f83
   ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
   ctx.fillStyle = `#D3D3D3`;
-  ctx.font = `37px Warsaw`;
+  ctx.font = `37px Uni Sans Heavy`;
   ctx.textAlign = "center";
   ctx.fillText(`Görüşürüz ${member.user.username}`, 300, 230);
 
