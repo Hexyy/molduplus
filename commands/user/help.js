@@ -40,7 +40,7 @@ const yardım = new MessageEmbed()
 <a:cekilis:798253124342513735> **Çekiliş** menüsünde ki komutları gösterir.
 
 <:degnek:809142151770275921> **${ayarlar.prefix}yardım moderasyon**
-<:menu:809432007766573107> **Moderasyon** menüsünde ki komutları gösterir.
+<:moderasyon:809140448286212118> **Moderasyon** menüsünde ki komutları gösterir.
 
 
 <:degnek:809142151770275921> **${ayarlar.prefix}yardım eğlence**
@@ -88,6 +88,24 @@ if(args[0].toLowerCase() === 'kayıt'||args[0].toLowerCase() === 'kayıtsistemi'
 
 <:degnek:809142151770275921> **Bir Kullanıcıyı \`Kadın\` Rolü İle Kayıt Etmek İçin:**
 <:kullanici:809143152858497095> \`${ayarlar.prefix}kadın [ @kullanıcı ] { isim }\`
+ \`\`\`                                                                                                         \`\`\`
+`)
+message.channel.send(kayıt)
+ } else {
+if(args[0].toLowerCase() === 'kayıt'||args[0].toLowerCase() === 'kayıtsistemi') {
+ const kayıt = new MessageEmbed()
+.setColor('BLUE')
+.setTitle('<:kullanici:809143152858497095> Moldup Moderasyon Menüsü')
+.setDescription(`
+\`\`\`                                                                                                         \`\`\`
+
+<:degnek:809142151770275921> **Birden Fazla Kullanıcıyı Aynı Susturmak İçin:**
+<:moderasyon:809140448286212118> \`${ayarlar.prefix}supermute [ @kullanıcılar ] { sebep }\`
+
+
+<:degnek:809142151770275921> **Birden Fazla Kullanıcının Susturmasını Aynı Anda Kaldırmak İçin:**
+<:moderasyon:809140448286212118> \`${ayarlar.prefix}unmute [ @kullanıcılar ] { sebep }\`
+
  \`\`\`                                                                                                         \`\`\`
 `)
 message.channel.send(kayıt)
@@ -275,6 +293,6 @@ if(args[0].toLowerCase() === 'bot'||args[0].toLowerCase() === 'robot') {
 }
 } 
 
-
+}
 }
 }
