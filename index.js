@@ -169,12 +169,12 @@ client.on("guildMemberRemove", async member => {
   
 let re = await karsilama.fetch(`gçresim.${member.guild.id}`)
 
-if (!re || re === null) re = "https://cdn.glitch.com/3025a41d-a9e2-4425-a95c-f83b9fe265c4%2FAds%C4%B1z%20tasar%C4%B1m.png?v=1611050688809"
+if (!re || re === null) re = "https://i.imgur.com/2gKDB9w.png"
 
   const canvas = Canvas.createCanvas(640, 270);
   const ctx = canvas.getContext("2d");
 
-  const background = await Canvas.loadImage(re) || await Canvas.loadImage("https://cdn.glitch.com/3025a41d-a9e2-4425-a95c-f83b9fe265c4%2FAds%C4%B1z%20tasar%C4%B1m.png?v=1611050688809")
+  const background = await Canvas.loadImage(re) || await Canvas.loadImage("https://i.imgur.com/2gKDB9w.png")
   
   
   ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
@@ -183,7 +183,7 @@ if (!re || re === null) re = "https://cdn.glitch.com/3025a41d-a9e2-4425-a95c-f83
   ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
   ctx.fillStyle = `#D3D3D3`;
-  ctx.font = `37px Uni Sans Heavy`;
+  ctx.font = `37px Lilita One`;
   ctx.textAlign = "center";
   ctx.fillText(`Görüşürüz ${member.user.username}`, 300, 230);
 
@@ -224,14 +224,14 @@ client.on("guildMemberAdd", async member => {
   
 let re = await karsilama.fetch(`gçresim.${member.guild.id}`)
 
-if (!re || re === null) re = "https://cdn.glitch.com/3025a41d-a9e2-4425-a95c-f83b9fe265c4%2FAds%C4%B1z%20tasar%C4%B1m.png?v=1611050688809"
+if (!re || re === null) re = "https://i.imgur.com/uMOveOe.png"
     
 
   const canvas = Canvas.createCanvas(640, 270);
   const ctx = canvas.getContext("2d");
 
   const background = await Canvas.loadImage(re) || await Canvas.loadImage(
-   "https://cdn.glitch.com/3025a41d-a9e2-4425-a95c-f83b9fe265c4%2FAds%C4%B1z%20tasar%C4%B1m.png?v=1611050688809")
+   "https://i.imgur.com/uMOveOe.png")
   
   ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
@@ -239,7 +239,7 @@ if (!re || re === null) re = "https://cdn.glitch.com/3025a41d-a9e2-4425-a95c-f83
   ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
   ctx.fillStyle = `#D3D3D3`;
-  ctx.font = `37px Warsaw`;
+  ctx.font = `37px Lilita One`;
   ctx.textAlign = "center"
   ctx.fillText(`Hoş Geldin ${member.user.username}`, 300, 230);
 
