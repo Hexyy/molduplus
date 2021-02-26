@@ -182,7 +182,7 @@ if (!re || re === null) re = "https://i.imgur.com/2gKDB9w.png"
   ctx.strokeStyle = "#74037b";
   ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
-  ctx.fillStyle = `#D3D3D3`;
+  ctx.fillStyle = `#ffffff`;
   ctx.font = `37px Como Heavy`;
   ctx.textAlign = "center";
   ctx.fillText(`${member.user.username}`, 300, 230);
@@ -237,7 +237,7 @@ if (!re || re === null) re = "https://i.imgur.com/uMOveOe.png"
   ctx.strokeStyle = "#74037b";
   ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
-  ctx.fillStyle = `#D3D3D3`;
+  ctx.fillStyle = `#ffffff`;
   ctx.font = `37px Como Heavy`;
   ctx.textAlign = "center"
   ctx.fillText(`${member.user.username}`, 300, 230);
