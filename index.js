@@ -179,8 +179,8 @@ if (!re || re === null) re = "https://i.imgur.com/2gKDB9w.png"
   
   ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
-  ctx.strokeStyle = "#0f0f0f";
-  ctx.strokeRect(10, 10, canvas.width, canvas.height);
+  ctx.strokeStyle = "#000000";
+  ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
   ctx.fillStyle = `#ffffff`;
   ctx.font = `37px Como Heavy`;
@@ -234,8 +234,8 @@ if (!re || re === null) re = "https://i.imgur.com/uMOveOe.png"
   
   ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
-  ctx.strokeStyle = "#0f0f0f";
-  ctx.strokeRect(10, 10, canvas.width, canvas.height);
+  ctx.strokeStyle = "#000000";
+  ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
   ctx.fillStyle = `#ffffff`;
   ctx.font = `37px Como Heavy`;
