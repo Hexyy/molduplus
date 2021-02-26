@@ -206,8 +206,6 @@ if (!re || re === null) re = "https://cdn.glitch.com/3025a41d-a9e2-4425-a95c-f83
   );
 
     canvaskanal.send(attachment);
-    if (member.user.bot)
-      return canvaskanal.send(`${member.user.tag}, Dostum Sen Botsun!`);
 })
 
 
@@ -263,8 +261,6 @@ if (!re || re === null) re = "https://cdn.glitch.com/3025a41d-a9e2-4425-a95c-f83
   );
 
   canvaskanal.send(attachment);
-  if (member.user.bot)
-    return canvaskanal.send(`${member.user.tag}, Dostum Sen Botsun!`);
 })
 
  /**
