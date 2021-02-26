@@ -228,8 +228,6 @@ let re = await karsilama.fetch(`gçresim.${member.guild.id}`)
 
 if (!re || re === null) re = "https://cdn.glitch.com/3025a41d-a9e2-4425-a95c-f83b9fe265c4%2FAds%C4%B1z%20tasar%C4%B1m.png?v=1611050688809"
     
-  let paket = await db.fetch(`pakets_${member.id}`);
-
 
   const canvas = Canvas.createCanvas(640, 270);
   const ctx = canvas.getContext("2d");
