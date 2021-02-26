@@ -57,7 +57,7 @@ const yardım = new MessageEmbed()
 `<a:dev:767649354940547072> **[Moldup Davet Linki](https://bot.moldup.tk/davet.html)\n<a:dev:767649354940547072> [Moldup Destek Sunucusu](https://bot.moldup.tk/destek.html)\n<a:dev:767649354940547072> [Moldup Oy Ver](https://bot.moldup.tk/oy.html)**`    )
 message.channel.send(yardım)
 } else {
-if(args[0].toLowerCase() === 'kayıt'||args[0].toLowerCase() === 'kayıtsistemi') {
+if(args[0].toLowerCase() === 'kayıt'||args[0].toLowerCase() === 'kayıtsistemi'||args[0].toLowerCase() === 'ks') {
  const kayıt = new MessageEmbed()
 .setColor('BLUE')
 .setTitle('<:kullanici:809143152858497095> Moldup Kayıt Sistemi Menüsü')
