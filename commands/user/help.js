@@ -32,7 +32,7 @@ const yardım = new MessageEmbed()
 
 
 <:degnek:809142151770275921> **${ayarlar.prefix}yardım sistemler**
-<:moderasyon:809140448286212118> **Sistemler** menüsünde ki komutları gösterir.
+<:genel:809431920056205343> **Sistemler** menüsünde ki komutları gösterir.
 
 
 <:degnek:809142151770275921> **${ayarlar.prefix}yardım çekiliş**
