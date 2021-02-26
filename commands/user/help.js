@@ -92,7 +92,7 @@ if(args[0].toLowerCase() === 'kayıt'||args[0].toLowerCase() === 'kayıtsistemi'
 `)
 message.channel.send(kayıt)
  } else {
-if(args[0].toLowerCase() === 'kayıt'||args[0].toLowerCase() === 'kayıtsistemi') {
+if(args[0].toLowerCase() === 'moderasyon'||args[0].toLowerCase() === 'mod') {
  const kayıt = new MessageEmbed()
 .setColor('BLUE')
 .setTitle('<:kullanici:809143152858497095> Moldup Moderasyon Menüsü')
