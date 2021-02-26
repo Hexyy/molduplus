@@ -85,8 +85,10 @@ if(args[0].toLowerCase() === 'kayıt'||args[0].toLowerCase() === 'kayıtsistemi'
 <:degnek:809142151770275921> **Bir Kullanıcıyı \`Üye\` Rolü İle Kayıt Etmek İçin:**
 <:kullanici:809143152858497095> \`${ayarlar.prefix}üye [ @kullanıcı ] [ isim ]\`
 
+
 <:degnek:809142151770275921> **Bir Kullanıcıyı \`Erkek\` Rolü Veya Kadın Rolü İle Kayıt Etmek İçin:**
 <:kullanici:809143152858497095> \`${ayarlar.prefix}erkek [ @kullanıcı ] [ isim ]\` **|** \`${ayarlar.prefix}kadın [ @kullanıcı ] [ isim ]\`
+
 
  \`\`\`                                                                                                         \`\`\`
 `)
@@ -105,6 +107,7 @@ if(args[0].toLowerCase() === 'moderasyon'||args[0].toLowerCase() === 'mod') {
 
 <:degnek:809142151770275921> **Birden Fazla Kullanıcının Susturmasını Aynı Anda Kaldırmak İçin:**
 <:moderasyon:809140448286212118> \`${ayarlar.prefix}unmute [ @kullanıcılar ] { sebep }\`
+
 
  \`\`\`                                                                                                         \`\`\`
 `)
@@ -135,6 +138,7 @@ const jail = new MessageEmbed()
 <:jail:809139843287482379> **Özel Mesaj** : Sunucuya yeni katılan üyelere belirlenen mesajı **özelden** gönderir.
 <:jail:809139843287482379> **Kanala Mesaj** : Sunucuya yeni bir üye geldiğinde belirlenen kanala belirlenen mesajı gönderir.
 
+
 \`\`\`                                                                                                         \`\`\`
 `)
 message.channel.send(jail)
@@ -157,6 +161,7 @@ if(args[0].toLowerCase() === 'çekiliş'||args[0].toLowerCase() === 'giveaways')
 <:degnek:809142151770275921> **Çekilişi Bitirmek İçin:**
 <a:cekilis:798253124342513735> \`${ayarlar.prefix}gbitir [ çekiliş mesaj ID ]\`
        
+
 \`\`\`                                                                                                         \`\`\`
     `)
     message.channel.send(cekilis)
@@ -178,6 +183,7 @@ if(args[0].toLowerCase() === 'sistemler'||args[0].toLowerCase() === 'sistem') {
 
 <:degnek:809142151770275921> **Mesaj Log Sistemini Açmak Veya Kapatmak İçin:**
 <:moderasyon:809140448286212118> \`${ayarlar.prefix}mesaj-log [ #kanal ]\` **|** \`${ayarlar.prefix}mesaj-log-kapat\`
+
 
 \`\`\`                                                                                                         \`\`\`
     `)
@@ -221,6 +227,7 @@ if(args[0].toLowerCase() === 'eğlence'||args[0].toLowerCase() === 'fun') {
 <:degnek:809142151770275921> **YouTube Yorumu Atmak İçin:**
 <:eglence:809143990276456529> \`${ayarlar.prefix}youtube [ yazı ]\`
 
+
 \`\`\`                                                                                                         \`\`\`    `)    
   message.channel.send(fun)  
     }else{
@@ -250,6 +257,7 @@ if(args[0].toLowerCase() === 'bot'||args[0].toLowerCase() === 'robot') {
 <:degnek:809142151770275921> **Botun Pingini Öğrenmek İçin:**
 <:bot:809432681192357940> \`${ayarlar.prefix}ping\`
 
+
 \`\`\`                                                                                                         \`\`\`
     `)    
   message.channel.send(bot)        
@@ -273,6 +281,7 @@ if(args[0].toLowerCase() === 'bot'||args[0].toLowerCase() === 'robot') {
 <:degnek:809142151770275921> **Öneri Yapmak İçin:**
 <:kayit:809140124621078598> \`${ayarlar.prefix}öneri <öneri>\`
         
+
         \`\`\`                                                                                                         \`\`\`
             `)    
           message.channel.send(öneri)
