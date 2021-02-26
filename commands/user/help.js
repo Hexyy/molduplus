@@ -39,6 +39,7 @@ const yardım = new MessageEmbed()
 <:degnek:809142151770275921> **${ayarlar.prefix}yardım çekiliş**
 <a:cekilis:798253124342513735> **Çekiliş** menüsünde ki komutları gösterir.
 
+
 <:degnek:809142151770275921> **${ayarlar.prefix}yardım moderasyon**
 <:moderasyon:809140448286212118> **Moderasyon** menüsünde ki komutları gösterir.
 
@@ -49,6 +50,7 @@ const yardım = new MessageEmbed()
 
 <:degnek:809142151770275921> **${ayarlar.prefix}yardım bot**
 <:bot:809432681192357940> **Bot** menüsünde ki komutları gösterir.
+
 
 \`\`\`                                                                                                         \`\`\`
 `)
@@ -67,26 +69,24 @@ if(args[0].toLowerCase() === 'kayıt'||args[0].toLowerCase() === 'kayıtsistemi'
 <:degnek:809142151770275921> **Kayıt Sistemini Ayarlamak Veya Sıfırlamak İçin:**
 <:kullanici:809143152858497095> \`${ayarlar.prefix}kayıt-ayarlama\`
 
-<:degnek:809142151770275921> **Yeni Gelenlere Otomatik Olarak Bir İsim Vermek İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}oto-isim [ isim ]\`
-
-<:degnek:809142151770275921> **Yeni Gelenlere Otomatik Olarak Bir İsim Vermeyi Kapatmak İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}oto-isim-sil\`
 
 <:degnek:809142151770275921> **Bir Kullanıcının İsmini Değiştirmek İçin:**
 <:kullanici:809143152858497095> \`${ayarlar.prefix}isim [ @kullanıcı ] [ isim ]\`
 
+
 <:degnek:809142151770275921> **Kayıt Sistemi Ayarlarını Görmek İçin:**
 <:kullanici:809143152858497095> \`${ayarlar.prefix}kayıt-bilgi\`
 
+
+<:degnek:809142151770275921> **Otomatik İsim Sistemini Açmak Veya Kapatmak İçin:**
+<:kullanici:809143152858497095> \`${ayarlar.prefix}oto-isim [ isim ]\` **|** \`${ayarlar.prefix}oto-isim-sil\`
+
+
 <:degnek:809142151770275921> **Bir Kullanıcıyı \`Üye\` Rolü İle Kayıt Etmek İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}üye [ @kullanıcı ] { isim }\`
+<:kullanici:809143152858497095> \`${ayarlar.prefix}üye [ @kullanıcı ] [ isim ]\`
 
-<:degnek:809142151770275921> **Bir Kullanıcıyı \`Erkek\` Rolü İle Kayıt Etmek İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}erkek [ @kullanıcı ] { isim }\`
-
-<:degnek:809142151770275921> **Bir Kullanıcıyı \`Kadın\` Rolü İle Kayıt Etmek İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}kadın [ @kullanıcı ] { isim }\`
+<:degnek:809142151770275921> **Bir Kullanıcıyı \`Erkek\` Rolü Veya Kadın Rolü İle Kayıt Etmek İçin:**
+<:kullanici:809143152858497095> \`${ayarlar.prefix}erkek [ @kullanıcı ] [ isim ]\` **|** \`${ayarlar.prefix}kadın [ @kullanıcı ] [ isim ]\`
 
  \`\`\`                                                                                                         \`\`\`
 `)
