@@ -38,6 +38,9 @@ const yardım = new MessageEmbed()
 <:degnek:809142151770275921> **${ayarlar.prefix}yardım çekiliş**
 <a:cekilis:798253124342513735> **Çekiliş** menüsünde ki komutları gösterir.
 
+<:degnek:809142151770275921> **${ayarlar.prefix}yardım moderasyon**
+<:menu:809432007766573107> **Moderasyon** menüsünde ki komutları gösterir.
+
 
 <:degnek:809142151770275921> **${ayarlar.prefix}yardım eğlence**
 <:eglence:809143990276456529> **Eğlence** menüsünde ki komutları gösterir.
@@ -157,7 +160,6 @@ if(args[0].toLowerCase() === 'sistemler'||args[0].toLowerCase() === 'sistem') {
 
 <:degnek:809142151770275921> **Mesaj Log Sistemini Açmak Veya Kapatmak İçin:**
 <:moderasyon:809140448286212118> \`${ayarlar.prefix}mesaj-log [ #kanal ]\` **|** \`${ayarlar.prefix}mesaj-log-kapat\`
-
 
 \`\`\`                                                                                                         \`\`\`
     `)
