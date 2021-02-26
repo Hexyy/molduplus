@@ -50,7 +50,6 @@ const yardım = new MessageEmbed()
 <:degnek:809142151770275921> **${ayarlar.prefix}yardım bot**
 <:bot:809432681192357940> **Bot** menüsünde ki komutları gösterir.
 
-
 \`\`\`                                                                                                         \`\`\`
 `)
 .addField(
@@ -88,6 +87,7 @@ if(args[0].toLowerCase() === 'kayıt'||args[0].toLowerCase() === 'kayıtsistemi'
 
 <:degnek:809142151770275921> **Bir Kullanıcıyı \`Kadın\` Rolü İle Kayıt Etmek İçin:**
 <:kullanici:809143152858497095> \`${ayarlar.prefix}kadın [ @kullanıcı ] { isim }\`
+
  \`\`\`                                                                                                         \`\`\`
 `)
 message.channel.send(kayıt)
@@ -156,8 +156,7 @@ if(args[0].toLowerCase() === 'çekiliş'||args[0].toLowerCase() === 'giveaways')
     
 <:degnek:809142151770275921> **Çekilişi Bitirmek İçin:**
 <a:cekilis:798253124342513735> \`${ayarlar.prefix}gbitir [ çekiliş mesaj ID ]\`
-    
-    
+       
 \`\`\`                                                                                                         \`\`\`
     `)
     message.channel.send(cekilis)
@@ -222,7 +221,6 @@ if(args[0].toLowerCase() === 'eğlence'||args[0].toLowerCase() === 'fun') {
 <:degnek:809142151770275921> **YouTube Yorumu Atmak İçin:**
 <:eglence:809143990276456529> \`${ayarlar.prefix}youtube [ yazı ]\`
 
-
 \`\`\`                                                                                                         \`\`\`    `)    
   message.channel.send(fun)  
     }else{
@@ -252,7 +250,6 @@ if(args[0].toLowerCase() === 'bot'||args[0].toLowerCase() === 'robot') {
 <:degnek:809142151770275921> **Botun Pingini Öğrenmek İçin:**
 <:bot:809432681192357940> \`${ayarlar.prefix}ping\`
 
-
 \`\`\`                                                                                                         \`\`\`
     `)    
   message.channel.send(bot)        
@@ -275,7 +272,6 @@ if(args[0].toLowerCase() === 'bot'||args[0].toLowerCase() === 'robot') {
 
 <:degnek:809142151770275921> **Öneri Yapmak İçin:**
 <:kayit:809140124621078598> \`${ayarlar.prefix}öneri <öneri>\`
-        
         
         \`\`\`                                                                                                         \`\`\`
             `)    
