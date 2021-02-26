@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const AloneDogru = "#22BF41";
 const AloneHata = "#f30707"
 const { kayit } = require('../../database/KayıtDataBase')
-const { kız , çarpı , tik} = require("../emojiler.json")
+const { kız , çarpı , tik} = require("../../emojiler.json")
 
 module.exports = {
  name: 'erkeksil',
