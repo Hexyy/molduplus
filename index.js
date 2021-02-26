@@ -161,7 +161,7 @@ client.on("guildMemberRemove", async member => {
  var canvaskanal = member.guild.channels.cache.get(kanal);
  if (!canvaskanal) return;
 
-  const request = require('node-fetch');
+  const request = require('node-superfetch');
   const Canvas = require('canvas'),
     Image = Canvas.Image,
     Font = Canvas.Font,
@@ -218,7 +218,7 @@ client.on("guildMemberAdd", async member => {
  var canvaskanal = member.guild.channels.cache.get(kanal);
  if (!canvaskanal) return;
 
-  const request = require('node-fetch');
+  const request = require('node-superfetch');
   const Canvas = require('canvas'),
     Image = Canvas.Image,
     Font = Canvas.Font,
