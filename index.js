@@ -265,36 +265,31 @@ if (!re || re === null) re = "https://i.imgur.com/uMOveOe.png"
  /**
  * --------------------------- Sistemler Bitiş -------------------
  */
-client.on('message', async message => {
-    if(message.author.bot || message.channel.type !== 'text') return;
-    if(message.content.split(' ').filter(x => x.startsWith(':') && x.endsWith(':')).length > 1) {
-    let emojiler = [];
-    message.content.split(' ').filter(x => x.startsWith(':') && x.endsWith(':')).forEach(x => {
-    emojiler.push(message.guild.emojis.cache.find(s => s.name.includes(x.replace(/:/g, ''))));
-    });
-    let newMessage;
-    var d = -1;
-    if(emojiler.length >= 1) {
-    emojiler.forEach(s => {
-    d++
-    if(!newMessage) newMessage = message.content.replace(message.content.split(' ').filter(x => x.startsWith(':') && x.endsWith(':'))[d], s);
-    if(newMessage) newMessage = newMessage.replace(message.content.split(' ').filter(x => x.startsWith(':') && x.endsWith(':'))[d], s);
-    });
-    };
-   
-    return message.delete() && await message.channel.createWebhook(message.author.username , {
-        avatar: message.author.avatarURL({format: 'png'})
-    }).send(newMessage)
-    };
-    let emoji = message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':').toString().replace(/:/g, ''));
-    if (emoji) return;
-    let emojii = message.guild.emojis.cache.find(x => x.name.includes(emoji));
-    if(!emojii) return;
-    message.content = message.content.replace(message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':')), emojii);
-    return message.delete() && await message.channel.createWebhook(message.author.username , {
-        avatar: message.author.avatarURL({format: 'png'})
-    }).send(message.content)
-    });
+client.on('message', async message => {// can#0002
+if(message.author.bot || message.channel.type !== 'text') return;
+if(message.content.split(' ').filter(x => x.startsWith(':') && x.endsWith(':')).length > 1) {
+let emojiler = [];
+message.content.split(' ').filter(x => x.startsWith(':') && x.endsWith(':')).forEach(x => {
+emojiler.push(message.guild.emojis.cache.find(s => s.name.includes(x.replace(/:/g, ''))));
+});
+let newMessage;
+var d = -1;
+if(emojiler.length >= 1) {
+emojiler.forEach(s => {
+d++
+if(!newMessage) newMessage = message.content.replace(message.content.split(' ').filter(x => x.startsWith(':') && x.endsWith(':'))[d], s);
+if(newMessage) newMessage = newMessage.replace(message.content.split(' ').filter(x => x.startsWith(':') && x.endsWith(':'))[d], s);
+});
+};
+return message.delete() && message.channel.send(`**${message.author.tag}**: ${newMessage}`);
+};
+let emoji = message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':').toString().replace(/:/g, ''));
+let emojii = message.guild.emojis.cache.find(x => x.name.includes(emoji));
+if(!emojii) return;
+message.content = message.content.replace(message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':')), emojii);
+return message.delete() && message.channel.send(`**${message.author.tag}**: ${message.content}`);
+});
+
 client.login(ayarlar.token)
 
 
