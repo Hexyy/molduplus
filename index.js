@@ -164,7 +164,7 @@ client.on("guildMemberRemove", async member => {
   const request = require('node-superfetch');
   const Canvas = require('canvas'),
     Image = Canvas.Image,
-    Font = Canvas.Font,
+    Font = "Lilita One",
     path = require('path');
   
 let re = await karsilama.fetch(`gçresim.${member.guild.id}`)
@@ -219,7 +219,7 @@ client.on("guildMemberAdd", async member => {
   const request = require('node-superfetch');
   const Canvas = require('canvas'),
     Image = Canvas.Image,
-    Font = Canvas.Font,
+    Font = "Lilita One",
     path = require('path');
   
 let re = await karsilama.fetch(`gçresim.${member.guild.id}`)
