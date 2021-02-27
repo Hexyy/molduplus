@@ -286,6 +286,8 @@ client.on('message', async message => {
         avatar: message.author.avatarURL({format: 'png'})
     }).send(newMessage)
     };
+    let denen = message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':'))
+    if (!denen) return;
     let emoji = message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':')).toString().replace(/:/g, '');
     if (emoji) return;
     let emojii = message.guild.emojis.cache.find(x => x.name.includes(emoji));
