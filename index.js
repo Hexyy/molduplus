@@ -291,7 +291,6 @@ client.on('message', async message => {
     let emojii = message.guild.emojis.cache.find(x => x.name.includes(emoji));
     if(!emojii) return;
     message.content = message.content.replace(message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':')), emojii);
-   message.rep
     return message.delete() && await message.channel.createWebhook(message.author.username , {
         avatar: message.author.avatarURL({format: 'png'})
     }).send(message.content)
