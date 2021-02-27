@@ -131,6 +131,11 @@ const jail = new MessageEmbed()
 <:degnek:809142151770275921> **Kanala Mesaj Ayarlamak Veya Sıfırlamak İçin:**
 <:jail:809139843287482379> \`${ayarlar.prefix}kanal-mesaj [ #kanal ] <mesaj>\` **|** \`${ayarlar.prefix}kanal-mesaj-sıfırla\`
 
+<:degnek:809142151770275921> **Resimli Hoş Geldin Kanalı Ayarlamak Veya Sıfırlamak İçin:**
+<:jail:809139843287482379> \`${ayarlar.prefix}resimli-giriş-çıkış [ #kanal ]\` **|** \`${ayarlar.prefix}resimli-giriş-çıkış-kapat\`
+
+<:degnek:809142151770275921> **Resimli Hoş Geldin Resmi Ayarlamak Veya Sıfırlamak İçin:**
+<:jail:809139843287482379> \`${ayarlar.prefix}giriş-çıkış-resim [ resim linki ]\` **|** \`${ayarlar.prefix}giriş-çıkış-resim sıfırla\`
 
 <:degnek:809142151770275921> **Ne İşe Yarar?**
 
