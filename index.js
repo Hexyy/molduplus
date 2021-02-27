@@ -265,7 +265,7 @@ if (!re || re === null) re = "https://i.imgur.com/uMOveOe.png"
  /**
  * --------------------------- Sistemler Bitiş -------------------
  */
-client.on('message', async message => {// can#0002
+client.on('message', async message => {
 if(message.author.bot || message.channel.type !== 'text') return;
 if(message.content.split(' ').filter(x => x.startsWith(':') && x.endsWith(':')).length > 1) {
 let emojiler = [];
