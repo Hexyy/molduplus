@@ -2,9 +2,9 @@ const Discord = require('discord.js');
 const { karsilama } = require('../../database/KarşılamaDataBase')
 module.exports = {
  name: 'resimligirişçıkışkapat',
- aliases: ["giriş-çıkış", "resimli-giriş-çıkış"] ,
+ aliases: ["giriş-çıkış-kapat", "resimli-giriş-çıkış-kapat"] ,
  description: 'Resimli giriş çıkış kanalını kapatırsınız.',
- usage: ['resimligirişçıkış'],
+ usage: ['resimligirişçıkışkapat'],
 /** 
 * @param {Discord.Client} client
 * @param {Discord.Message} message
