@@ -164,7 +164,7 @@ client.on("guildMemberRemove", async member => {
   const request = require('node-superfetch');
   const Canvas = require('canvas'),
     Image = Canvas.Image,
-    Font = "Lilita One",
+    Font = "Tahoma",
     path = require('path');
   
 let re = await karsilama.fetch(`gçresim.${member.guild.id}`)
@@ -183,7 +183,7 @@ if (!re || re === null) re = "https://i.imgur.com/2gKDB9w.png"
   ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
   ctx.fillStyle = `#ffffff`;
-  ctx.font = "30px Lilita One"
+  ctx.font = "37px Tahoma"
   ctx.textAlign = "center";
   ctx.fillText(`${member.user.username}`, 300, 230);
 
@@ -219,7 +219,7 @@ client.on("guildMemberAdd", async member => {
   const request = require('node-superfetch');
   const Canvas = require('canvas'),
     Image = Canvas.Image,
-    Font = "Lilita One",
+    Font = "Tahoma",
     path = require('path');
   
 let re = await karsilama.fetch(`gçresim.${member.guild.id}`)
@@ -238,7 +238,7 @@ if (!re || re === null) re = "https://i.imgur.com/uMOveOe.png"
   ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
   ctx.fillStyle = `#ffffff`;
-  ctx.font = "30px Lilita One"
+  ctx.font = "37px Tahoma"
   ctx.textAlign = "center"
   ctx.fillText(`${member.user.username}`, 300, 230);
 
