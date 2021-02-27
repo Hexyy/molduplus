@@ -23,7 +23,7 @@ const kayıtsızroleID = await kayit.fetch(`kayıtsız.${message.guild.id}`);
 const nn = new Discord.MessageEmbed().setThumbnail();
 
 
-let member = message.mentions.members.first(); || message.guild.members.cache.get(args[0])
+let member = message.mentions.members.first();
 let üye = message.guild.roles.cache.get(üyeroleID);
 let yetkili = message.guild.roles.cache.get(yetkiliroleID);
 let kayıtsız = message.guild.roles.cache.get(kayıtsızroleID);
