@@ -31,7 +31,7 @@ if(!öneriembed) return message.channel.send(`**${mesajID}** ID'li mesaj bulamad
 const data1 = öneriembed.embeds[0]
 const deskırıpşın = data1.description.replace("Önerisi: ", "")
 const embed = new Discord.MessageEmbed()
-.setAuthor(data1.author, "https://cdn.discordapp.com/emojis/798871896636522517.png?v=1")
+.setAuthor(data1.author.tag, "https://cdn.discordapp.com/emojis/798871896636522517.png?v=1")
 .setDescription(`**Önerisi:** ${deskırıpşın}`)
 .setColor('GREEN')
 .addField('Durum' , 'Kabul Edildi')
