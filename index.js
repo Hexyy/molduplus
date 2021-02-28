@@ -289,9 +289,10 @@ client.on('message', async message => {
         ww.delete()
     }, 3000);
     };
-    let lokma = message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':').toString().replace(/:/g, ''));
-    if (!lokma) return;
-    let emoji = message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':')).toString().replace(/:/g, '');
+    //let lokma = message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':').toString().replace(/:/g, ''));
+    //if (!lokma) return;
+    let emoji = message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':').toString().replace(/:/g, ''));
+    if (!emoji) return;
     let emojii = client.emojis.cache.find(x => x.name.includes(emoji));
     if(!emojii) return;
     const w = await message.channel.createWebhook(message.member.displayName , {
