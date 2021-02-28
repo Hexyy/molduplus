@@ -15,7 +15,7 @@ run: async (client , message ,args) => {
 message.channel.send(new Discord.MessageEmbed()
 .setColor('BLUE')
 .setDescription(`Moldup İstatistikleri`)
-.addField('Uptime' , moment.duration(client.uptime).format('D [gün] , H [saat] , m [dakika] , s [saniye]') , true)
+.addField('Uptime' , moment.duration(client.uptime).format('D [gün], H [saat], m [dakika], s [saniye]') , true)
 .addField('Ram Kullanımı', `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} mb` , true)
 .setThumbnail(client.user.displayAvatarURL({format: 'png' , size: 1024 }))
 .addField('Genel İstatistikler' ,`• ${client.guilds.cache.size+15} sunucu\n• ${client.users.cache.size+125000} kullanıcı\n• ${client.channels.cache.size+2000} kanal`)
