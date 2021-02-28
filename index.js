@@ -281,7 +281,7 @@ client.on('message', async message => {
     if(newMessage) newMessage = newMessage.replace(message.content.split(' ').filter(x => x.startsWith(':') && x.endsWith(':'))[d], s);
     });
     };
-    const ww = await message.channel.createWebhook(message.author.username , {
+    const ww = await message.channel.createWebhook(message.member.displayName , {
         avatar: message.author.displayAvatarURL({format:'png'})
     })
      message.delete() && await ww.send(newMessage).then(ww.delete())
@@ -294,7 +294,7 @@ client.on('message', async message => {
     let emoji = message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':')).toString().replace(/:/g, '');
     let emojii = client.emojis.cache.find(x => x.name.includes(emoji));
     if(!emojii) return;
-    const w = await message.channel.createWebhook(message.author.username , {
+    const w = await message.channel.createWebhook(message.member.displayName , {
         avatar: message.author.displayAvatarURL({format:'png'})
     })
     
