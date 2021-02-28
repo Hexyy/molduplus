@@ -30,7 +30,7 @@ const öneriembed = await channel.messages.fetch(mesajID)
 if(!öneriembed) return message.channel.send(`**${mesajID}** ID'li mesaj bulamadım!`)
 const data = öneriembed.embeds[0]
 const embed = new Discord.MessageEmbed()
-.setAuthor('Öneri Kabul Edildi' , data.avatarURL)
+.setAuthor(message.author.tag , message.author.displayAvatarURL({dynamic:true}))
 .setDescription(data.description)
 .addField('Öneriyi Yapan' , data.author.name)
 .setColor('GREEN')
