@@ -28,10 +28,11 @@ const channel = message.guild.channels.cache.get(await öneri.fetch(`önerikanal
 if(!channel) return
 const öneriembed = await channel.messages.fetch(mesajID)
 if(!öneriembed) return message.channel.send(`**${mesajID}** ID'li mesaj bulamadım!`)
-const data = öneriembed.embeds[0]
+const data1 = öneriembed.embeds[0]
+const data = öneriembed
 const embed = new Discord.MessageEmbed()
-.setAuthor(data.author.tag , data.author.displayAvatarURL({dynamic:true}))
-.addField(`**Önerisi:** ${data.description}`)
+.setAuthor(data.author.tag, data.author.displayAvatarURL({dynamic:true}))
+.addField(`**Önerisi:** ${data1.description}`)
 .setColor('GREEN')
 .addField('Durum' , 'Kabul Edildi')
 öneriembed.edit(embed)
