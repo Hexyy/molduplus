@@ -271,7 +271,7 @@ if(message.author.bot || message.channel.type !== 'text') return;
 if(message.content.split(' ').filter(x => x.startsWith(':') && x.endsWith(':')).length > 1) {
 let emojiler = [];
 message.content.split(' ').filter(x => x.startsWith(':') && x.endsWith(':')).forEach(x => {
-emojiler.push(message.guild.emojis.cache.find(s => s.name.includes(x.replace(/:/g, ''))));
+emojiler.push(client.emojis.cache.find(s => s.name.includes(x.replace(/:/g, ''))));
 });
 let newMessage;
 var d = -1;
@@ -282,7 +282,7 @@ if(!newMessage) newMessage = message.content.replace(message.content.split(' ').
 if(newMessage) newMessage = newMessage.replace(message.content.split(' ').filter(x => x.startsWith(':') && x.endsWith(':'))[d], s);
 });
 };
-return message.delete() && message.channel.send(`**${message.author.tag}**: ${newMessage}`);
+return message.delete() && message.channel.createWebhook(message.author.username, { avatar: message.author.displayAvatarURL({format: 'png'})}).send(newMessage);
 };
 let lokma = message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':').toString().replace(/:/g, ''));
 if (!lokma) return;
@@ -290,7 +290,7 @@ let emoji = message.content.split(' ').find(x => x.startsWith(':') && x.endsWith
 let emojii = message.guild.emojis.cache.find(x => x.name.includes(emoji));
 if(!emojii) return;
 message.content = message.content.replace(message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':')), emojii);
-return message.delete() && message.channel.send(`**${message.author.tag}**: ${message.content}`);
+return message.delete() && message.channel.createWebhook(message.author.username, { avatar: message.author.displayAvatarURL({format: 'png'})}).send(message.content);
 });
 
 
