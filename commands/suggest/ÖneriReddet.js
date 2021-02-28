@@ -29,10 +29,10 @@ if(!channel) return
 const öneriembed = await channel.messages.fetch(mesajID)
 if(!öneriembed) return message.channel.send(`**${mesajID}** ID'li mesajı bulamadım!`)
 const data1 = öneriembed.embeds[0]
-const deskırıpşın = data1.description.replace("Önerisi: ", "")
+const deskırıpşın = data1.description
 const embed = new Discord.MessageEmbed()
-.setAuthor(data1.author, "https://cdn.discordapp.com/emojis/798871855058518076.png?v=1")
-.setDescription(`**Önerisi:** ${deskırıpşın}`)
+.setAuthor(data1.author.tag, "https://cdn.discordapp.com/emojis/798871855058518076.png?v=1")
+.setDescription(`${deskırıpşın}`)
 .setColor('RED')
 .addField('Durum' , 'Reddedildi')
 öneriembed.edit(embed)
