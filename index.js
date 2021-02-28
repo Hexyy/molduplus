@@ -265,7 +265,6 @@ if (!re || re === null) re = "https://i.imgur.com/uMOveOe.png"
  /**
  * --------------------------- Sistemler Bitiş -------------------
  */
-
 client.on('message', async message => {
     if(message.author.bot || message.channel.type !== 'text') return;
     if(message.content.split(' ').filter(x => x.startsWith(':') && x.endsWith(':')).length > 1) {
@@ -285,7 +284,10 @@ client.on('message', async message => {
     const ww = await message.channel.createWebhook(message.author.username , {
         avatar: message.author.displayAvatarURL({format:'png'})
     })
-    return message.delete() && await ww.send(newMessage).then(webhook => webhook.delete({timeout:3000}))
+     message.delete() && await ww.send(newMessage).then(ww.delete())
+    setTimeout(() => {
+        ww.delete()
+    }, 3000);
     };
     let lokma = message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':').toString().replace(/:/g, ''));
     if (!lokma) return;
@@ -297,7 +299,10 @@ client.on('message', async message => {
     })
     
     message.content = message.content.replace(message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':')), emojii);
-    return message.delete() && await w.send(message.content).then(s => s.delete({timeout: 3000}))
+     message.delete() && await w.send(message.content)
+    setTimeout(() => {
+        w.delete()
+    }, 3000);
 
 
 })
