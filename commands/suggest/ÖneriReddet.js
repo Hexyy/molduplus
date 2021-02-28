@@ -31,7 +31,7 @@ if(!öneriembed) return message.channel.send(`**${mesajID}** ID'li mesaj bulamad
 const data = öneriembed.embeds[0]
 const embed = new Discord.MessageEmbed()
 .setAuthor(data.author.tag , data.author.displayAvatarURL({dynamic:true}))
-.addField('Önerisi' , data.description)
+.addField(`**Önerisi:** ${data.description}`)
 .setColor('RED')
 .addField('Durum' , 'Reddedildi')
 öneriembed.edit(embed)
