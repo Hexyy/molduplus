@@ -292,7 +292,7 @@ client.on('message', async message => {
     let lokma = message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':').toString().replace(/:/g, ''));
     if (!lokma) return;
     let emoji = message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':')).toString().replace(/:/g, '');
-    let emojii = message.guild.emojis.cache.find(x => x.name.includes(emoji));
+    let emojii = client.emojis.cache.find(x => x.name.includes(emoji));
     if(!emojii) return;
     const w = await message.channel.createWebhook(message.author.username , {
         avatar: message.author.displayAvatarURL({format:'png'})
