@@ -19,7 +19,7 @@ if (!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send(n
 let kanal = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
 if(!kanal) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('<:hata:813391295665930260> Kanal Etiketlemeyi Unuttun!').setDescription(`**${message.author.username}** bir kanal etiketlemeyi unuttun!`))
 if(!kanal.permissionsFor(client.user.id).has('SEND_MESSAGES')) return message.channel.send(new Discord.MessageEmbed().setDescription(`**${message.author.username}** etiketlediğin kanalda benim \`Mesaj Gönder\` yetkim bulunmuyor!`).setTitle('<:hata:813391295665930260> Yetersiz Yetki!').setColor('RED'))
-if(await öneri.fetch(`önerikanal_${message.guild.id}`)) return message.channel.send(`Bu sunucuda **öneri** sistemi zaten ayarlı! Tekrardan ayarlamazsın.`)
+if(await öneri.fetch(`önerikanal_${message.guild.id}`)) return message.channel.send(new Discord.MessageEmbed().setDescription(`**${message.author.username}** Bu sunucuda **öneri** sistemi zaten ayarlı! Tekrardan ayarlamazsın.`).setTitle('<:hata:813391295665930260> Uyarı!').setColor('RED'))
 
 
 await öneri.set(`önerikanal_${message.guild.id}`,kanal.id)
