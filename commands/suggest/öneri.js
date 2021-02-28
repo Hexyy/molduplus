@@ -19,7 +19,7 @@ if(!text) return message.channel.send(new Discord.MessageEmbed().setColor('RED')
 **${message.author.username}** bir mesaj girmeyi unuttun!
 `))
 
-
+message.delete()
 const embed = new Discord.MessageEmbed()
 .setColor('YELLOW')
 .setAuthor(message.author.tag , message.author.displayAvatarURL({dynamic:true}))
