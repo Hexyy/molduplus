@@ -19,7 +19,7 @@ if(!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send(no
 if(!await öneri.fetch(`önerikanal_${message.guild.id}`)) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setDescription(`**${message.author.username}** bu sunucuda **öneri** sistemi zaten ayarlı değil!`))
 
 
-message.channel.send(new Discord.MessageEmbed().setDescription(`**Öneri** sistemi bu sunucu için sıfırlandı!`))
+message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384> **Öneri** sistemi bu sunucu için sıfırlandı!`))
 await öneri.delete(`önerikanal_${message.guild.id}`)
 
 }
