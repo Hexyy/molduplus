@@ -304,7 +304,6 @@ client.on('message', async message => {
     setTimeout(() => {
         w.delete()
     }, 3000);
-
     }
 })
 
