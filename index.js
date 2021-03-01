@@ -286,7 +286,7 @@ client.on('message', async message => {
     })
      message.delete() && await ww.send(newMessage)
     setTimeout(() => {
-        ww.delete()
+        return ww.delete()
     }, 3000);
     };
     let lokma = message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':').toString().replace(/:/g, ''));
