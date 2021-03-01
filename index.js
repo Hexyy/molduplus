@@ -288,7 +288,7 @@ client.on('message', async message => {
     setTimeout(() => {
         return ww.delete()
     }, 3000);
-    };
+    } else {
     let lokma = message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':').toString().replace(/:/g, ''));
     if (!lokma) return;
     let emoji = message.content.split(' ').find(x => x.startsWith(':') && x.endsWith(':')).toString().replace(/:/g, '');
@@ -305,7 +305,7 @@ client.on('message', async message => {
         w.delete()
     }, 3000);
 
-
+    }
 })
 
 
