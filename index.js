@@ -284,7 +284,7 @@ client.on('message', async message => {
     const ww = await message.channel.createWebhook(message.member.displayName , {
         avatar: message.author.displayAvatarURL({format:'png'})
     })
-     message.delete() && await ww.send(newMessage).then(ww.delete())
+     message.delete() && await ww.send(newMessage)
     setTimeout(() => {
         ww.delete()
     }, 3000);
