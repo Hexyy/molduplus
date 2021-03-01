@@ -178,6 +178,9 @@ if(args[0].toLowerCase() === 'sistemler'||args[0].toLowerCase() === 'sistem') {
     .setDescription(`
     \`\`\`                                                                                                         \`\`\`
     
+<:degnek:809142151770275921> **Nitrosuz Emoji Sistemini Açmak Veya Kapatmak İçin:**
+<:moderasyon:809140448286212118> \`${ayarlar.prefix}nitrosuz-emoji-aç\` **|** \`${ayarlar.prefix}nitrosuz-emoji-kapat\`
+
 <:degnek:809142151770275921> **Sa As Sistemini Açmak Veya Kapatmak İçin:**
 <:moderasyon:809140448286212118> \`${ayarlar.prefix}sa-as-aç\` **|** \`${ayarlar.prefix}sa-as-kapat\`
     
