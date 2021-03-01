@@ -261,7 +261,6 @@ if (!re || re === null) re = "https://i.imgur.com/uMOveOe.png"
 
   canvaskanal.send(attachment);
 })
-
  /**
  * --------------------------- Sistemler Bitiş -------------------
  */
