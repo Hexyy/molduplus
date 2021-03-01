@@ -20,6 +20,6 @@ if(!await sistem.fetch(`saas_${message.guild.id}`)) return message.channel.send(
 
 
 await sistem.delete(`saas_${message.guild.id}` , true)
-message.channel.send(new Discord.MessageEmbed().setDescription(`**Sa As** sistemi kapatıldı!`))
+message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384> **Sa As** sistemi kapatıldı!`))
 }
 }
