@@ -19,7 +19,7 @@ run: async (client , message ,args) => {
 
 
 
-await sistem.set(`saas_${message.guild.id}` , true)
+await sistem.set(`nitrosuzemoji_${message.guild.id}` , true)
 message.channel.send(new Discord.MessageEmbed().setDescription(`**Nitrosuz Emoji** sistemi açıldı!`))
 }
 }
