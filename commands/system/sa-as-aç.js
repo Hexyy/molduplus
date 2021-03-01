@@ -20,6 +20,6 @@ run: async (client , message ,args) => {
 
 
 await sistem.set(`saas_${message.guild.id}` , true)
-message.channel.send(new Discord.MessageEmbed().setDescription(`**Sa As** sistemi açıldı!`))
+message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384> **Sa As** sistemi açıldı!`))
 }
 }
