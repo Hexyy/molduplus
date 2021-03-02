@@ -39,6 +39,10 @@ if(!mesaj) return message.channel.send(new Discord.MessageEmbed().setColor('RED'
 \`Üyenin Kullanıcı Adını Söyler.\`
 **${message.author.username}**
 ------------------
+**[üye-tag]**
+\`Üyenin Kullanıcı Adını Ve Etiketini Söyler\`
+**${message.author.tag}**
+------------------
 **[sunucu-üye]**
 \`Sunucuda ki Üye Sayısını Söyler.\`
 **${message.guild.memberCount}**   
