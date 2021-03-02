@@ -18,7 +18,7 @@ if(!message.guild.me.hasPermission(['SEND_MESSAGES','MANAGE_ROLES','EMBED_LINKS'
 if(!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send(noperm.setTitle('<:hata:813391295665930260> Yetersiz Yetki!'))
 if(!await karsilama.fetch(`otorol_${message.guild.id}`)) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setDescription(`**${message.author.username}** bu sunucuda **oto rol** sistemi zaten ayarlı değil!`))
 
-message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384>**Oto Rol** sistemi bu sunucu için sıfırlandı!`))
+message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384> **Oto Rol** sistemi bu sunucu için sıfırlandı!`))
 await karsilama.delete(`otorol_${message.guild.id}`)
 }
 }
