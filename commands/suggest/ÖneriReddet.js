@@ -31,7 +31,7 @@ if(!öneriembed) return message.channel.send(`**${mesajID}** ID'li mesajı bulam
 const data = öneriembed.embeds[0]
 const deskırıpşın = data.description
 const embed = new Discord.MessageEmbed()
-.setAuthor(data.author.name, data.avatarURL)
+.setAuthor(data.author.name, "https://cdn.discordapp.com/emojis/798871855058518076.png?v=1")
 .setDescription(`${deskırıpşın}`)
 .setColor('RED')
 .addField('Durum' , 'Reddedildi')
