@@ -20,8 +20,8 @@ const filter = response => {
     return response.author.id === message.author.id;
   };
 
-  message.channel.send(`Sunucuya yüklenecek emojiye koyulacak adı yazın. 
-İşlem otomatik olarak 30 saniye içinde iptal olacaktır.`);
+  message.channel.send(new Discord.MessageEmbed().setColor("#c0c0c0").setDescription(`<:zaman:789219599844900865> \`1. Adım:\` Emojinin adını yazınız. 
+30 saniye içinde cevap vermezseniz işlem iptal edilecektir.`);
 
   let first;
   let two;
@@ -29,8 +29,8 @@ const filter = response => {
   message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
   .then(collected => {
     first = collected.first().content
-    message.channel.send(`Emojiyi dosya olarak yükleyin, emojiyi gönderin ya da emojinin bağlantısını gönderin. 
-İşlem otomatik olarak 30 saniye içinde iptal olacaktır.`);
+    message.channel.send(new Discord.MessageEmbed().setColor("#c0c0c0").setDescription(`<:zaman:789219599844900865> \`1. Adım:\` Emojiyi dosya olarak yükleyin, emojiyi gönderin ya da bağlantısını gönderin. 
+30 saniye içinde cevap vermezseniz işlem iptal edilecektir.`);
 message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
 .then(collected => {
   
@@ -50,36 +50,36 @@ message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
   message.guild.emojis.create(two, first, { reason: 'Sorumlu moderatör: '+message.author.tag}).then(emoji => {
   message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384> ${message.guild.emojis.cache.get(emoji.id)} adlı emoji sunucunuza yüklenmiştir.`));
 
-  }).catch(error => message.channel.send(`Bir hata oluştu. Lütfen; 
+  }).catch(error => message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Emoji sunucunuza yüklenemedi. 
 - Sunucuda emoji yüklemek için yer olduğuna, 
 - Koyduğunuz dosyanın bir fotoğraf/gif olduğuna, 
 - 256kb boyutundan küçük olduğuna,
-emin olun ve tekrar deneyin.`))
+ emin olun ve tekrar deneyin.`)));
   } catch(error) {
     console.log(error);
-    return message.channel.send(`Bir hata oluştu. Lütfen; 
-    - Sunucuda emoji yüklemek için yer olduğuna, 
-    - Koyduğunuz dosyanın bir fotoğraf/gif olduğuna, 
-    - 256kb boyutundan küçük olduğuna,
-    emin olun ve tekrar deneyin.`); 
+    return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Emoji sunucunuza yüklenemedi. 
+- Sunucuda emoji yüklemek için yer olduğuna, 
+- Koyduğunuz dosyanın bir fotoğraf/gif olduğuna, 
+- 256kb boyutundan küçük olduğuna,
+ emin olun ve tekrar deneyin.`));  
   };
 })
 .catch(collected => {
   console.log(collected);
-  return message.channel.send(`Bir hata oluştu. Lütfen; 
+  return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Emoji sunucunuza yüklenemedi. 
 - Sunucuda emoji yüklemek için yer olduğuna, 
 - Koyduğunuz dosyanın bir fotoğraf/gif olduğuna, 
 - 256kb boyutundan küçük olduğuna,
-emin olun ve tekrar deneyin.`);  
+ emin olun ve tekrar deneyin.`));  
 });
   })
   .catch(collected => {
     console.log(collected);
-    return message.channel.send(`Bir hata oluştu. Lütfen; 
+    return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Emoji sunucunuza yüklenemedi. 
 - Sunucuda emoji yüklemek için yer olduğuna, 
 - Koyduğunuz dosyanın bir fotoğraf/gif olduğuna, 
 - 256kb boyutundan küçük olduğuna,
- emin olun ve tekrar deneyin.`);  
+ emin olun ve tekrar deneyin.`));  
   });
 }
 }
