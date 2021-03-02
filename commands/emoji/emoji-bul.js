@@ -17,12 +17,12 @@ run: async (client , message ,args) => {
     
 **${message.author.username}** bir emoji adı unuttun!
     `))
-for (const hm of args) {
-const e = client.emojis.cache.find(k => k.name === hm)
-if(!e) return message.channel.send(`**${emoji}** adında her hangi bir emoji bulamadım!`)
-let mesaj = `<:${e.name}:${e.id}>`
-if(e.animated === true) mesaj = `<a:${e.name}:${e.id}>`
 
-message.channel.send(mesaj)
+if(!client.emojis.cache.find(x => x.name === args[0]) && !client.emojis.cache.find(x => x.name.startsWith(args[0]))) return message.channel.send('Aradığınız isime tam olarak veya benzerine sahip olan bir emoji bulamadım.');
+if(client.emojis.cache.find(x => x.name.startsWith(args[0])) && !client.emojis.cache.find(x => x.name === args[0])) {
+   message.channel.send(`Aradığınız isime sahip bir emoji bulamadım, onun yerine benzer sonuçlar buldum.`);
+   return message.channel.send(client.emojis.cache.filter(x => x.name.startsWith(args[0])).map(a => client.emojis.cache.get(a.id)).slice(0, 30).join(' '));
+} else if(client.emojis.cache.find(x => x.name === args[0])) {
+   return message.channel.send(client.emojis.cache.filter(x => x.name === args[0]).map(a => client.emojis.cache.get(a.id)).slice(0, 30).join(' '))
 }}
 }
