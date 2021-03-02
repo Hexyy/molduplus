@@ -4,7 +4,7 @@ module.exports = {
  name: 'emoji-ekle',
  aliases: ['emojiekle', 'emoji-yükle', 'emojiyükle'] ,
 description: 'Sunucu için hızlı yoldan emoji eklersiniz.',
-usage: ['emoji-ekle [ emoji ]'],
+usage: ['emoji-ekle'],
 /** 
 * @param {Discord.Client} client
 * @param {Discord.Message} message
