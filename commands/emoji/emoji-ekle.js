@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
  name: 'emoji-ekle',
- aliases: ['emojiekle'] ,
+ aliases: ['emojiekle', 'emoji-yükle', 'emojiyükle'] ,
 description: 'Sunucu için hızlı yoldan emoji eklersiniz.',
 usage: ['emoji-ekle [ emoji ]'],
 /** 
@@ -48,7 +48,7 @@ message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
   try {
     
   message.guild.emojis.create(two, first, { reason: 'Sorumlu moderatör: '+message.author.tag}).then(emoji => {
-  message.channel.send(`Emoji yüklendi: ${message.guild.emojis.cache.get(emoji.id)}`);
+  message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384> Emoji yüklendi: ${message.guild.emojis.cache.get(emoji.id)}`));
 
   }).catch(error => message.channel.send(`Bir hata oluştu. Lütfen; 
 - Sunucuda emoji yüklemek için yer olduğuna, 
