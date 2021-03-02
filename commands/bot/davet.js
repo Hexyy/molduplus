@@ -11,6 +11,6 @@ module.exports = {
 * @param {String[]} args
 */
 run: async (client , message ,args) => {
-message.channel.send("Moldup'ı sunucuna davet etmek için şu linke tıkla: https://bot.moldup.tk/davet.html")
+message.channel.send(new Discord.MessageEmbed().setAuthor("Moldup'ı sevdiniz mi?", message.author.displayAvatarURL({ dynamic: true })).setDescription("[Sunucunuza davet edin](https://bot.moldup.tk/destek.html)").setColor("BLUE"))
 }
 }
