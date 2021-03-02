@@ -47,7 +47,7 @@ message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
     };
   try {
     
-  message.guild.emojis.create(two, first, { reason: 'Sorumlu moderatör: '+message.author.tag}).then(emoji => {
+  message.guild.emojis.create(two, first, { reason: '[ '+message.author.tag +' Emoji Yükleme ]'}).then(emoji => {
   message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384> ${message.guild.emojis.cache.get(emoji.id)} adlı emoji sunucunuza yüklenmiştir.`));
 
   }).catch(error => message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`**Emoji sunucunuza yüklenemedi.** 
