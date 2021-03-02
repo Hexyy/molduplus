@@ -11,6 +11,6 @@ module.exports = {
 * @param {String[]} args
 */
 run: async (client , message ,args) => {
-message.channel.send(new Discord.MessageEmbed().setAuthor("Sitemiz de var!", message.author.displayAvatarURL({ dynamic: true })).setDescription("[Sitemize git](https://bot.moldup.tk)").setFooter(message.author.tag + " tarafından istendi").setTimestamp().setColor("BLUE"))
+message.channel.send(new Discord.MessageEmbed().setAuthor("Siteyi mi merak ettin?", message.author.displayAvatarURL({ dynamic: true })).setDescription("[Siteye git](https://bot.moldup.tk)").setFooter(message.author.tag + " tarafından istendi").setTimestamp().setColor("BLUE"))
 }
 }
