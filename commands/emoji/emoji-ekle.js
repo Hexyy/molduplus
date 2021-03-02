@@ -50,14 +50,14 @@ message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
   message.guild.emojis.create(two, first, { reason: 'Sorumlu moderatör: '+message.author.tag}).then(emoji => {
   message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384> ${message.guild.emojis.cache.get(emoji.id)} adlı emoji sunucunuza yüklenmiştir.`));
 
-  }).catch(error => message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Emoji sunucunuza yüklenemedi. 
+  }).catch(error => message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`**Emoji sunucunuza yüklenemedi.** 
 - Sunucuda emoji yüklemek için yer olduğuna, 
 - Koyduğunuz dosyanın bir fotoğraf/gif olduğuna, 
 - 256kb boyutundan küçük olduğuna,
  emin olun ve tekrar deneyin.`)));
   } catch(error) {
     console.log(error);
-    return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Emoji sunucunuza yüklenemedi. 
+    return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`**Emoji sunucunuza yüklenemedi.** 
 - Sunucuda emoji yüklemek için yer olduğuna, 
 - Koyduğunuz dosyanın bir fotoğraf/gif olduğuna, 
 - 256kb boyutundan küçük olduğuna,
@@ -66,7 +66,7 @@ message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
 })
 .catch(collected => {
   console.log(collected);
-  return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Emoji sunucunuza yüklenemedi. 
+  return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`**Emoji sunucunuza yüklenemedi.** 
 - Sunucuda emoji yüklemek için yer olduğuna, 
 - Koyduğunuz dosyanın bir fotoğraf/gif olduğuna, 
 - 256kb boyutundan küçük olduğuna,
@@ -75,7 +75,7 @@ message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
   })
   .catch(collected => {
     console.log(collected);
-    return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Emoji sunucunuza yüklenemedi. 
+    return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`**Emoji sunucunuza yüklenemedi.** 
 - Sunucuda emoji yüklemek için yer olduğuna, 
 - Koyduğunuz dosyanın bir fotoğraf/gif olduğuna, 
 - 256kb boyutundan küçük olduğuna,
