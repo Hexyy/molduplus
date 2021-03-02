@@ -28,7 +28,7 @@ if(!message.guild.emojis.cache.find(x => x.name === args.slice(0).join('-'))) re
 emoji = message.guild.emojis.cache.find(x => x.name === args.slice(0).join('-'));
 };
 
-emoji.delete();
+emoji.delete({ reason: '[ '+message.author.tag +' Emoji Silme ]'});
 return message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384> \`${emoji.name}\` isimli emoji silindi!`));
 
 } catch(error) {
