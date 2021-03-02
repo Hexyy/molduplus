@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 
 module.exports = {
- name: 'emoji-ekle',
- aliases: ['emojiekle', 'emoji-yükle', 'emojiyükle'] ,
-description: 'Sunucu için hızlı yoldan emoji eklersiniz.',
-usage: ['emoji-ekle [ emoji ]'],
+ name: 'emoji-sil',
+ aliases: ['emojisil'] ,
+description: 'Sunucu için hızlı yoldan emoji silersiniz.',
+usage: ['emoji-sil [ emoji ]'],
 /** 
 * @param {Discord.Client} client
 * @param {Discord.Message} message
