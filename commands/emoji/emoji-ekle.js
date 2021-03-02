@@ -16,25 +16,70 @@ run: async (client , message ,args) => {
     .setDescription(`**${message.author.username}** bu komutu kullanabilmek için \`Emojileri Yönet\` yetkisine sahip olmalısın!`)
     if(!message.guild.me.hasPermission(['SEND_MESSAGES','MANAGE_EMOJIS','EMBED_LINKS'])) return
     if(!message.member.hasPermission('MANAGE_EMOJIS')) return message.channel.send(noperm.setTitle('<:hata:813391295665930260> Yetersiz Yetki!'))
-let emoji = args[0]
-if(!emoji) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('<:hata:813391295665930260> Emoji Girmeyi Unuttun!')
-.setDescription(`
+const filter = response => {
+    return response.author.id === message.author.id;
+  };
 
-**${message.author.username}** bir emoji girmeyi unuttun!
-`))
+  message.channel.send(`Sunucuya yüklenecek emojiye koyulacak adı yazın. 
+İşlem otomatik olarak 30 saniye içinde iptal olacaktır.`);
 
-for (const emojii of args) {
-    const parsedEmoji = Discord.Util.parseEmoji(emojii)
+  let first;
+  let two;
 
-    if(parsedEmoji.id) {
-        const gifpng = parsedEmoji.animated ? '.gif' : '.png'
-        const url = `https://cdn.discordapp.com/emojis/${parsedEmoji.id + gifpng}`
-        message.guild.emojis.create(url,parsedEmoji.name)
-        let mesaj = `Emoji Eklendi <:${parsedEmoji.name}:${parsedEmoji.id}>`
-        if(parsedEmoji.animated === true) mesaj = `Emoji Eklendi <a:${parsedEmoji.name}:${parsedEmoji.id}>`
+  message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
+  .then(collected => {
+    first = collected.first().content
+    message.channel.send(`Emojiyi dosya olarak yükleyin, emojiyi gönderin ya da emojinin bağlantısını gönderin. 
+İşlem otomatik olarak 30 saniye içinde iptal olacaktır.`);
+message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
+.then(collected => {
+  
+  if(collected.first().attachments.size > 0) {
+    two = collected.first().attachments.first().url;
+  } else {
+    const s = collected.first().content.split(' ').filter(x => x.includes('<') && x.includes('>'))[0];
+    if(s) {
+      two = `https://cdn.discordapp.com/emojis/${s.split(':')[2].split('>')[0]}${s.split('<')[0].split('')[1] === 'a' ? '.gif' : '.png'}?v=1`
+    } else {
+      two = collected.first().content;
+    };
 
-        message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384> ${mesaj}`))
-    }
-}
+    };
+  try {
+    
+  message.guild.emojis.create(two, first, { reason: 'Sorumlu moderatör: '+message.author.tag}).then(emoji => {
+  message.channel.send(`Emoji yüklendi: ${message.guild.emojis.cache.get(emoji.id)}`);
+
+  }).catch(error => message.channel.send(`Bir hata oluştu. Lütfen; 
+- Sunucuda emoji yüklemek için yer olduğuna, 
+- Koyduğunuz dosyanın bir fotoğraf/gif olduğuna, 
+- 256kb boyutundan küçük olduğuna,
+emin olun ve tekrar deneyin.`))
+  } catch(error) {
+    console.log(error);
+    return message.channel.send(`Bir hata oluştu. Lütfen; 
+    - Sunucuda emoji yüklemek için yer olduğuna, 
+    - Koyduğunuz dosyanın bir fotoğraf/gif olduğuna, 
+    - 256kb boyutundan küçük olduğuna,
+    emin olun ve tekrar deneyin.`); 
+  };
+})
+.catch(collected => {
+  console.log(collected);
+  return message.channel.send(`Bir hata oluştu. Lütfen; 
+- Sunucuda emoji yüklemek için yer olduğuna, 
+- Koyduğunuz dosyanın bir fotoğraf/gif olduğuna, 
+- 256kb boyutundan küçük olduğuna,
+emin olun ve tekrar deneyin.`);  
+});
+  })
+  .catch(collected => {
+    console.log(collected);
+    return message.channel.send(`Bir hata oluştu. Lütfen; 
+- Sunucuda emoji yüklemek için yer olduğuna, 
+- Koyduğunuz dosyanın bir fotoğraf/gif olduğuna, 
+- 256kb boyutundan küçük olduğuna,
+ emin olun ve tekrar deneyin.`);  
+  });
 }
 }
