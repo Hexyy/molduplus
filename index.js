@@ -51,14 +51,14 @@ await member.roles.add(role)
 // Özel Mesaj 
 let mesaj = await karsilama.fetch(`özelmesaj_${member.guild.id}`)
 if(!mesaj) return
-let msj = mesaj.replace('[üye]' , member)
+let mess = mesaj.replace('[üye]' , member)
 .replace('[üye-id]',member.id)
 .replace('[üye-ad]',member.user.username)
 .replace('[üye-tag]',member.user.tag)
 .replace('[sunucu-ad]' , member.guild.name)
 .replace('[sunucu-id]' , member.guild.id)
 .replace('[sunucu-üye]' , member.guild.memberCount)
-member.send(msj).catch(e => client.channels.cache.get('801860207256797194').send('Hata').then(m => m.delete()))
+member.send(mess).catch(e => client.channels.cache.get('801860207256797194').send('Hata').then(m => m.delete()))
 // Özel Mesaj Bitiş
 
 // Kanal Mesaj 
@@ -69,7 +69,7 @@ if(!mesaj1) return
 
 let kanall = member.guild.channels.cache.get(kanal)
 if(!kanall.permissionsFor(client.user.id).has('SEND_MESSAGES')) return
-let msj = mesaj1.replace('[üye]' , member)
+let messs = mesaj1.replace('[üye]' , member)
 .replace('[üye-id]',member.id)
 .replace('[üye-ad]',member.user.username)
 .replace('[üye-tag]',member.user.tag)
@@ -77,7 +77,7 @@ let msj = mesaj1.replace('[üye]' , member)
 .replace('[sunucu-id]' , member.guild.id)
 .replace('[sunucu-üye]' , member.guild.memberCount)
 
-kanall.send(msj)
+kanall.send(messs)
 })
 /**
  * --------------------------- Karşılama Bitiş -------------------
