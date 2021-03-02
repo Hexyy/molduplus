@@ -52,6 +52,10 @@ const yardım = new MessageEmbed()
 <:bot:809432681192357940> **Bot** menüsünde ki komutları gösterir.
 
 
+<:degnek:809142151770275921> **${ayarlar.prefix}yardım emoji**
+<:emoji:766586536044527616> **Emoji** menüsünde bulunan komutları gösterir.[eklenecek]
+
+
 \`\`\`                                                                                                         \`\`\`
 `)
 .addField(
