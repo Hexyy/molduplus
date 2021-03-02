@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client()
 const handler = require('cords-handler');
-const logs = require('discord-logs')
+const logs = require('discord-logs');
 logs(client)
 
 const chclient = new handler.Client()
