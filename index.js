@@ -54,6 +54,7 @@ if(!mesaj) return
 let msj = mesaj.replace('[üye]' , member)
 .replace('[üye-id]',member.id)
 .replace('[üye-ad]',member.user.username)
+.replace('[üye-tag]',member.user.tag)
 .replace('[sunucu-ad]' , member.guild.name)
 .replace('[sunucu-id]' , member.guild.id)
 .replace('[sunucu-üye]' , member.guild.memberCount)
