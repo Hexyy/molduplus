@@ -3,8 +3,8 @@ const Discord = require('discord.js');
 module.exports = {
  name: 'destek',
  aliases: ['dc', 'discord', 'support'] ,
- description: 'Botun davet linkini alırsınız.',
- usage: ['davet'],
+ description: 'Botun destek sunucusunun linkini alırsınız.',
+ usage: ['destek'],
 /** 
 * @param {Discord.Client} client
 * @param {Discord.Message} message
