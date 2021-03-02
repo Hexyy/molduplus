@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
  name: 'destek',
- aliases: ['dc', 'discord', 'support'] ,
+ aliases: ['dc', 'discord', 'support', 'Destek'] ,
  description: 'Botun destek sunucusunun linkini alırsınız.',
  usage: ['destek'],
 /** 
