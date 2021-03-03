@@ -11,7 +11,7 @@ module.exports = (client) => {
 
     client.user.setPresence( { 
         activity: {
-    name: 'youtube.com/AlpuTV (Yapımcımın kanalına abone olursan sevinirim ^^) | ?yardım',
+    name: 'youtube.com/AlpuTV | ?yardım',
     type: 'WATCHING'
         }, status: 'online'
     })    
