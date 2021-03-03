@@ -99,9 +99,9 @@ message.channel.send(new Discord.MessageEmbed().setAuthor(`${message.author.tag}
 client.on('messageDelete' , async (mesaj) => {
 if(mesaj.author.bot || !mesaj.guild ) return
 const token = await log.fetch(`mesajtoken_${mesaj.guild.id}`)
-const iddd = await log.fetch(`mesajid_${mesaj.guild.id}`)
+const id = await log.fetch(`mesajid_${mesaj.guild.id}`)
 if(!token) return
-if(!iddd) return
+if(!id) return
 const w = new Discord.WebhookClient(id,token)
 if(mesaj.attachments.size === 0) {
     const embed = new Discord.MessageEmbed()
