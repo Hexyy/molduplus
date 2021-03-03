@@ -10,5 +10,5 @@ shard.spawn()
 
 
 shard.on('shardCreate' , (shard) => {
-  console.log(`shard aktif`)
+  console.log(`shardlar aktif`)
 })
