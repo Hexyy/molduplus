@@ -32,3 +32,5 @@ if(args[1] === 'kaldır' || args[1] === 'everyone') {
   return emoji.edit({ roles: [message.guild.roles.cache.find(a => a.name === args[1])], });
 
 };
+}
+}
