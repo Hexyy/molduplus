@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
  name: 'emoji-rastgele',
- aliases: ['emojirasgele', 'emoji-random', 'emojirandom', 'rastgele-emoji', 'rastgeleemoji', 'random-emoji', 'randomemoji'] ,
+ aliases: ['emojirastgele', 'emoji-random', 'emojirandom', 'rastgele-emoji', 'rastgeleemoji', 'random-emoji', 'randomemoji'] ,
 description: 'Belirttiğiniz sayı kadar rastgele emoji gönderilir.',
 usage: ['emoji-rastgele [ emoji sayısı ] { hareketli/hareketsiz }'],
 /** 
