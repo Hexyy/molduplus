@@ -10,7 +10,7 @@ setInterval(function()  {
 
     client.user.setPresence( { 
         activity: {
-    name: durum,
+    name: "bot.moldup.tk | ?yardım",
     type: 'WATCHING'
         }, status: 'online'
     })    
