@@ -4,7 +4,7 @@
   "description": "Moldup",
   "main": "index.js",
   "scripts": {
-    "start": "node shard.js"
+    "start": "node index.js"
   },
   "author": "Hexy , AlpuTV",
   "license": "ISC",
