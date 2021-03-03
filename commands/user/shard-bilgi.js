@@ -1,0 +1,46 @@
+const Discord = require('discord.js');
+const moment = require('moment');
+moment.locale('tr');
+
+module.exports = {
+name: 'shard',
+aliases: ['shardbilgi', 'shard-bilgi', 'shardinfo', 'shard-info', 's'] ,
+description: 'Sunucunuz içinde bulunduğu shardın bilgisini gönderir.',
+usage: ['shard'],
+/** 
+* @param {Discord.Client} client
+* @param {Discord.Message} message
+* @param {String[]} args
+*/
+run: async (client , message ,args) => {
+
+require('moment-duration-format');
+
+return message.channel.send(new Discord.MessageEmbed()
+.setColor('#eb5c0e')
+.setAuthor('Shard Bilgileri', client.user.avatarURL())
+.setDescription('» Bu sunucu toplam **0** adet shard arasından, **0** numaralı shard üzerinde bulunuyor.')
+.addField('Shard 0', `${client.guilds.cache.size} servers,
+${moment.duration(client.uptime).format(`w [hafta] d [gün] h [saat] m [dakika] s [saniye]`)}
+${client.ws.ping}ms!`)
+.setFooter(`${message.author.tag} tarafından istendi.`, message.author.avatarURL({ dynamic: true })));
+
+
+let values = await client.shard.broadcastEval(`
+    [
+        this.shard.id,
+        this.guilds.size
+    ]
+`);
+// Make a final string which will be sent in the channel
+let finalString = "**SHARD STATUS**\n\n";
+// For each shard data
+values.forEach((value) => {
+    // Add the shard infos to the final string
+    finalString += "• SHARD #"+value[0]+" | ServerCount: "+value[1]+"\n";
+});
+// Send the final string in the channel
+message.channel.send(finalString);
+
+}
+}
