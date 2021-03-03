@@ -24,7 +24,7 @@ for(var i = 0; i < [1, 2, 3][Math.floor(Math.random() * 2)]; i++) {
 return message.channel.send(emojis.map(x => client.emojis.cache.get(x)).join(''));
 } else {
 
-if(args[0] > 25) return message.channel.send("Tek seferde en fazla 25 rastgele emoji gönderebilirim. (Premium alarak bu limiti **50**'ye çıkarabilirsiniz; `-premium tr`)");
+if(args[0] > 25) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Tek seferde en fazla 25 adet rastgele emoji gönderebilirim.`);
 
 if(!args[1]) {
 const emojis = [];
