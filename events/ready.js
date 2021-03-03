@@ -11,7 +11,7 @@ module.exports = (client) => {
 
     client.user.setPresence( { 
         activity: {
-    name: 'bot.moldup.tk | ?yardım',
+    name: 'youtube.com/AlpuTV (Yapımcımın kanalına abone olursan sevinirim ^^) | ?yardım',
     type: 'WATCHING'
         }, status: 'online'
     })    
