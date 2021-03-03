@@ -21,17 +21,17 @@ const filter = response => {
   };
 
   message.channel.send(new Discord.MessageEmbed().setColor("#c0c0c0").setDescription(`<:zaman:789219599844900865> \`1. Adım:\` Emojinin adını yazınız. 
-30 saniye içinde cevap vermezseniz işlem iptal edilecektir.`));
+15 saniye içinde cevap vermezseniz işlem iptal edilecektir.`));
 
   let first;
   let two;
 
-  message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
+  message.channel.awaitMessages(filter, { max: 1, time: 15000, errors: ['time'] })
   .then(collected => {
     first = collected.first().content
     message.channel.send(new Discord.MessageEmbed().setColor("#c0c0c0").setDescription(`<:zaman:789219599844900865> \`2. Adım:\` Emojiyi dosya olarak yükleyin, emojiyi gönderin ya da bağlantısını gönderin. 
-30 saniye içinde cevap vermezseniz işlem iptal edilecektir.`));
-message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
+15 saniye içinde cevap vermezseniz işlem iptal edilecektir.`));
+message.channel.awaitMessages(filter, { max: 1, time: 15000, errors: ['time'] })
 .then(collected => {
   
   if(collected.first().attachments.size > 0) {
