@@ -20,7 +20,7 @@ run: async (client , message ,args) => {
 
 if(args[1] === 'kaldır' || args[1] === 'everyone') {
 
-  let emoji = message.guild.emojis.cache.find(x => x.name.toLowerCase(args[0])); || message.guild.emojis.cache.find(x => (x.animated ? `<a:${x.id}:${x.name}:` : `<:${x.name}:${x.id}>`) === args[0])
+  let emoji = message.guild.emojis.cache.find(x => x.name.toLowerCase(args[0])) || message.guild.emojis.cache.find(x => (x.animated ? `<a:${x.id}:${x.name}:` : `<:${x.name}:${x.id}>`) === args[0])
   message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384> \`${emoji.name}\` adlı emoji artık herkes tarafından kullanılabilir.`));
   return emoji.edit({ roles: [message.guild.roles.cache.find(a => a.name === '@everyone')], });
 
