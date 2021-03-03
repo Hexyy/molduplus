@@ -58,3 +58,4 @@ return message.channel.send(emojis.map(x => client.emojis.cache.get(x)).join('')
 };
 }
 }
+}
