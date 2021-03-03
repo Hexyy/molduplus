@@ -55,12 +55,14 @@ const yardım = new MessageEmbed()
 <:degnek:809142151770275921> **${ayarlar.prefix}yardım emoji**
 <:emoji:766586536044527616> **Emoji** menüsünde bulunan komutları gösterir.[eklenecek]
 
+<a:linkler:816781887615008800> **__Linklerim__**
+:envelope: **[Moldup Davet Linki](https://bot.moldup.tk/davet.html)**
+<:bughunter_level_1:766651275147476992> **[Moldup Destek Sunucusu](https://bot.moldup.tk/destek.html)**
+<:vote:788399561806839858> **[Moldup Oy Ver](https://bot.moldup.tk/oy.html)**
+
 
 \`\`\`                                                                                                         \`\`\`
 `)
-.addField(
-    `__Linkler__`,
-`<a:dev:767649354940547072> **[Moldup Davet Linki](https://bot.moldup.tk/davet.html)\n<a:dev:767649354940547072> [Moldup Destek Sunucusu](https://bot.moldup.tk/destek.html)\n<a:dev:767649354940547072> [Moldup Oy Ver](https://bot.moldup.tk/oy.html)**`    )
 message.channel.send(yardım)
 } else {
  if(args[0].toLowerCase() === 'emoji') {
