@@ -4,7 +4,7 @@ module.exports = {
  name: 'emoji-rastgele',
  aliases: ['emojirasgele', 'emoji-random', 'emojirandom', 'rastgele-emoji', 'rastgeleemoji', 'random-emoji', 'randomemoji'] ,
 description: 'Belirttiğiniz sayı kadar rastgele emoji gönderilir.',
-usage: ['emoji-rastgele [ emoji sayısı ]'],
+usage: ['emoji-rastgele [ emoji sayısı ] { hareketli/hareketsiz }'],
 /** 
 * @param {Discord.Client} client
 * @param {Discord.Message} message
