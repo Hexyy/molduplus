@@ -28,6 +28,6 @@ reason: 'Moldup - Mesaj Log'
 await log.set(`mesajid_${message.guild.id}` , w.id)
 await log.set(`mesajtoken_${message.guild.id}` , w.token)
 
-message.channel.send(new Discord.MessageEmbed().setDescription(`**Mesaj Log** kanalını ${kanal} olarak ayarladım!`))
+message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384> **Mesaj Log** kanalını ${kanal} olarak ayarladım!`))
 }
 }
