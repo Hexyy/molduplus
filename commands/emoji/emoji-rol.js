@@ -26,10 +26,11 @@ if(args[1] === 'kaldır' || args[1] === 'everyone') {
 
 } else {
 
-  if(!message.guild.roles.cache.find(a => a.name === args[1])) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Belirttiğiniz rolü bulamadım. Yazım yanlışı olabilir, ki bu çok doğal.`))
+  let rol = message.mentions.roles.first() || message.guild.roles.cache.find(a => a.name === args[1])
+  if(!rol) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Belirttiğiniz rolü bulamadım. Yazım yanlışı olabilir, ki bu çok doğal.`)) 
   let emoji = client.emojis.cache.find(x => (x.animated ? `<a:${x.id}:${x.name}:` : `<:${x.name}:${x.id}>`) === args[0]) || client.emojis.cache.find(x => x.name.toLowerCase(args[0]));
-  message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384> ${emoji} adlı emoji artık sadece ${message.guild.roles.cache.find(a => a.name === args[1])} rolüne sahip olanlar tarafından kullanılabilecektir.`));
-  return emoji.edit({ roles: [message.guild.roles.cache.find(a => a.name === args[1])], });
+  message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384> ${emoji} adlı emoji artık sadece ${rol} rolüne sahip olanlar tarafından kullanılabilecektir.`));
+  return emoji.edit({ roles: [rol], });
 
 };
 }
