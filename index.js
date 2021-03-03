@@ -5,7 +5,7 @@ const logs = require('discord-logs');
 logs(client)
 
 const chclient = new handler.Client()
-const cmd = new handler.CommandHandler(client,chclient)
+const cmd = new handler.CommandHandler(client,chclient);
 const { ayarlar } = require('./settings/ayarlar')
 const { karsilama } = require('./database/KarşılamaDataBase')
 const { sistem } = require('./database/SistemDataBase')
@@ -99,9 +99,9 @@ message.channel.send(new Discord.MessageEmbed().setAuthor(`${message.author.tag}
 client.on('messageDelete' , async (mesaj) => {
 if(mesaj.author.bot || !mesaj.guild ) return
 const token = await log.fetch(`mesajtoken_${mesaj.guild.id}`)
-const id = await log.fetch(`mesajid_${mesaj.guild.id}`)
+const iddd = await log.fetch(`mesajid_${mesaj.guild.id}`)
 if(!token) return
-if(!id) return
+if(!iddd) return
 const w = new Discord.WebhookClient(id,token)
 if(mesaj.attachments.size === 0) {
     const embed = new Discord.MessageEmbed()
@@ -261,7 +261,7 @@ if (!re || re === null) re = "https://i.imgur.com/uMOveOe.png"
     "moldup-hosgeldin.png"
   );
 
-  canvaskanal.send(attachment);
+  canvaskanal.send(attachment)
 })
  /**
  * --------------------------- Sistemler Bitiş -------------------
