@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 
 module.exports = {
- name: 'emoji-ekle',
- aliases: ['emojiekle', 'emoji-yükle', 'emojiyükle'] ,
+ name: 'emoji-bilgi',
+ aliases: ['emojibilgi', 'emoji-info', 'emojiinfo'] ,
 description: 'Sunucu için hızlı yoldan emoji eklersiniz.',
 usage: ['emoji-bilgi [ emoji ismi ]'],
 /** 
