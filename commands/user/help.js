@@ -2,7 +2,7 @@ const { Client , Message , MessageEmbed } = require('discord.js');
 const { ayarlar } = require('../../settings/ayarlar')
 module.exports = {
  name: 'yardım',
- aliases: ['help' , 'y'] ,
+ aliases: ["help", "y", "h", "Help", "Yardım"] ,
  description: 'Botta bulunan kategorileri ve o kategorilerin komutlarını gösterir.',
  usage: ['yardım'], 
 /** 
@@ -57,7 +57,7 @@ const yardım = new MessageEmbed()
 
 
 <a:linkler:816781887615008800> **Bağlantılarım**
-**[<:youtube:816736321573879848> Alpu TV](https://www.youtube.com/AlpuTV),[Hexy]("")
+**[<:youtube:816736321573879848> Alpu TV](https://www.youtube.com/AlpuTV), [Hexy]("")**
 **[:envelope: Moldup Davet Linki](https://bot.moldup.tk/davet.html)**
 **[<:bughunter_level_1:766651275147476992> Moldup Destek Sunucusu](https://bot.moldup.tk/destek.html)**
 **[<:vote:788399561806839858> Moldup Oy Ver](https://bot.moldup.tk/oy.html)**
