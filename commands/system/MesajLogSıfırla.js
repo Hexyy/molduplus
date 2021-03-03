@@ -24,6 +24,6 @@ if(!webhook) return
 await log.delete(`mesajid_${message.guild.id}`)
 await log.delete(`mesajtoken_${message.guild.id}`)
 await webhook.delete('Moldup')
-message.channel.send(new Discord.MessageEmbed().setDescription(`**Mesaj Log** sistemi bu sunucu için sıfırlandı!`))
+message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384> **Mesaj Log** sistemi bu sunucu için sıfırlandı!`))
 }
 }
