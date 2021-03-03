@@ -56,10 +56,11 @@ const yardım = new MessageEmbed()
 <:emoji:766586536044527616> **Emoji** menüsünde bulunan komutları gösterir.[eklenecek]
 
 
-<a:linkler:816781887615008800> **__Linklerim__**
-:envelope: **[Moldup Davet Linki](https://bot.moldup.tk/davet.html)**
-<:bughunter_level_1:766651275147476992> **[Moldup Destek Sunucusu](https://bot.moldup.tk/destek.html)**
-<:vote:788399561806839858> **[Moldup Oy Ver](https://bot.moldup.tk/oy.html)**
+<a:linkler:816781887615008800> **Bağlantılarım**
+**[<:youtube:816736321573879848> Alpu TV](https://www.youtube.com/AlpuTV),[Hexy]("")
+**[:envelope: Moldup Davet Linki](https://bot.moldup.tk/davet.html)**
+**[<:bughunter_level_1:766651275147476992> Moldup Destek Sunucusu](https://bot.moldup.tk/destek.html)**
+**[<:vote:788399561806839858> Moldup Oy Ver](https://bot.moldup.tk/oy.html)**
 
 
 \`\`\`                                                                                                         \`\`\`
