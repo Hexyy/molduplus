@@ -1,4 +1,6 @@
 const Discord = require('discord.js');
+const moment = require('moment');
+moment.locale('tr');
 
 module.exports = {
  name: 'emoji-bilgi',
