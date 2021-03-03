@@ -63,6 +63,41 @@ const yardım = new MessageEmbed()
 `<a:dev:767649354940547072> **[Moldup Davet Linki](https://bot.moldup.tk/davet.html)\n<a:dev:767649354940547072> [Moldup Destek Sunucusu](https://bot.moldup.tk/destek.html)\n<a:dev:767649354940547072> [Moldup Oy Ver](https://bot.moldup.tk/oy.html)**`    )
 message.channel.send(yardım)
 } else {
+ if(args[0].toLowerCase() === 'emoji') {
+ const emoji = new MessageEmbed()
+.setColor('BLUE')
+.setTitle('<:kullanici:809143152858497095> Moldup Kayıt Sistemi Menüsü')
+.setDescription(`
+\`\`\`                                                                                                          \`\`\`
+
+<:degnek:809142151770275921> **Sunucunuza Hızlı Yoldan Emoji Yüklemek İçin:**
+<:kullanici:809143152858497095> \`${ayarlar.prefix}emoji-yükle [ emoji ismi ] [ emoji , bağlantı , dosya ]\`
+
+
+<:degnek:809142151770275921> **Bir Kullanıcının İsmini Değiştirmek İçin:**
+<:kullanici:809143152858497095> \`${ayarlar.prefix}isim [ @kullanıcı ] [ isim ]\`
+
+
+<:degnek:809142151770275921> **Kayıt Sistemi Ayarlarını Görmek İçin:**
+<:kullanici:809143152858497095> \`${ayarlar.prefix}kayıt-bilgi\`
+
+
+<:degnek:809142151770275921> **Otomatik İsim Sistemini Açmak Veya Kapatmak İçin:**
+<:kullanici:809143152858497095> \`${ayarlar.prefix}oto-isim [ isim ]\` **|** \`${ayarlar.prefix}oto-isim-sil\`
+
+
+<:degnek:809142151770275921> **Bir Kullanıcıyı \`Üye\` Rolü İle Kayıt Etmek İçin:**
+<:kullanici:809143152858497095> \`${ayarlar.prefix}üye [ @kullanıcı ] [ isim ]\`
+
+
+<:degnek:809142151770275921> **Bir Kullanıcıyı \`Erkek\` Rolü Veya Kadın Rolü İle Kayıt Etmek İçin:**
+<:kullanici:809143152858497095> \`${ayarlar.prefix}erkek [ @kullanıcı ] [ isim ]\` **|** \`${ayarlar.prefix}kadın [ @kullanıcı ] [ isim ]\`
+
+
+ \`\`\`                                                                                                         \`\`\`
+`)
+message.channel.send(emoji)
+ } else {
 if(args[0].toLowerCase() === 'kayıt'||args[0].toLowerCase() === 'kayıtsistemi'||args[0].toLowerCase() === 'ks') {
  const kayıt = new MessageEmbed()
 .setColor('BLUE')
@@ -307,7 +342,7 @@ if(args[0].toLowerCase() === 'bot'||args[0].toLowerCase() === 'robot') {
     }
 
 
-    }
+    }}
 }
 }
 }
