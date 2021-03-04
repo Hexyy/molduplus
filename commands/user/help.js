@@ -70,7 +70,7 @@ message.channel.send(yardım)
  if(args[0].toLowerCase() === 'emoji') {
  const emoji = new MessageEmbed()
 .setColor('BLUE')
-.setTitle('<:kullanici:809143152858497095> Moldup Kayıt Sistemi Menüsü')
+.setTitle('<:kullanici:809143152858497095> Moldup Emoji Menüsü')
 .setDescription(`
 \`\`\`                                                                                                          \`\`\`
 
@@ -78,24 +78,16 @@ message.channel.send(yardım)
 <:kullanici:809143152858497095> \`${ayarlar.prefix}emoji-yükle [ emoji ismi ] [ emoji , bağlantı , dosya ]\`
 
 
-<:degnek:809142151770275921> **Bir Kullanıcının İsmini Değiştirmek İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}isim [ @kullanıcı ] [ isim ]\`
+<:degnek:809142151770275921> **Bir Emoji Hakkında Bilgi Almak İçin:**
+<:kullanici:809143152858497095> \`${ayarlar.prefix}emoji-bilgi [ emoji ]\`
 
 
-<:degnek:809142151770275921> **Kayıt Sistemi Ayarlarını Görmek İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}kayıt-bilgi\`
+<:degnek:809142151770275921> **Botun Sunucularından Emoji Bulmak İçin:**
+<:kullanici:809143152858497095> \`${ayarlar.prefix}emoji-bul [ emoji ismi ]\`
 
 
-<:degnek:809142151770275921> **Otomatik İsim Sistemini Açmak Veya Kapatmak İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}oto-isim [ isim ]\` **|** \`${ayarlar.prefix}oto-isim-sil\`
-
-
-<:degnek:809142151770275921> **Bir Kullanıcıyı \`Üye\` Rolü İle Kayıt Etmek İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}üye [ @kullanıcı ] [ isim ]\`
-
-
-<:degnek:809142151770275921> **Bir Kullanıcıyı \`Erkek\` Rolü Veya Kadın Rolü İle Kayıt Etmek İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}erkek [ @kullanıcı ] [ isim ]\` **|** \`${ayarlar.prefix}kadın [ @kullanıcı ] [ isim ]\`
+<:degnek:809142151770275921> **Sunucudan Bir Emojiyi Silmek İçin:**
+<:kullanici:809143152858497095> \`${ayarlar.prefix}emoji-sil [ emoji ]\`
 
 
  \`\`\`                                                                                                         \`\`\`
