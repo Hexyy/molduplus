@@ -21,7 +21,7 @@ const embed = new Discord.MessageEmbed()
 .setColor('BLUE')
 .addField('• Kanal Adı' , kanal.name)
 .addField('• Kanal ID', kanal.id)
-.addField('• Kanalı Görebilen Üye Sayısı' , kanal.members)
+.addField('• Son Mesaj' , `[${kanal.lastMessage.content}](${kanal.lastMessage.url})`)
 .addField('• Oluşturulma Tarihi' , moment.duration(created).format('Y [yıl], D [gün], H [saat], m [dakika],s [saniye]')+'önce')
 message.channel.send(embed)
 }
