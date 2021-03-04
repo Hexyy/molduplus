@@ -263,9 +263,8 @@ if (!re || re === null) re = "https://i.imgur.com/uMOveOe.png"
 
   canvaskanal.send(attachment)
 })
- /**
- * --------------------------- Sistemler Bitiş -------------------
- */
+
+//nitrosuz emoji
 client.on('message', async message => {
     if(!await sistem.fetch(`nitrosuzemoji_${message.guild.id}`)) return
     if(message.author.bot || message.channel.type !== 'text') return;
@@ -308,7 +307,9 @@ client.on('message', async message => {
     }, 3000);
     }
 })
-
+ /**
+ * --------------------------- Sistemler Bitiş -------------------
+ */
 
 client.login(ayarlar.token)
 
