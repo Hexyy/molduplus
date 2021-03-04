@@ -17,7 +17,7 @@ run: async (client , message ,args) => {
 require('moment-duration-format');
 
 return message.channel.send(new Discord.MessageEmbed()
-.setColor('#eb5c0e')
+.setColor('#FFEE00')
 .setAuthor('Shard Bilgileri', client.user.avatarURL())
 .setDescription('Bu sunucu **' + client.shard.count + ' **adet shard arasından, **' + message.guild.shardID + '** numaralı shard üzerinde bulunuyor.')
 .addField('Shard ' + message.guild.shardID, `**Sunucu sayısı:** ${client.guilds.cache.size}
