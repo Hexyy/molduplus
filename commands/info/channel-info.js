@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
-const moment = require('moment')
-require('moment-duration-format')
+const moment = require('moment');
+require('moment-duration-format');
 module.exports = {
  name: 'kanal-bilgi',
  aliases: ['kanalbilgi', 'channel-info','channel-info'] ,
