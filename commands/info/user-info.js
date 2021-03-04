@@ -29,7 +29,9 @@ const userembed = new Discord.MessageEmbed()
 message.channel.send(userembed)
  const rolembed = new Discord.MessageEmbed()
 .setColor(kullanıcı.displayHexColor)
-.setDescription(`• Bütün Rolleri\n${kullanıcı.roles.cache.map(s => `<@&${s.id}>`)}`)
+.setDescription(`
+• Bütün Rolleri
+${message.guild.members.cache.get(user.id).roles.cache.filter(s => s.name !== '@everyone').map(s => `<@&${s.id}>`)}`)
 message.channel.send()
 }
 }
