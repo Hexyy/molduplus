@@ -80,7 +80,7 @@ let messs = mesaj1.replace('[üye]' , member)
 kanall.send(messs)
 })
 /**
- * --------------------------- Karşılama Bitiş -------------------
+ * ------------------------------- Karşılama Bitiş -------------------
  */
 
  /**
