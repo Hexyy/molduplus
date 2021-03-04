@@ -2,7 +2,7 @@ const { ShardingManager, Client, WebhookClient } = require('discord.js');
 const client = new Client();
 const { ayarlar } = require('./settings/ayarlar')
 const shard = new ShardingManager('./index.js' , {
-    totalShards: 4,
+    totalShards: 2,
     token: ayarlar.token
 })
 
