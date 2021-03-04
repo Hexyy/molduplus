@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const moment = require('moment')
+require('moment-duration-format')
 module.exports = {
  name: 'kullanıcı-bilgi',
  aliases: ['user-info'] ,
@@ -21,8 +22,8 @@ const userembed = new Discord.MessageEmbed()
 .addField('• ID' , user.id)
 .setAuthor(`${user.tag} kullanıcısının bilgileri ` , user.avatarURL({dynamic: true}))
 .addField('• Tag' , '#'+user.discriminator)
-.addField('• Sunucuya Katılım Tarihi' , moment(create).format('Y [yıl] M [ay] D [gün] m [dakika]')+'önce')
-.addField('• Discorda Katılım Tarihi' , moment(joined).format('Y [yıl] M [ay] D [gün] m [dakika]')+'önce')
+.addField('• Sunucuya Katılım Tarihi' , moment.duration(create).format('Y [yıl] M [ay] D [gün] m [dakika]')+'önce')
+.addField('• Discorda Katılım Tarihi' , moment.duration(joined).format('Y [yıl] M [ay] D [gün] m [dakika]')+'önce')
 .addField('• En Yüksek Rolü' ,'<@&'+kullanıcı.roles.highest.id+'>')
 .addField('• Avatar URL' , `[Tıkla](${user.displayAvatarURL({ format: 'png' , dynamic: true })})`)
 message.channel.send(userembed)
