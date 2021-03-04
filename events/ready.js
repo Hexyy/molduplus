@@ -9,7 +9,7 @@ const durumlar = ['bot.moldup.tk | ?yardım', 'youtube.com/AlpuTV | Yapımcımı
 //setInterval(function() {
 
          //var random = Math.floor(Math.random()*(durumlar.length-0+1)+0);
-         client.user.setActivity(`youtube.com/AlpuTV | Shard 1`, {"type": "WATCHING"});
+         //client.user.setActivity(`youtube.com/AlpuTV | Shard 1`, {"type": "WATCHING"});
 
         //}, 2 * 5000);
     
