@@ -19,7 +19,7 @@ require('moment-duration-format');
 return message.channel.send(new Discord.MessageEmbed()
 .setColor('#FFEE00')
 .setAuthor('Shard Bilgileri', client.user.avatarURL())
-.setDescription('Bu sunucu **' + client.shard.count + ' **adet shard arasından, **' + message.guild.shardID + '** numaralı shard üzerinde bulunuyor.')
+.setDescription('Bu sunucu **' + client.shard.count + ' **adet shard arasından, **' + message.guild.shardID + '** numaralı shardın içinde bulunuyor.')
 .addField('Shard ' + message.guild.shardID, `**Sunucu sayısı:** ${client.guilds.cache.size}
 **Uptime:** ${moment.duration(client.uptime).format(`w [hafta] d [gün] h [saat] m [dakika] s [saniye]`)}
 **Gecikme süresi:** ${client.ws.ping} ms`)
