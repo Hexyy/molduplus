@@ -3,7 +3,7 @@ const moment = require('moment')
 require('moment-duration-format')
 module.exports = {
  name: 'kullanıcı-bilgi',
- aliases: ['user-info'] ,
+ aliases: ['user-info' , 'userinfo','kullanıcıbilgi'] ,
 description: 'Kullanıcı hakkında bilgi alırsınız.',
 usage: ['kullanıcı-bilgi { @kullanıcı }'],
 /** 
