@@ -310,7 +310,6 @@ client.on('message', async message => {
  /**
  * --------------------------- Sistemler Bitiş -------------------
  */
-
 client.login(ayarlar.token)
 
 
