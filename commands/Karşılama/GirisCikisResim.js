@@ -15,9 +15,10 @@ run: async (client , message ,args) => {
 if(!message.guild) return
 if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(new Discord.MessageEmbed().setTitle('Hata').setColor("RED").setDescription(`<:moldup_sinirli:783582342643056661> Bu komutu kullanmak için \`Yönetici\` iznine sahip olman gerekli.`))
 let resim = args[0]
+let resmi = message.attachments.first()
   
-if (!resim) return message.channel.send(new Discord.MessageEmbed()
-.setColor("RED").setTitle("Hata").setDescription(`<:moldup_hayir:783582180113907742> Lütfen bir resim linki gönderiniz!
+if (!resim && !resmi) return message.channel.send(new Discord.MessageEmbed()
+.setColor("RED").setTitle("Hata").setDescription(`<:moldup_hayir:783582180113907742> Lütfen bir resim linki gönderiniz veya dosya olarak ekleyiniz!
 
 **Not**
 Resminiz \`640x270\` boyutunda olmalıdır.`))
@@ -26,12 +27,15 @@ Resminiz \`640x270\` boyutunda olmalıdır.`))
   if (args[0] === "sıfırla" || args[0] === "sil") {
 message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("GREEN").setDescription(`<:moldup_evet:783582088346468384> Giriş çıkış mesaj resmi başarıyla sıfırlandı!`))
 karsilama.delete(`gçresim.${message.guild.id}`)
-  } else if(resim) {
+  } else if(resmi && !resim) {
+   karsilama.set(`gçresim.${message.guild.id}`, resmi.url)
+  return message.channel.send(new Discord.MessageEmbed().setColor("GREEN").setTitle("Görev Tamamlandı!").setDescription(`<:moldup_evet:783582088346468384> Giriş çıkış mesaj resmi başarıyla ayarlandı!`).setImage(resmi.url))
+  } else if(resim && !resmi) {
     karsilama.set(`gçresim.${message.guild.id}`, resim)
   return message.channel.send(new Discord.MessageEmbed().setColor("GREEN").setTitle("Görev Tamamlandı!").setDescription(`<:moldup_evet:783582088346468384> Giriş çıkış mesaj resmi başarıyla ayarlandı!`).setImage(resim))
-}else {
+} else {
   return message.channel.send(new Discord.MessageEmbed()
-.setColor("RED").setTitle("Hata").setDescription(`<:moldup_hayir:783582180113907742> Lütfen bir resim linki gönderiniz!
+.setColor("RED").setTitle("Hata").setDescription(`<:moldup_hayir:783582180113907742> Lütfen bir resim linki gönderiniz veya dosya olarak ekleyiniz!
 
 **Not**
 Resminiz \`640x270\` boyutunda olmalıdır.`))
