@@ -12,13 +12,12 @@ shard.spawn()
 shard.on('shardCreate' , shard => {
   const hook = new WebhookClient("811179831051288596", "xZ-IVtqIuAB172gYZgPnax-3_LUGKsHh5oG0DC_z_VSEQ8ny-mDaD4-_GnCa83tVH27u")
   hook.send(`<:cevrimici:758661635619029043> \`${shard.id+1}\` numaralı shard aktif.`)
-  client.user.setActivity(`youtube.com/AlpuTV | Shard ${shard.id+1}`, {"type": "WATCHING"});
+  client.user.setActivity(`youtube.com/AlpuTV [${shard.id+1}/${client.shard.count}]`, {"type": "WATCHING"});
 })
 
 shard.on('shardDisconnect' , shard => {
   const hook = new WebhookClient("811179831051288596", "xZ-IVtqIuAB172gYZgPnax-3_LUGKsHh5oG0DC_z_VSEQ8ny-mDaD4-_GnCa83tVH27u")
   hook.send(`<:cevrimdisi:758661564055945226> \`${shard.id+1}\` numaralı shardın bağlantısı koptu.`)
-  client.user.setActivity(`youtube.com/AlpuTV | Shard ${shard.id-1}`, {"type": "WATCHING"});
 })
 
 shard.on('shardError' , shard => {
@@ -39,5 +38,5 @@ shard.on('shardReconnecting' , shard => {
 shard.on('shardResume' , shard => {
   const hook = new WebhookClient("811179831051288596", "xZ-IVtqIuAB172gYZgPnax-3_LUGKsHh5oG0DC_z_VSEQ8ny-mDaD4-_GnCa83tVH27u")
   hook.send(`<:cevrimici:758661635619029043> \`${shard.id+1}\` numaralı shard aktif olmaya devam ediyor.`)
-  client.user.setActivity(`youtube.com/AlpuTV | Shard ${shard.id+1}`, {"type": "WATCHING"});
+  client.user.setActivity(`youtube.com/AlpuTV [${shard.id+1}/${client.shard.count}]`, {"type": "WATCHING"});
 })
