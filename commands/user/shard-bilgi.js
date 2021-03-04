@@ -22,7 +22,7 @@ return message.channel.send(new Discord.MessageEmbed()
 .setDescription('Bu sunucu **' + client.shard.count + ' **adet shard arasından, **' + message.guild.shardID + '** numaralı shard üzerinde bulunuyor.')
 .addField('Shard ' + message.guild.shardID, `**Sunucu sayısı:** ${client.guilds.cache.size}
 **Uptime:** ${moment.duration(client.uptime).format(`w [hafta] d [gün] h [saat] m [dakika] s [saniye]`)}
-**Gecikme süresi:** ${client.ws.ping}ms!`)
+**Gecikme süresi:** ${client.ws.ping} ms`)
 .setFooter(`${message.author.tag} tarafından istendi`, message.author.avatarURL({ dynamic: true })).setTimestamp());
 
 }
