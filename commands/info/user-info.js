@@ -27,10 +27,9 @@ const userembed = new Discord.MessageEmbed()
 .addField('• En Yüksek Rolü' ,'<@&'+kullanıcı.roles.highest.id+'>')
 .addField('• Avatar URL' , `[Tıkla](${user.displayAvatarURL({ format: 'png' , dynamic: true })})`)
 message.channel.send(userembed)
-message.channel.send(new Discord.MessageEmbed()
+ const rolembed = new Discord.MessageEmbed()
 .setColor(kullanıcı.displayHexColor)
-.setDescription('• Bütün Rolleri' , kullanıcı.roles.cache.map(s => s.name))
-
-)
+.setDescription(`• Bütün Rolleri\n${kullanıcı.roles.cache.map(s => `<@&${s.id}>`)}`)
+message.channel.send()
 }
 }
