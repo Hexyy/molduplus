@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
  name: 'hızlı-ekle',
  aliases: ['hızlıekle', 'hızlı-yükle', 'hızlıyükle'] ,
-description: ['Sunucu için hızlıca emoji eklersiniz.',
+description: 'Sunucu için hızlıca emoji eklersiniz.',
 usage: ['emoji-hızlı [ emoji ]'],
 /** 
 * @param {Discord.Client} client
