@@ -18,7 +18,7 @@ message.channel.send(new Discord.MessageEmbed()
 .addField('Uptime' , moment.duration(client.uptime).format('D [gün], H [saat], m [dakika], s [saniye]') , true)
 .addField('Ram Kullanımı', `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} mb` , true)
 .setThumbnail(client.user.displayAvatarURL({format: 'png' , size: 1024 }))
-.addField('Genel İstatistikler' ,`• ${client.guilds.cache.size+15} sunucu\n• ${client.users.cache.size+125000} kullanıcı\n• ${client.channels.cache.size+2000} kanal`)
+.addField('Genel İstatistikler' ,`• ${client.guilds.cache.size} sunucu\n• ${client.users.cache.size} kullanıcı\n• ${client.channels.cache.size} kanal`)
 .addField('Bot Sahibi Ve Geliştiricileri' , `<@696373721992003604> \`[ Alpu TV#6598 ]\` \n<@722186767704522812> \`[ Hexy#1490 ]\` `)
 )
 }
