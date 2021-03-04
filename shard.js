@@ -8,7 +8,6 @@ const shard = new ShardingManager('./index.js' , {
 
 shard.spawn()
 
-
 shard.on('shardCreate' , shard => {
   const { ShardingManager, Client, WebhookClient } = require('discord.js');
   const client = new Client();
