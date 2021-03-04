@@ -9,6 +9,7 @@ const shard = new ShardingManager('./index.js' , {
 shard.spawn()
 
 
-shard.on('shardCreate' , (shard) => {
-  console.log(`shardlar aktif`)
+shard.on('shardCreate' , shard => {
+  const hook = WebhookClient("811179831051288596", "xZ-IVtqIuAB172gYZgPnax-3_LUGKsHh5oG0DC_z_VSEQ8ny-mDaD4-_GnCa83tVH27u")
+  hook.send(`<:cevrimici:758661635619029043> \`${shard.id}\` numaralı shard aktif.`)
 })
