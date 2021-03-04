@@ -32,6 +32,6 @@ message.channel.send(userembed)
 .setDescription(`
 • Bütün Rolleri
 ${message.guild.members.cache.get(user.id).roles.cache.filter(s => s.name !== '@everyone').map(s => `<@&${s.id}>`)}`)
-message.channel.send()
+message.channel.send(rolembed)
 }
 }
