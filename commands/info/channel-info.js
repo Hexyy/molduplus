@@ -13,7 +13,8 @@ usage: ['kanal-bilgi { #kanal }'],
 */
 run: async (client , message ,args) => {
     
-let kanal = message.mentions.channels.first() || message.channel
+let kanal = message.mentions.channels.first()
+if(!kanal) kanal = message.channel;
 let now = await Date.now()
 let created = (await now) - kanal.createdTimestamp
 
