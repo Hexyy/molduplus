@@ -6,12 +6,12 @@ const { Client } = require('discord.js')
 module.exports = (client) => {
 const durumlar = ['bot.moldup.tk | ?yardım', 'youtube.com/AlpuTV | Yapımcımın kanalına abone olursan sevinirim 😊']
 
-setInterval(function() {
+//setInterval(function() {
 
-         var random = Math.floor(Math.random()*(durumlar.length-0+1)+0);
-         client.user.setActivity(durumlar[random], {"type": "WATCHING"});
+         //var random = Math.floor(Math.random()*(durumlar.length-0+1)+0);
+         client.user.setActivity(`youtube.com/AlpuTV | Shard 1`, {"type": "WATCHING"});
 
-        }, 2 * 5000);
+        //}, 2 * 5000);
     
 console.log(require('chalk').blue(`${client.user.tag} ismiyle giriş yaptım!`));
 }
