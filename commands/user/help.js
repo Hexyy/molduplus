@@ -189,7 +189,7 @@ message.channel.send(jail)
 if(args[0].toLowerCase() === 'çekiliş'||args[0].toLowerCase() === 'giveaways') {
     const cekilis = new MessageEmbed()
     .setColor('BLUE')
-    .setTitle('<:cekilis:798233545436561468> Moldup Çekiliş Menüsü')
+    .setTitle('<a:cekilis:798253124342513735> Moldup Çekiliş Menüsü')
     .setDescription(`
     \`\`\`                                                                                                         \`\`\`
     
