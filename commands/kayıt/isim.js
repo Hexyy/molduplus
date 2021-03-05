@@ -38,7 +38,7 @@ let isim;
 if(datas) isim = `${datas} Değiştirilen isim ${cod}`; 
 if(!datas) isim = `Değiştirilen isim ${cod}`; 
 message.mentions.members.first().setNickname(isim, `[ ${message.author.tag} İsim Düzeltme ]`).catch(err => message.channel.send(`\`\`\`Bir hata oluştu: ${err}\`\`\``));
-message.channel.send(new Discord.MessageEmbed().setThumbnail(client.users.cache.get(user.id).displayAvatarURL({dynamic: true}) ? client.users.cache.get(user.id).displayAvatarURL({size: 2048, dynamic: true}) : client.user.avatarURL()).setTitle(`Görev Tamamlandı!`)
+message.channel.send(new Discord.MessageEmbed().setThumbnail(client.users.cache.get(user.id).displayAvatarURL({dynamic: true}) ? client.users.cache.get(user.id).displayAvatarURL({size: 2048, dynamic: true}) : client.user.avatarURL()).setColor(message.mentions.members.first().displayHexColor).setTitle(`Görev Tamamlandı!`)
 .setDescription(`<:moldup_evet:783582088346468384> ${message.mentions.users.first()} **kullanıcısının ismi başarıyla düzeltildi.**
 
 \`\`\`${isim} ismi bir ceza olarak verildi. \`\`\`
@@ -49,7 +49,7 @@ let isim;
 if(datas) isim = `${datas} ${args.slice(1).join(' ')}`; 
 if(!datas) isim = `${args.slice(1).join(' ')}`; 
 message.mentions.members.first().setNickname(isim, `[ ${message.author.tag} İsim Değiştirme ]`).catch(err => message.channel.send(`\`\`\`Bir hata oluştu: ${err}\`\`\``));
-message.channel.send(new Discord.MessageEmbed().setThumbnail(client.users.cache.get(user.id).displayAvatarURL({dynamic: true}) ? client.users.cache.get(user.id).displayAvatarURL({size: 2048, dynamic: true}) : client.user.avatarURL()).setTitle(`Görev Tamamlandı!`)
+message.channel.send(new Discord.MessageEmbed().setThumbnail(client.users.cache.get(user.id).displayAvatarURL({dynamic: true}) ? client.users.cache.get(user.id).displayAvatarURL({size: 2048, dynamic: true}) : client.user.avatarURL()).setColor(message.mentions.members.first().displayHexColor).setTitle(`Görev Tamamlandı!`)
 .setDescription(`<:moldup_evet:783582088346468384> ${message.mentions.users.first()} **kullanıcısının ismi başarıyla değiştirildi.**
 
 \`\`\`${isim} yeni ismini sevdim. \`\`\`
