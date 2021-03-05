@@ -57,7 +57,7 @@ const yardım = new MessageEmbed()
 
 
 <a:linkler:816781887615008800> **Bağlantılarım**
-**[<:youtube:816736321573879848> Alpu TV](https://www.youtube.com/AlpuTV), [Hexy](https://www.youtube.com/channel/UCRe6i5X4N25F4Gja1qfHm_g)**
+**[<:youtube:816736321573879848> Alpu TV](https://www.youtube.com/AlpuTV)**
 **[:envelope: Moldup Davet Linki](https://bot.moldup.tk/davet.html)**
 **[<:bughunter_level_1:766651275147476992> Moldup Destek Sunucusu](https://bot.moldup.tk/destek.html)**
 **[<:vote:788399561806839858> Moldup Oy Ver](https://bot.moldup.tk/oy.html)**
