@@ -3,7 +3,7 @@ const { sistem } = require('./database/SistemDataBase')
 const Discord = require('discord.js');
 module.exports = {
     name: 'chatkapat',
-    aliases: ["botlasohbetkapat", "sohbet-kapat", "sohbetkapat"],
+    aliases: ['botlasohbetkapat', 'sohbet-kapat', 'sohbetkapat'],
     description: 'Bot ile sohbet etmeyi bırakırsınız.',
     usage: ['chatkapat'],
     /** 
