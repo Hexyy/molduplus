@@ -23,7 +23,7 @@ const datas = await kayit.fetch(`tag.${message.guild.id}`);
  
  if (args[1] === "değiştir" || args[1] === "moderate" || args[1] === "düzelt") {
   
-  function makeid(length) {
+  function kod(length) {
    var result           = '';
    var characters       = 'ABCÇDEFGHIİJKLMNOÖPQRSŞTUÜVWXYZabcçdefghijklmnoöpqrsştuüvwxyz0123456789';
    var charactersLength = characters.length;
@@ -33,7 +33,7 @@ const datas = await kayit.fetch(`tag.${message.guild.id}`);
    return result;
 }
   
-let cod = makeid(9)
+let cod = kod(9)
 let isim;
 if(datas) isim = `${datas} Değiştirilen isim ${cod}`; 
 if(!datas) isim = `Değiştirilen isim ${cod}`; 
