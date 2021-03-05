@@ -20,6 +20,31 @@ if(!args[1]) return message.channel.send(new Discord.MessageEmbed().setTitle('Ha
 if (message.guild.members.cache.get(message.author.id).roles.highest.position <= message.mentions.members.first().roles.highest.position) return  message.channel.send(new Discord.MessageEmbed().setTitle('Hata').setColor("RED").setDescription(`<:moldup_hayir:783582180113907742> Senin gücün buna yetmez, ondan daha yüksek bir role sahip ol da öyle dene.`))
 const datas = await kayit.fetch(`tag.${message.guild.id}`);
               let user = message.mentions.users.first();
+ 
+ if (args[1].toLowerCase("değiştir") || args[1].toLowerCase("moderate") || args[1].toLowerCase("düzelt")) {
+  
+  function makeid(length) {
+   var result           = '';
+   var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+   var charactersLength = characters.length;
+   for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   return result;
+}
+  
+let cod = makeid(9)
+let isim;
+if(datas) isim = `${datas} Değiştirilen isim ${cod}`; 
+if(!datas) isim = `Değiştirilen isim ${cod}`; 
+message.mentions.members.first().setNickname(isim).catch(err => message.channel.send(`\`\`\`Bir hata oluştu: ${err}\`\`\``));
+message.channel.send(new Discord.MessageEmbed().setThumbnail(client.users.cache.get(user.id).displayAvatarURL({dynamic: true}) ? client.users.cache.get(user.id).displayAvatarURL({size: 2048, dynamic: true}) : client.user.avatarURL()).setTitle(`Görev Tamamlandı!`)
+.setDescription(`<:moldup_evet:783582088346468384> ${message.mentions.users.first()} **kullanıcısının ismi başarıyla düzeltildi.**
+
+\`\`\`${isim} ismi bir ceza olarak verildi. \`\`\`
+`));
+  
+ }
 let isim;
 if(datas) isim = `${datas} ${args.slice(1).join(' ')}`; 
 if(!datas) isim = `${args.slice(1).join(' ')}`; 
