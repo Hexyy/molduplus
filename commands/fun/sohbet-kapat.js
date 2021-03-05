@@ -1,6 +1,6 @@
-const { sistem } = require('./database/SistemDataBase')
-
+const { sistem } = require('../../database/SistemDataBase')
 const Discord = require('discord.js');
+
 module.exports = {
     name: 'chatkapat',
     aliases: ['botlasohbetkapat', 'sohbet-kapat', 'sohbetkapat'],
