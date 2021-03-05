@@ -94,7 +94,7 @@ if(!message.guild.me.hasPermission('EMBED_LINKS')) return
 if(kontrol) {
 if(message.content.toLowerCase() === 'sa' || message.content.toLowerCase() === 'selam' || message.content.toLowerCase() === 'sea' ||message.content.toLowerCase() === 'selamun aleyküm' || message.content.toLowerCase() === 'slm') 
 {
-message.channel.send(new Discord.MessageEmbed().setColor(message.member.displayHexColor()).setAuthor(`${message.author.tag} aleyküm selam , hoş geldin` , message.author.avatarURL({dynamic:false})))
+message.channel.send(new Discord.MessageEmbed().setColor(message.member.displayHexColor).setAuthor(`${message.author.tag} aleyküm selam , hoş geldin` , message.author.avatarURL({dynamic:false})))
 }}})
 client.on('messageDelete' , async (mesaj) => {
 if(mesaj.author.bot || !mesaj.guild ) return
