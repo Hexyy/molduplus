@@ -310,6 +310,30 @@ client.on('message', async message => {
  /**
  * --------------------------- Sistemler Bitiş -------------------
  */
+client.on("message", async msg => {
+  if (!msg.guild) return
+    
+if (!await sistem.fetch(`sohbet.${msg.author.id}.${msg.channel.id}`)) return;
+  
+  if (msg.author.bot) return;
+  
+  if (msg.content.startsWith("?") || msg.content.startsWith("m!")) return
+  
+  
+    var messageReq = encodeURI(msg.content);
+
+     fetch(`https://api.codare.fun/sor/${messageReq}`)
+.then(e => e.json()
+    .then(f => {
+    msg.channel.send(f.cevap)
+  })
+       )
+  .catch(e => {
+    msg.channel.send("```Bir hata oluştu (Cannot Find Message 001)```")
+  });
+});
+
+
 client.login(ayarlar.token)
 
 
