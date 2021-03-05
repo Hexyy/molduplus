@@ -21,7 +21,7 @@ if (message.guild.members.cache.get(message.author.id).roles.highest.position <=
 const datas = await kayit.fetch(`tag.${message.guild.id}`);
               let user = message.mentions.users.first();
  
- if (args[1].toLowerCase("değiştir") || args[1].toLowerCase("moderate") || args[1].toLowerCase("düzelt")) {
+ if (args[1] === "değiştir" || args[1] === "moderate" || args[1] === "düzelt") {
   
   function makeid(length) {
    var result           = '';
@@ -38,11 +38,7 @@ let isim;
 if(datas) isim = `${datas} Değiştirilen isim ${cod}`; 
 if(!datas) isim = `Değiştirilen isim ${cod}`; 
 message.mentions.members.first().setNickname(isim, `[ ${message.author.tag} İsim Düzeltme ]`).catch(err => message.channel.send(`\`\`\`Bir hata oluştu: ${err}\`\`\``));
-message.channel.send(new Discord.MessageEmbed().setThumbnail(client.users.cache.get(user.id).displayAvatarURL({dynamic: true}) ? client.users.cache.get(user.id).displayAvatarURL({size: 2048, dynamic: true}) : client.user.avatarURL()).setColor(message.mentions.members.first().displayHexColor).setTitle(`Görev Tamamlandı!`)
-.setDescription(`<:moldup_evet:783582088346468384> ${message.mentions.users.first()} **kullanıcısının ismi başarıyla düzeltildi.**
-
-\`\`\`${isim} ismi bir ceza olarak verildi. \`\`\`
-`));
+message.channel.send(`<a:onaylandi:790233906158370866> ${message.author}, isim başarıyla düzeltildi!`).then(a => a.delete({timeout: 5000}));
   
  } else {
 let isim;
