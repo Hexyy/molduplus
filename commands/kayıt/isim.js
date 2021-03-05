@@ -38,6 +38,7 @@ let isim;
 if(datas) isim = `${datas} Değiştirilen isim ${cod}`; 
 if(!datas) isim = `Değiştirilen isim ${cod}`; 
 message.mentions.members.first().setNickname(isim, `[ ${message.author.tag} İsim Düzeltme ]`).catch(err => message.channel.send(`\`\`\`Bir hata oluştu: ${err}\`\`\``));
+message.delete()
 message.channel.send(`<a:onaylandi:790233906158370866> ${message.author}, kullanıcının ismi başarıyla **düzeltildi**!`).then(a => a.delete({timeout: 5000}));
   
  } else {
