@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+require('./inlineReply')
 const client = new Discord.Client()
 const handler = require('cords-handler');
 const fetch = require('node-fetch')
@@ -323,11 +324,11 @@ if (!await sistem.fetch(`sohbet_${msg.author.id}_${msg.channel.id}`)) return;
      fetch(`https://api.codare.fun/sor/${messageReq}`)
 .then(e => e.json()
     .then(f => {
-    msg.channel.send(f.cevap)
+    msg.inlineReply(f.cevap)
   })
        )
   .catch(e => {
-    msg.channel.send("```Bir hata oluştu: ${e}```")
+    msg.inlineReply("```Bir hata oluştu: ${e}```")
   });
 });
 
