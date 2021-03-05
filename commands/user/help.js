@@ -244,8 +244,8 @@ if(args[0].toLowerCase() === 'eğlence'||args[0].toLowerCase() === 'fun') {
     .setDescription(`
     \`\`\`                                                                                                         \`\`\`    
 
-<:degnek:809142151770275921> **Emojiyi Büyütmek İçin:**
-<:eglence:809143990276456529> \`${ayarlar.prefix}büyüt [ :emoji: ]\`
+<:degnek:809142151770275921> **Botla Sohbet Etmek Veya Sohbeti Kapatmak İçin:**
+<:eglence:809143990276456529> \`${ayarlar.prefix}sohbet\` **|** \`${ayarlar.prefix}sohbet-kapat\`
     
     
 <:degnek:809142151770275921> **İstediğniz Kişiye Triggered Efekti Eklemek İçin:**
