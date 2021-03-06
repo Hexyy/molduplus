@@ -22,7 +22,7 @@ if(!client.player.getQueue(message)) {
 } else {
 client.player.skip(message) 
 message.react('⏩')
-
+}
 }
 }
 }
