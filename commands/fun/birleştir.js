@@ -58,7 +58,7 @@ function combinename(name1,name2){
     var name1 = message.member.displayName
 		var name2 = member.displayName
 		var name = combinename(name1,name2);
-		message.channel.send("**"+name1+"** 💞 **"+name2+"** = **" + name +"**");
+		message.channel.send("**"+name1+"** \➕ **"+name2+"** = **" + name +"**");
 
 }
 }
