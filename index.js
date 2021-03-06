@@ -38,7 +38,7 @@ const cekilis = new giveaway.GiveawaysManager(client, {
 client.çekiliş = cekilis
 
 
-const { player } = require('../../settings/müzik')
+const { player } = require('./settings/müzik')
 player.on('trackStart', (message, track) => message.channel.send(new Discord.MessageEmbed()
 .setColor('GREEN').setTitle(track.title).setURL(track.url).setDescription(`${e.tik} **${track.title}** isimli şarkı oynatılıyor! [${message.author}]`)))
 
