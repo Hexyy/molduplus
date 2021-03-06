@@ -3,7 +3,7 @@ const { player } = require('../../settings/müzik')
 module.exports = {
  name: 'kuyruk',
  aliases: ['queue' , 'q'] ,
- description: 'Şarkı kuyruğunu gönderir.',
+ description: 'Şarkı kuyruğunu gösterir.',
  usage: ['kuyruk'],
 /** 
 * @param {Discord.Client} client
