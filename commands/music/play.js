@@ -10,5 +10,6 @@ module.exports = {
 */
 run: async (client , message ,args) => {
 player.play(message , args.join(' ') , { firstResult: false})
+client.channels.cache.get("817867840560037938").setName(`${args.join(' ')} çalıyorum 🎶`)
 }
 }
