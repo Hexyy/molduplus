@@ -3,6 +3,8 @@ const { player } = require('../../settings/müzik')
 module.exports = {
  name: 'play',
  aliases: ['oynat' , 'çal', 'p'] ,
+ description: 'Belirttiğiniz şarkıyı sesli kanalda oynatır.',
+ usage: ['play [ şarkı ]'],
 /** 
 * @param {Discord.Client} client
 * @param {Discord.Message} message
