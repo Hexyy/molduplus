@@ -37,6 +37,13 @@ const cekilis = new giveaway.GiveawaysManager(client, {
 })
 client.çekiliş = cekilis
 
+
+const { player } = require('../../settings/müzik')
+player.on('trackStart', (message, track) => message.channel.send(new Discord.MessageEmbed()
+.setColor('GREEN').setTitle(track.title).setURL(track.url).setDescription(`${e.tik} **${track.title}** isimli şarkı oynatılıyor! [${message.author}]`)))
+
+player.on('trackAdd', (message, queue, track) => message.channel.send(new Discord.MessageEmbed().setColor('BLUE').setTitle(track.title).setURL(track.url).setDescription(`${e.tik} **${track.title}** isimli şarkı kuyruğa eklendi! [${message.author}]`)))
+player.on('queueEnd' , (message , queue) => message.channel.send(new Discord.MessageEmbed().setColor('BLUE').setDescription(`${e.tik} Kuyruktaki bütün şarkılar oynatıldığı için sesli kanaldan ayrılıyorum!`)))
 /**
  * --------------------------- Karşılama -------------------
  */
