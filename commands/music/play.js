@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const { player } = require('../../settings/müzik')
 module.exports = {
  name: 'play',
- aliases: ['oynat' , 'çal'] ,
+ aliases: ['oynat' , 'çal', 'p'] ,
 /** 
 * @param {Discord.Client} client
 * @param {Discord.Message} message
