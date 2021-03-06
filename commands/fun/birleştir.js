@@ -13,7 +13,7 @@ module.exports = {
     
 let member = message.mentions.members.first()
 
-if (!member) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('<:hata:813391295665930260> Hata').setDescription(`<:moldup_hayir:783582180113907742> Bir kullanıcı etiketleyerek tekrar deneyiniz.`)).then(a => a.delete({timeout: 10000}));
+if (!member) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('<:hata:813391295665930260> Hata').setDescription(`Bir kullanıcı etiketleyerek tekrar deneyiniz.`)).then(a => a.delete({timeout: 10000}));
 
 function combinename(name1,name2){
 	var count1=-1,count2=-1;
