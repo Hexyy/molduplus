@@ -259,6 +259,7 @@ if(args[0].toLowerCase() === 'eğlence'||args[0].toLowerCase() === 'fun') {
 <:degnek:809142151770275921> **İstediğniz Kişiye Hapis Efekti Eklemek İçin:**
 <:eglence:809143990276456529> \`${ayarlar.prefix}hapis\` **|** \`${ayarlar.prefix}hapis [ @kullanıcı ]\`                                                                                                
 
+
 <:degnek:809142151770275921> **İstediğiniz Kişiye Stonks Efekti Eklemek İçin:**
 <:eglence:809143990276456529> \`${ayarlar.prefix}stonks\` **|** \`${ayarlar.prefix}stonks [ @kullanıcı ]\`                                                                                                         
 
@@ -266,8 +267,10 @@ if(args[0].toLowerCase() === 'eğlence'||args[0].toLowerCase() === 'fun') {
 <:degnek:809142151770275921> **İstediğiniz Kişiye Eject Efekti Eklemek İçin:**
 <:eglence:809143990276456529> \`${ayarlar.prefix}eject\` **|** \`${ayarlar.prefix}eject [ @kullanıcı ]\`                                                                                                         
 
+
 <:degnek:809142151770275921> **Etiketlediğiniz Kişiyle İsminizi Birleştirmek İçin:**
 <:eglence:809143990276456529> \`${ayarlar.prefix}ship [ @kullanıcı ]\`
+
 
 <:degnek:809142151770275921> **Change My Mind Meemi Atmak İçin:**
 <:eglence:809143990276456529> \`${ayarlar.prefix}cmm [ yazı ]\`
