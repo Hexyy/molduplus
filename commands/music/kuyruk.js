@@ -3,8 +3,8 @@ const { player } = require('../../settings/müzik')
 module.exports = {
  name: 'kuyruk',
  aliases: ['queue' , 'q'] ,
- description: 'Çalan şarkıyı durdurur ve sonraki şarkıya geçer.',
- usage: ['skip'],
+ description: 'Şarkı kuyruğunu gönderir.',
+ usage: ['kuyruk'],
 /** 
 * @param {Discord.Client} client
 * @param {Discord.Message} message
