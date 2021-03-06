@@ -21,7 +21,7 @@ cmd.loader()
 const event = new handler.EventHandler(client,chclient)
 event.setEventFolder('./events')
 event.loader()
-const giveaway = require('discord-giveaways')
+const giveaway = require('discord-giveaways');
 // keşke değişmeseydin // renkleri fln değişcem diye biraz saçmaladı :/
 const cekilis = new giveaway.GiveawaysManager(client, {
     storage: './çekiliş.json',
