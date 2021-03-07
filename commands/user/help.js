@@ -83,7 +83,7 @@ const müzik = new MessageEmbed()
 
 
 <:degnek:809142151770275921> **Şarkıyı Durdurmak Veya Devam Ettirmek İçin:**
-<:muzik:803194953898655775> \`${ayarlar.prefix}durdur\` **|** \`${ayarlar.prefix}devam\`
+<:muzik:803194953898655775> \`${ayarlar.prefix}duraklat\` **|** \`${ayarlar.prefix}devam\`
 
 
 <:degnek:809142151770275921> **Şarkıyı Veya Kuyruğu Döngüye Almak İçin:**
