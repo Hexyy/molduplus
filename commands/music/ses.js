@@ -3,8 +3,8 @@ const { player } = require('../../settings/müzik')
 module.exports = {
  name: 'ses',
  aliases: ['volume' , 'ses-ayarla', 'set-volume', 'setvolume'] ,
- description: 'Çalan şarkıyı durdurur ve sonraki şarkıya geçer.',
- usage: ['skip'],
+ description: 'Çalan şarkının sesini ayarlarsınız.',
+ usage: ['ses [ ses seviyesi ]'],
 /** 
 * @param {Discord.Client} client
 * @param {Discord.Message} message
