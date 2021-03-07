@@ -26,7 +26,7 @@ player.on('searchInvalidResponse', (message, query, tracks, content, collector) 
         return message.channel.send('Tamam, aramayı iptal ettim.')
     }
 
-    message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`1 ile ${tracks.length} arasında geçerli bir sayı yazmadınız, şarkı oynatmak için komutu tekrar yazmalısınız!`)
+    message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`1 ile ${tracks.length} arasında geçerli bir sayı yazmadınız, şarkı oynatmak için komutu tekrar yazmalısınız!`))
 
 })
 player.on('searchCancel', (message, query, tracks) => message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription('Şarkı numarasını zamanında belirtmediniz, şarkı oynatmak için komutu tekrar yazmalısınız!')))
