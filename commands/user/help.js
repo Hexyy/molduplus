@@ -52,8 +52,12 @@ const yardım = new MessageEmbed()
 <:bot:809432681192357940> **Bot** menüsünde ki komutları gösterir.
 
 
+<:degnek:809142151770275921> **${ayarlar.prefix}yardım müzik**
+<:muzik:803194953898655775> **Müzik** menüsünde bulunan komutları gösterir.
+
+
 <:degnek:809142151770275921> **${ayarlar.prefix}yardım emoji**
-<:emoji:766586536044527616> **Emoji** menüsünde bulunan komutları gösterir.[eklenecek]
+<:emoji:766586536044527616> **Emoji** menüsünde bulunan komutları gösterir.
 
 
 <a:linkler:816781887615008800> **Bağlantılarım**
@@ -67,6 +71,34 @@ const yardım = new MessageEmbed()
 `)
 message.channel.send(yardım)
 } else {
+  if(args[0].toLowerCase() === 'müzik' || args[0].toLowerCase() === 'music') {
+const müzik = new MessageEmbed()
+.setColor('BLUE')
+.setTitle('<:muzik:803194953898655775> Moldup Müzik Menüsü')
+.setDescription(`
+\`\`\`                                                                                                          \`\`\`
+
+<:degnek:809142151770275921> **Müziği Çalmak Veya Atlamak İçin:**
+<:kullanici:809143152858497095> \`${ayarlar.prefix}oynat [ şarkı ]\` **|** \`${ayarlar.prefix}atla\`
+
+
+<:degnek:809142151770275921> **Şarkıyı Durdurmak Veya Devam Ettirmek İçin:**
+<:kullanici:809143152858497095> \`${ayarlar.prefix}durdur\` **|** \`${ayarlar.prefix}devam\`
+
+
+<:degnek:809142151770275921> **Botun Sunucularından Emoji Bulmak İçin:**
+<:kullanici:809143152858497095> \`${ayarlar.prefix}emoji-bul [ emoji ismi ]\`
+
+
+<:degnek:809142151770275921> **Sunucudan Bir Emojiyi Silmek İçin:**
+<:kullanici:809143152858497095> \`${ayarlar.prefix}emoji-sil [ emoji ]\`
+
+
+ \`\`\`                                                                                                         \`\`\`
+`)
+message.channel.send(müzik)
+   
+  } else {
  if(args[0].toLowerCase() === 'emoji') {
  const emoji = new MessageEmbed()
 .setColor('BLUE')
@@ -341,7 +373,7 @@ if(args[0].toLowerCase() === 'bot'||args[0].toLowerCase() === 'robot') {
         
         }     
     }
-
+    }
 
     }}
 }
