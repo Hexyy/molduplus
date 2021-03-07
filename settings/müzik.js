@@ -46,6 +46,7 @@ player.on('error', (error, message) => {
             message.channel.send(`\`\`\`Bir hata oluştu: ${error}\`\`\``)
     }
 })
+   
     
 
 module.exports.player = player
