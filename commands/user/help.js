@@ -79,19 +79,19 @@ const müzik = new MessageEmbed()
 \`\`\`                                                                                                          \`\`\`
 
 <:degnek:809142151770275921> **Müziği Çalmak Veya Atlamak İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}oynat [ şarkı ]\` **|** \`${ayarlar.prefix}atla\`
+<:muzik:803194953898655775> \`${ayarlar.prefix}oynat [ şarkı ]\` **|** \`${ayarlar.prefix}atla\`
 
 
 <:degnek:809142151770275921> **Şarkıyı Durdurmak Veya Devam Ettirmek İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}durdur\` **|** \`${ayarlar.prefix}devam\`
+<:muzik:803194953898655775> \`${ayarlar.prefix}durdur\` **|** \`${ayarlar.prefix}devam\`
 
 
-<:degnek:809142151770275921> **Botun Sunucularından Emoji Bulmak İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}emoji-bul [ emoji ismi ]\`
+<:degnek:809142151770275921> **Şarkıyı Veya Kuyruğu Döngüye Almak İçin:**
+<:muzik:803194953898655775> \`${ayarlar.prefix}şarkı-döngüsü [ aç & kapat ]\` **|** \`\`${ayarlar.prefix}kuyruk-döngüsü [ aç & kapat ]\`\`
 
 
-<:degnek:809142151770275921> **Sunucudan Bir Emojiyi Silmek İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}emoji-sil [ emoji ]\`
+<:degnek:809142151770275921> **Kuyrukta ki Şarkılara Bakmak İçin Veya Şarkı Sesi Ayarlamak İçin:**
+<:kullanici:809143152858497095> \`${ayarlar.prefix}kuyruk\` **|** \`${ayarlar.prefix}ses [ ses ]\`
 
 
  \`\`\`                                                                                                         \`\`\`
