@@ -91,7 +91,7 @@ const müzik = new MessageEmbed()
 
 
 <:degnek:809142151770275921> **Kuyrukta ki Şarkılara Bakmak İçin Veya Şarkı Sesi Ayarlamak İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}kuyruk\` **|** \`${ayarlar.prefix}ses [ ses ]\`
+<:muzik:803194953898655775> \`${ayarlar.prefix}kuyruk\` **|** \`${ayarlar.prefix}ses [ ses ]\`
 
 
  \`\`\`                                                                                                         \`\`\`
