@@ -94,6 +94,10 @@ const müzik = new MessageEmbed()
 <:muzik:803194953898655775> \`${ayarlar.prefix}kuyruk\` **|** \`${ayarlar.prefix}ses [ ses ]\`
 
 
+<:degnek:809142151770275921> **Bir Önceki Şarkıya Geçmek Veya Şarkıyı Bitirmek İçin:**
+<:muzik:803194953898655775> \`${ayarlar.prefix}geri\` **|** \`${ayarlar.prefix}ayrıl\`
+
+
  \`\`\`                                                                                                         \`\`\`
 `)
 message.channel.send(müzik)
