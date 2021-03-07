@@ -1,6 +1,6 @@
 const { Player } = require('discord-player')
-const { Client } = require('discord.js')
-const player = new Player(new Client() , {
+const Discord = require('discord.js')
+const player = new Player(new Discord.Client() , {
 autoSelfDeaf: true,
 })
 player.on('trackStart', (message, track) => message.channel.send(new Discord.MessageEmbed()
