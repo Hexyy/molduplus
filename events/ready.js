@@ -4,7 +4,7 @@ const { Client } = require('discord.js')
  * @param {Client} client
  */
 module.exports = (client) => {
-const durumlar = ['bot.moldup.tk | ?yardım', 'youtube.com/AlpuTV | Yapımcımın kanalına abone olursan sevinirim 😊']
+const durumlar = ['bot.moldup.tk | ?yardım', 'youtube.com/AlpuTV | Yapımcımın kanalına abone olursan sevinirim 😊', 'BUGÜN HEXY\'NİN DOĞUM GÜNÜ!!! | Doğum Günün Kutlu Olsun 🎂']
 
 setInterval(function() {
 
