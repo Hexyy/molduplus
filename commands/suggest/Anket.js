@@ -13,9 +13,9 @@ module.exports = {
     run: async (client, message, args) => {
     const noperm = new Discord.MessageEmbed()
     .setColor('RED')
-    .setDescription(`**${message.author.username}** bu komutu kullanabilmek için \`Sunucuyu Yönet\` yetkisine veya \`Oylamacı\` adında bir role sahip olmalısın!`)
+    .setDescription(`**${message.author.username}** bu komutu kullanabilmek için \`Sunucuyu Yönet\` yetkisine veya \`Moldup Kontrol\` adında bir role sahip olmalısın!`)
     if(!message.guild.me.hasPermission(['SEND_MESSAGES','MANAGE_ROLES','EMBED_LINKS'])) return
-    let rol = message.guild.roles.cache.find(role => role.name == "Oylamacı");
+    let rol = message.guild.roles.cache.find(role => role.name == "Moldup Kontrol");
     if (!message.member.hasPermission('MANAGE_SERVER') && !message.member.roles.cache.has(rol.id)) return message.channel.send(noperm.setTitle('<:hata:813391295665930260> Yetersiz Yetki!'))
 
 const alpuhata = (hata) => {
@@ -25,7 +25,7 @@ const alpuhata = (hata) => {
     try {
         const alpuargs = args.join(' ').split('/')
         const hmmm = alpuargs[0].trim();
-        if (!hmmm) return alpuhata('Oylamanızda en az bir şık bulunmalıdır!');
+        if (!hmmm) return alpuhata('Anketinizde en az bir şık bulunmalıdır!');
         const trimer = alpuargs[1].trim().split(',');
         const ikinci = trimer.length;
         if (ikinci > 10) return alpuhata('Maksimum 10 adet şık koyabilirsiniz.');
@@ -38,7 +38,7 @@ const alpuhata = (hata) => {
                 pollMsg.react(emojiler[ucuncu]);
                 pollEmbed.addField(`${emojiler[ucuncu]} ${trimer[ucuncu].trim()}`, `\u200B`, true);
                 pollEmbed.setColor("BLUE")
-                pollEmbed.setFooter(`Oylamayı yapan: ${message.author.tag}`)
+                pollEmbed.setFooter(`Anketi yapan: ${message.author.tag}`)
                 pollEmbed.setTimestamp()
             };
             
