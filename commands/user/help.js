@@ -16,7 +16,7 @@ if(!message.guild.me.hasPermission('EMBED_LINKS')) return
 if(!args[0]) {
 const yardım = new MessageEmbed()
 .setColor("YELLOW")
-.setTitle(`Moldup Yardım Menüsü`)
+.setTitle(`<:degnek:809142151770275921> Moldup Yardım Menüsü`)
 .setDescription(`
 \`\`\`                                                                                                         \`\`\`
 
@@ -184,7 +184,7 @@ message.channel.send(kayıt)
 if(args[0].toLowerCase() === 'moderasyon'||args[0].toLowerCase() === 'mod') {
  const kayıt = new MessageEmbed()
 .setColor('BLUE')
-.setTitle('<:kullanici:809143152858497095> Moldup Moderasyon Menüsü')
+.setTitle('<:moderasyon:809140448286212118> Moldup Moderasyon Menüsü')
 .setDescription(`
 \`\`\`                                                                                                         \`\`\`
 
