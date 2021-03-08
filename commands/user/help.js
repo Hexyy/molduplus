@@ -57,7 +57,7 @@ const yardım = new MessageEmbed()
 
 
 <:degnek:809142151770275921> **${ayarlar.prefix}yardım emoji**
-<:emoji:766586536044527616> **Emoji** menüsünde bulunan komutları gösterir.
+<:hypesquad_events:766651060969930752> **Emoji** menüsünde bulunan komutları gösterir.
 
 
 <a:linkler:816781887615008800> **Bağlantılarım**
@@ -111,19 +111,35 @@ message.channel.send(müzik)
 \`\`\`                                                                                                          \`\`\`
 
 <:degnek:809142151770275921> **Sunucunuza Hızlı Yoldan Emoji Yüklemek İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}emoji-yükle [ emoji ismi ] [ emoji , bağlantı , dosya ]\`
+<:hypesquad_events:766651060969930752> \`${ayarlar.prefix}emoji-yükle [ emoji ismi ] [ emoji , bağlantı , dosya ]\`
 
 
 <:degnek:809142151770275921> **Bir Emoji Hakkında Bilgi Almak İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}emoji-bilgi [ emoji ]\`
+<:hypesquad_events:766651060969930752> \`${ayarlar.prefix}emoji-bilgi [ emoji ]\`
 
 
 <:degnek:809142151770275921> **Botun Sunucularından Emoji Bulmak İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}emoji-bul [ emoji ismi ]\`
+<:hypesquad_events:766651060969930752> \`${ayarlar.prefix}emoji-bul [ emoji ismi ]\`
+
+
+<:degnek:809142151770275921> **Botun Sunucularından Rastgele Emojiler Bulmak İçin:**
+<:hypesquad_events:766651060969930752> \`${ayarlar.prefix}emoji-rastgele [ emoji sayısı ] { hareketli/hareketsiz }\`
 
 
 <:degnek:809142151770275921> **Sunucudan Bir Emojiyi Silmek İçin:**
-<:kullanici:809143152858497095> \`${ayarlar.prefix}emoji-sil [ emoji ]\`
+<:hypesquad_events:766651060969930752> \`${ayarlar.prefix}emoji-sil [ emoji ]\`
+
+
+<:degnek:809142151770275921> **Sunucudaki Bir Emojiyi Belirli Bir Role Özel Yapmak İçin:**
+<:hypesquad_events:766651060969930752> \`${ayarlar.prefix}emoji-rol [ emoji ismi ] [ @rol ]\`
+
+
+<:degnek:809142151770275921> **Sunucuya Çok Hızlı Bir Şekilde Emoji Yüklemek İçin:**
+<:hypesquad_events:766651060969930752> \`${ayarlar.prefix}emoji-hızlı [ emoji ]\`
+
+
+<:degnek:809142151770275921> **Kanaldaki Son Atılan Mesaja Tepki Eklemek İçin:**
+<:hypesquad_events:766651060969930752> \`${ayarlar.prefix}tepki [ emoji ]\`
 
 
  \`\`\`                                                                                                         \`\`\`
