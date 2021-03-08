@@ -370,6 +370,10 @@ if(args[0].toLowerCase() === 'bot'||args[0].toLowerCase() === 'robot') {
 <:kayit:809140124621078598> \`${ayarlar.prefix}öneri <öneri>\`
         
 
+<:degnek:809142151770275921> **Anket Yapmak İçin:**
+<:kayit:809140124621078598> \`${ayarlar.prefix}anket [ soru ]/[ seçenek ], { seçenek (en fazla 10) }\`
+
+
         \`\`\`                                                                                                         \`\`\`
             `)    
           message.channel.send(öneri)
