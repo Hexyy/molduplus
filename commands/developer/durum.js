@@ -17,7 +17,7 @@ module.exports = {
            if (!durum) return message.channel.send("Lütfen botun ayarlanacağı durumu giriniz.")
            
            let statü = status.replace("oynuyor", "PLAYING").replace("izliyor", "WATCHING").replace("dinliyor", "LISTENING")
-           client.user.setActivity(durum, { type: statü }).catch(err => message.channel.send(`\`\`\`Bir hata oluştu: ${err}\`\`\``)))
+           client.user.setActivity(durum, { "type": statü }).catch(err => message.channel.send(`\`\`\`Bir hata oluştu: ${err}\`\`\``)))
            
            message.channel.send("👍")
        
