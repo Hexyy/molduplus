@@ -4,7 +4,7 @@ module.exports = {
     name: 'oylama',
     aliases: ['poll'],
     description: 'Bir oylama mesajı oluşturursunuz.',
-    usage: ['oylama [ seçenek ], [ seçenek ], { seçenek (en fazla 10) }'],
+    usage: ['oylama [ soru ]/[ seçenek ], [ seçenek ], { seçenek (en fazla 10) }'],
     /** 
     * @param {Discord.Client} client
     * @param {Discord.Message} message
@@ -36,7 +36,8 @@ const alpuhata = (hata) => {
         message.channel.send(pollEmbed).then(async pollMsg => {
             for (let ucuncu = 0; ucuncu < ikinci; ucuncu++) {
                 pollMsg.react(emojiler[ucuncu]);
-                pollEmbed.addField(`${emojiler[ucuncu]} ${trimer[ucuncu].trim()}`, `\u200B`, true);
+                pollEmbed.setDescription(`${emojiler[ucuncu]} **${trimer[ucuncu].trim()}**`);
+                pollEmbed.setColor("BLUE")
             };
             
             await pollMsg.edit(pollEmbed.setTitle(hmmm));
