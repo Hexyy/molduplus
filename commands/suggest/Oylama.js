@@ -38,6 +38,8 @@ const alpuhata = (hata) => {
                 pollMsg.react(emojiler[ucuncu]);
                 pollEmbed.addField(`${emojiler[ucuncu]} ${trimer[ucuncu].trim()}`, `\u200B`, true);
                 pollEmbed.setColor("BLUE")
+                pollEmbed.setFooter(`Oylamayı yapan: ${message.author.tag}`)
+                pollEmbed.setTimestamp()
             };
             
             await pollMsg.edit(pollEmbed.setTitle(hmmm));
