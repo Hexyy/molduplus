@@ -98,6 +98,10 @@ const müzik = new MessageEmbed()
 <:muzik:803194953898655775> \`${ayarlar.prefix}geri\` **|** \`${ayarlar.prefix}ayrıl\`
 
 
+<:degnek:809142151770275921> **Kuyrukta ki Şarkıları Karıştırmak İçin**
+<:muzik:803194953898655775> \`${ayarlar.prefix}karıştır\`
+
+
  \`\`\`                                                                                                         \`\`\`
 `)
 message.channel.send(müzik)
