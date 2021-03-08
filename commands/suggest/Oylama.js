@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 
 module.exports = {
-    name: 'oylama',
-    aliases: ['poll'],
+    name: 'anket',
+    aliases: ['poll', 'oylama'],
     description: 'Bir oylama mesajı oluşturursunuz.',
-    usage: ['oylama [ soru ]/[ seçenek ], [ seçenek ], { seçenek (en fazla 10) }'],
+    usage: ['anket [ soru ]/[ seçenek ], [ seçenek ], { seçenek (en fazla 10) }'],
     /** 
     * @param {Discord.Client} client
     * @param {Discord.Message} message
