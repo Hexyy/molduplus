@@ -18,10 +18,10 @@ let mutekisi = message.mentions.members.first()
 
 let userlar = message.mentions.members.map(user => message.guild.members.cache.get(user.id))
 
-if(!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(new Discord.MessageEmbed().setTitle('Hata').setColor("RED").setDescription(`<:moldup_sinirli:783582342643056661> Bu komutu kullanmak için \`Rolleri Yönet\` iznine sahip olman gerekli.`))
+if(!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Bu komutu kullanmak için \`Rolleri Yönet\` iznine sahip olman gerekli.`))
 
   
-if (!mutekisi) return message.channel.send(new Discord.MessageEmbed().setTitle('Hata').setColor("RED").setColor("RED").setDescription(`<:moldup_hayir:783582180113907742> Bir kullanıcı etiketleyerek tekrar deneyiniz.`))
+if (!mutekisi) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Bir kullanıcı etiketleyerek tekrar deneyiniz.`))
   
     let muterol = message.guild.roles.cache.find(role => role.name == mutelirolu);
   if (!muterol) {
