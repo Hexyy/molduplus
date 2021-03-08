@@ -39,7 +39,7 @@ const alpuhata = (hata) => {
                 pollEmbed.addField(`${emojiler[ucuncu]} ${trimer[ucuncu].trim()}`, `\u200B`, true);
             };
             
-            await pollMsg.edit(pollEmbed.setTitle(hmmm)));
+            await pollMsg.edit(pollEmbed.setTitle(hmmm));
         });
     } catch(err) {
         message.channel.send("```Bir hata oluştu: " + err + "```");
