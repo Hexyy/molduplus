@@ -44,7 +44,7 @@ let kayıtsız = message.guild.roles.cache.get(kayıtsızroleID);
   if(!args[0] || !message.mentions.members.first()) return message.channel.send(nn.setColor('RED').setDescription(`<:moldup_hayir:783582180113907742> Bir kullanıcı etiketleyerek tekrar deneyiniz.`)).then(a => a.delete({timeout: 10000}));
 
 let isim;
-if(args[1]) {
+if(args.slice(1)) {
 isim = args.slice(1).join(' ');
 } else {
 isim = member.user.username;
