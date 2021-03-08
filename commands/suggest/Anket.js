@@ -15,7 +15,7 @@ module.exports = {
     .setColor('RED')
     .setDescription(`**${message.author.username}** bu komutu kullanabilmek için \`Sunucuyu Yönet\` yetkisine veya \`Moldup Kontrol\` adında bir role sahip olmalısın!`)
     if(!message.guild.me.hasPermission(['SEND_MESSAGES','MANAGE_ROLES','EMBED_LINKS'])) return
-    let rol = message.guild.roles.cache.find(role => role.name == "Moldup Kontrol");
+    let rol = message.guild.roles.cache.find(role => role.name.includes("Moldup Kontrol"));
     if (!message.member.hasPermission('MANAGE_SERVER') && !message.member.roles.cache.has(rol.id)) return message.channel.send(noperm.setTitle('<:hata:813391295665930260> Yetersiz Yetki!'))
 
 const alpuhata = (hata) => {
