@@ -40,7 +40,7 @@ let kayıtsız = message.guild.roles.cache.get(kayıtsızroleID);
 
 
 let isim;
-if(args[1]) {
+if(args.slice(1)) {
 isim = args.slice(1).join(' ');
 } else {
 isim = member.user.username;
