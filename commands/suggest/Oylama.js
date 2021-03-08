@@ -36,7 +36,7 @@ const alpuhata = (hata) => {
         message.channel.send(pollEmbed).then(async pollMsg => {
             for (let ucuncu = 0; ucuncu < ikinci; ucuncu++) {
                 pollMsg.react(emojiler[ucuncu]);
-                pollEmbed.setDescription(`${emojiler[ucuncu]} **${trimer[ucuncu].trim()}**`);
+                pollEmbed.addField(`${emojiler[ucuncu]} ${trimer[ucuncu].trim()}`, `\u200B`, true);
                 pollEmbed.setColor("BLUE")
             };
             
