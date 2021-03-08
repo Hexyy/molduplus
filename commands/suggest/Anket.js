@@ -31,7 +31,7 @@ const alpuhata = (hata) => {
         if (ikinci > 10) return alpuhata('Maksimum 10 adet şık koyabilirsiniz.');
         if (trimer.includes(' ')) return alpuata('Boş bir şık koyamazsınız.')
         
-        const pollEmbed = new Discord.MessageEmbed().setTitle('<a:yuklenme:783425041869307936> Oylama hazırlanıyor, lütfen bekleyiniz.');
+        const pollEmbed = new Discord.MessageEmbed().setTitle('<a:yuklenme:783425041869307936> Anket hazırlanıyor, lütfen bekleyiniz.');
         const emojiler = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣', '🔟'];
         message.channel.send(pollEmbed).then(async pollMsg => {
             for (let ucuncu = 0; ucuncu < ikinci; ucuncu++) {
