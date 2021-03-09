@@ -12,6 +12,12 @@ usage: ['emoji-rol [ emoji ismi ] [ @rol ]'],
 */
 run: async (client , message ,args) => {
   
+ const noperm = new Discord.MessageEmbed()
+.setColor('RED')
+.setDescription(`**${message.author.username}** bu komutu kullanabilmek için \`Sunucuyu Yönet\` yetkisine sahip olmalısın!`)
+if(!message.guild.me.hasPermission(['SEND_MESSAGES','MANAGE_ROLES','EMBED_LINKS'])) return
+if(!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send(noperm.setTitle('<:hata:813391295665930260> Yetersiz Yetki!'))
+ 
   if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`**${message.author.username}** bir emoji adı girmeyi unuttun!`))
 
 const s = args[0].split(' ').filter(x => x.includes('<') && x.includes('>'))[0];
