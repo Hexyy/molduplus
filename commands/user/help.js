@@ -110,7 +110,7 @@ message.channel.send(müzik)
  if(args[0].toLowerCase() === 'emoji') {
  const emoji = new MessageEmbed()
 .setColor('BLUE')
-.setTitle('<:kullanici:809143152858497095> Moldup Emoji Menüsü')
+.setTitle('<:hypesquad_events:766651060969930752> Moldup Emoji Menüsü')
 .setDescription(`
 \`\`\`                                                                                                          \`\`\`
 
