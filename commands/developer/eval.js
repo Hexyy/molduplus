@@ -7,11 +7,7 @@ module.exports = {
    * @param {String[]} args
    */
    run: async (client , message ,args) => {
-    const noperm = new Discord.MessageEmbed()
-    .setColor('RED')
-    .setDescription(`**${message.author.username}** bu komutu kullanabilmek için \`botun yapımcısı\` olmalısın!`)
-    if(!message.guild.me.hasPermission(['SEND_MESSAGES','MANAGE_EMOJIS','EMBED_LINKS'])) return
-    if (message.author.id !== "696373721992003604" && message.author.id !== "722186767704522812") return message.channel.send(noperm.setTitle('<:hata:813391295665930260> Yetersiz Yetki!'))
+    if (message.author.id !== "696373721992003604" && message.author.id !== "722186767704522812") return
        
        try {
       const code = args.join(" ");
