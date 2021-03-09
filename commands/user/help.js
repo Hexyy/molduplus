@@ -121,6 +121,9 @@ message.channel.send(müzik)
 <:degnek:809142151770275921> **Bir Emoji Hakkında Bilgi Almak İçin:**
 <:hypesquad_events:766651060969930752> \`${ayarlar.prefix}emoji-bilgi [ emoji ]\`
 
+<:degnek:809142151770275921> **Bir Emojinin Büyük Versiyonunu Almak İçin:**
+<:hypesquad_events:766651060969930752> \`${ayarlar.prefix}büyüt [ emoji ismi ]\`
+
 
 <:degnek:809142151770275921> **Botun Sunucularından Emoji Bulmak İçin:**
 <:hypesquad_events:766651060969930752> \`${ayarlar.prefix}emoji-bul [ emoji ismi ]\`
