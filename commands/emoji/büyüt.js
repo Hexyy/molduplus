@@ -27,6 +27,7 @@ emoji = message.guild.emojis.cache.find(x => x.name === args.slice(0).join('-'))
 
 return message.channel.send(new Discord.MessageEmbed()
 .setColor('BLUE')
+.setTitle(`${emoji.name} büyütülmüş hali`)
 .setImage(emoji.url)
 .setFooter(message.author.tag + ` tarafından istendi`, message.author.avatarURL({ dynamic: true })))
 } catch(error) {
