@@ -20,7 +20,7 @@ if(!client.player.isPlaying(message)) {
   let kuyruk = client.player.getQueue(message)
 if(!kuyruk) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('<:hata:813391295665930260> Hata').setDescription(`Bu sunucuda şarkı kuyruğu bulunmuyor!`))
 let k = kuyruk.tracks.map((tracks , i) => {
-return `${i === 0 ? '<a:yayinda:802533225738141737>' : `${i+1}:`} **[${tracks.title}](${tracks.url}) (${tracks.author})**`
+return `${i === 0 ? '<a:yayinda:802533225738141737>' : `${i+1}:`} **[${tracks.title}](${tracks.url})**`
 }).join('\n')
 message.channel.send(new Discord.MessageEmbed().setDescription(k).setColor('YELLOW'))
 }
