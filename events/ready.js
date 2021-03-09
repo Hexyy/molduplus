@@ -9,7 +9,7 @@ module.exports = (client) => {
 //setInterval(function() {
 
          //var random = Math.floor(Math.random()*(durumlar.length-0+1)+0);
-         client.user.setActivity('bot.moldup.tk | ?yardım', {"type": "WATCHING"});
+         client.user.setActivity(client.user.presence.activities[0].name, {"type": client.user.presence.activities[0].type});
 
         //}, 2 * 5000);
     
