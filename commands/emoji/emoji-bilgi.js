@@ -4,7 +4,7 @@ moment.locale('tr');
 
 module.exports = {
  name: 'emoji-bilgi',
- aliases: ['emojibilgi', 'emoji-info', 'emojiinfo'] ,
+ aliases: ['emojibilgi', 'emoji-info', 'emojiinfo', 'e-bilgi', 'ebilgi', 'e-info', 'einfo'] ,
 description: 'Sunucu için hızlı yoldan emoji eklersiniz.',
 usage: ['emoji-bilgi [ emoji ismi ]'],
 /** 
