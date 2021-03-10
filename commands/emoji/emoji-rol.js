@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
  name: 'emoji-rol',
- aliases: ['emojirol', 'emoji-role', 'emojirole'] ,
+ aliases: ['emojirol', 'emoji-role', 'emojirole', 'e-rol', 'erol', , 'e-role', 'erole'] ,
 description: 'Bir emojiyi belirli bir role özel yapabilirsiniz.',
 usage: ['emoji-rol [ emoji ismi ] [ @rol ]'],
 /** 
