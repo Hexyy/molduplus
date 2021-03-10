@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
  name: 'emoji-bul',
- aliases: ['emojibul'] ,
+ aliases: ['emojibul', 'e-bul', 'ebul'] ,
 description: 'Botun sunuculardan emoji ararsınız.',
 usage: ['emoji-bul [ emoji isim ]'],
 /** 
