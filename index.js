@@ -45,6 +45,7 @@ client.player = player
  * --------------------------- Karşılama -------------------
  */
 client.on('guildMemberAdd' , async(member) => {
+const { karsilama } = require('./database/KarşılamaDataBase')
 // Oto Rol
 if(!member.guild.me.hasPermission('MANAGE_ROLES')) return
 let rol = await karsilama.fetch(`otorol_${member.guild.id}`)
@@ -64,7 +65,7 @@ let mess = mesaj.replace('[üye]' , member)
 .replace('[sunucu-ad]' , member.guild.name)
 .replace('[sunucu-id]' , member.guild.id)
 .replace('[sunucu-üye]' , member.guild.memberCount)
-member.send(mess).catch(e => client.channels.cache.get('801860207256797194').send('Hata').then(m => m.delete()))
+member.send(mess).catch(e => client.channels.cache.get('801860207256797194').send('Hata'))
 // Özel Mesaj Bitiş
 
 // Kanal Mesaj 
