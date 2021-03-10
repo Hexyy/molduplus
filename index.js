@@ -77,7 +77,7 @@ let mess = mesaj.replace('[üye]' , member)
 .replace('[sunucu-ad]' , member.guild.name)
 .replace('[sunucu-id]' , member.guild.id)
 .replace('[sunucu-üye]' , member.guild.memberCount)
-member.send(mess).catch(e => client.channels.cache.get('801860207256797194').send(new Discord.MessageEmbed().setColor('RED').setTitle('<:hata:813391295665930260> Hata').setDescription(`**${member.guild.name}** isimli sunucuda \`${e}\` sebepli hata; \`${kod(15)}\` kodu ile tespit edildi.`)))
+member.send(mess).catch(e => client.channels.cache.get('819234253593247775').send(new Discord.MessageEmbed().setColor('RED').setTitle('<:hata:813391295665930260> Hata').setDescription(`**${member.guild.name}** isimli sunucuda \`${e}\` sebepli hata; \`${kod(15)}\` kodu ile tespit edildi.`)))
 })
 // Özel Mesaj Bitiş
 
