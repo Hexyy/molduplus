@@ -41,12 +41,15 @@ if (!mutekisi) return message.channel.send(new Discord.MessageEmbed().setTitle("
       console.log(e.stack);
     }
   }
-  
-  let numero = message.mentions.members.map(user => message.guild.members.cache.get(user.id).user.tag).size
-  
+
+  let reason = args.slice(0).map(r =>{
+    if(r.startsWith("<@")) return;
+    return r
+  });
+    
   let tagm = message.mentions.members.map(user => message.guild.members.cache.get(user.id).user.tag).join(", ")
                                           
-  userlar.forEach(async u => await u.roles.add(muterol.id, `[ ${message.author.tag}: Süper Mute ] Şu kişilere atıldı: ${args.slice(0).join(" ")}`).catch(err => message.channel.send(`\`\`\`Bir hata oluştu: ${err}\`\`\``)))
+  userlar.forEach(async u => await u.roles.add(muterol.id, `[ ${message.author.tag}: Süper Mute ] ${reason}`).catch(err => message.channel.send(`\`\`\`Bir hata oluştu: ${err}\`\`\``)))
   
   return message.channel.send("**" + tagm + "** başarıyla süper mutelendi.")
   
