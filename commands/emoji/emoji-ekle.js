@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
  name: 'emoji-ekle',
- aliases: ['emojiekle', 'emoji-yükle', 'emojiyükle'] ,
+ aliases: ['emojiekle', 'emoji-yükle', 'emojiyükle', 'e-yükle', 'eyükle', 'e-ekle', 'eekle'] ,
 description: 'Sunucu için hızlı yoldan emoji eklersiniz.',
 usage: ['emoji-ekle'],
 /** 
