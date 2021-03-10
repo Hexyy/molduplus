@@ -54,7 +54,10 @@ let role = member.guild.roles.cache.get(rol)
 if(role.position >= member.guild.me.roles.highest.position) return
 await member.roles.add(role)
 // Oto Rol Bitiş
-
+})
+    
+client.on('guildMemberAdd' , async(member) => {
+const { karsilama } = require('./database/KarşılamaDataBase')
 // Özel Mesaj 
 let mesaj = await karsilama.fetch(`özelmesaj_${member.guild.id}`)
 if(!mesaj) return
@@ -66,8 +69,11 @@ let mess = mesaj.replace('[üye]' , member)
 .replace('[sunucu-id]' , member.guild.id)
 .replace('[sunucu-üye]' , member.guild.memberCount)
 member.send(mess).catch(e => client.channels.cache.get('801860207256797194').send('Hata'))
+})
 // Özel Mesaj Bitiş
 
+client.on('guildMemberAdd' , async(member) => {
+const { karsilama } = require('./database/KarşılamaDataBase')
 // Kanal Mesaj 
 let kanal = await karsilama.fetch(`kanalmesajkanal_${member.guild.id}`)
 let mesaj1 = await karsilama.fetch(`kanalmesaj_${member.guild.id}`)
