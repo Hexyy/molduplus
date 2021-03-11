@@ -11,6 +11,6 @@ module.exports = {
 * @param {String[]} args
 */
 run: async (client , message ,args) => {
-message.channel.send(new Discord.MessageEmbed().setAuthor("Moldup ne durumda?", message.author.displayAvatarURL({ dynamic: true })).setDescription("[Hemen takip edin](https://moldup.statuspage.io/)").setFooter(message.author.tag + " tarafından istendi").setTimestamp().setColor("BLUE"))
+message.channel.send(new Discord.MessageEmbed().setAuthor("Moldup ne durumda?", message.author.displayAvatarURL({ dynamic: true })).setDescription("[Hemen takip edin](https://upbots.statuspage.io/)").setFooter(message.author.tag + " tarafından istendi").setTimestamp().setColor("BLUE"))
 }
 }
