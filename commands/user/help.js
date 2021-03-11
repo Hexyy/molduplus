@@ -62,10 +62,10 @@ const yardım = new MessageEmbed()
 
 <a:linkler:816781887615008800> **Bağlantılarım**
 **[<:youtube:816736321573879848> Alpu TV](https://www.youtube.com/AlpuTV)**
-**[:envelope: Moldup Davet Linki](https://bot.moldup.tk/davet.html)**
-**[<:bughunter_level_1:766651275147476992> Moldup Destek Sunucusu](https://bot.moldup.tk/destek.html)**
-**[<:vote:788399561806839858> Moldup'a Oy Ver](https://bot.moldup.tk/oy.html)**
-**[<a:cark:819467735448027156> Moldup'ın Durumunu Takip Et](https://bot.moldup.tk/durum.html)**
+**[<:blobmail:819477083252195380> Moldup Davet Linki](https://bot.moldup.tk/davet.html)**
+**[<:blobhunter:819477392924999691> Moldup Destek Sunucusu](https://bot.moldup.tk/destek.html)**
+**[<:blobokey:796365500102737941> Moldup'a Oy Ver](https://bot.moldup.tk/oy.html)**
+**[<a:blobwork:819477910113091585> Moldup'ın Durumunu Takip Et](https://bot.moldup.tk/durum.html)**
 
 
 \`\`\`                                                                                                         \`\`\`
