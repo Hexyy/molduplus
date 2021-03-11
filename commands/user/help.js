@@ -65,7 +65,7 @@ const yardım = new MessageEmbed()
 **[:envelope: Moldup Davet Linki](https://bot.moldup.tk/davet.html)**
 **[<:bughunter_level_1:766651275147476992> Moldup Destek Sunucusu](https://bot.moldup.tk/destek.html)**
 **[<:vote:788399561806839858> Moldup Oy Ver](https://bot.moldup.tk/oy.html)**
-**[<a:cark:819467735448027156> Moldup'ın Durumunu Takip Et](https://moldup.statuspage.io/)
+**[<a:cark:819467735448027156> Moldup'ın Durumunu Takip Et](https://moldup.statuspage.io/)**
 
 
 \`\`\`                                                                                                         \`\`\`
