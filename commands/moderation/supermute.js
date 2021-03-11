@@ -42,7 +42,7 @@ if (!mutekisi) return message.channel.send(new Discord.MessageEmbed().setTitle("
     }
   }
 
-  let reason = args.slice(0).map(r =>{
+  let reason = args.slice(message.mentions.members.size).map(r =>{
     if(r.startsWith("<@")) return;
     return r
   });
