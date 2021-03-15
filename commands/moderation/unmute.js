@@ -30,9 +30,7 @@ if (!mutekisi) return message.channel.send(new Discord.MessageEmbed().setTitle("
     let muterol = message.guild.roles.cache.find(role => role.name == mutelirolu);
  
  let reason = args.slice(message.mentions.members.size).join(" ")
-    
-  let tagm = message.mentions.members.map(user => message.guild.members.cache.get(user.id).user.tag).join(", ")
-                                          
+                                              
   userlar.forEach(async u => await u.roles.remove(muterol.id, `[ ${message.author.tag}: Un-Mute ] ${reason}`).catch(err => message.channel.send(`\`\`\`Bir hata oluştu: ${err}\`\`\``)))
   
  let tagm = message.mentions.members.map(user => message.guild.members.cache.get(user.id)).join(", ")
