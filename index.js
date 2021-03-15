@@ -5,6 +5,8 @@ const handler = require('cords-handler');
 const fetch = require('node-fetch')
 const logs = require('discord-logs');
 logs(client)
+const hatahook = new WebhookClient("819234440819507200", "hlSEN-R_9GYSTznweqmMCGMXFlEXnBKXReFrhEmOR0oqRTwrmArK-5jxWX7YwQEjUSB2")
+
 
 const chclient = new handler.Client()
 const cmd = new handler.CommandHandler(client,chclient);
@@ -77,7 +79,7 @@ let mess = mesaj.replace('[üye]' , member)
 .replace('[sunucu-ad]' , member.guild.name)
 .replace('[sunucu-id]' , member.guild.id)
 .replace('[sunucu-üye]' , member.guild.memberCount)
-member.send(mess).catch(e => client.channels.cache.get('819234253593247775').send(new Discord.MessageEmbed().setColor('RED').setTitle('<:hata:813391295665930260> Hata').setDescription(`**${member.guild.name}** isimli sunucuda \`${e}\` sebepli hata; \`${kod(15)}\` kodu ile tespit edildi.`)))
+member.send(mess).catch(e => hatahook.send(new Discord.MessageEmbed().setColor('RED').setTitle('<:hata:813391295665930260> Hata').setDescription(`**${member.guild.name}** isimli sunucuda \`${e}\` sebepli hata; \`${kod(15)}\` kodu ile tespit edildi.`)))
 })
 // Özel Mesaj Bitiş
 
