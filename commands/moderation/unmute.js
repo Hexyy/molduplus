@@ -39,7 +39,7 @@ mod.add(`işlem_${message.guild.id}`, 1)
  
  let işlem = mod.fetch(`işlem_${message.guild.id}`)
  
-  return message.channel.send("<:verified:803327894444441640> `" + işlem + "` " + tagm + " üyelerinin susturulmaları kaldırıldı.")
+  return message.channel.send("<:verified:803327894444441640> `İşlem #" + işlem + "` " + tagm + " üyelerinin susturulmaları kaldırıldı.")
 
 }
 }
