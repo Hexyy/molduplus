@@ -27,10 +27,10 @@ if (!mutekisi) return message.channel.send(new Discord.MessageEmbed().setTitle("
   if (!muterol) {
     try {
       muterol = await message.guild.roles.create({
-        name: mutelirolu,
+        name: "Muted",
         color: "#313136",
         permissions: [],
-        reason: message.author.tag + ' - Süper Mute'
+        reason: `[ ${message.author.tag}: Süper Mute ] Muteli Rolü Oluşturuldu`
       });
       message.guild.channels.forEach(async (channel, id) => {
         await channel.createOverwrite(muterol, {
