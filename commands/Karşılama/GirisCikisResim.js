@@ -42,11 +42,11 @@ await karsilama.delete(`gçresim.cikis.${message.guild.id}`)
    } else if (args[0] === "çıkış" || args[0] === "ç" || args[0] === "c" || args[0] === "cikis") {
     await karsilama.set(`gçresim.cikis.${message.guild.id}`, resmi.url)
   return message.channel.send(new Discord.MessageEmbed().setColor("GREEN").setTitle("Görev Tamamlandı!").setDescription(`<:moldup_evet:783582088346468384> Çıkış mesaj resmi başarıyla ayarlandı!`).setImage(resmi.url))
-   } else if(resim && !resmi) {
+   }} else if(resim && !resmi) {
        if (args[0] === "giriş" || args[0] === "g" || args[0] === "g" || args[0] === "giris") {
    await karsilama.set(`gçresim.giris.${message.guild.id}`, resim)
   return message.channel.send(new Discord.MessageEmbed().setColor("GREEN").setTitle("Görev Tamamlandı!").setDescription(`<:moldup_evet:783582088346468384> Giriş mesaj resmi başarıyla ayarlandı!`).setImage(resim))
-   } else if (args[0] === "çıkış" || args[0] === "ç" || args[0] === "c" || args[0] === "cikis") {
+   }} else if (args[0] === "çıkış" || args[0] === "ç" || args[0] === "c" || args[0] === "cikis") {
     await karsilama.set(`gçresim.cikis.${message.guild.id}`, resim)
   return message.channel.send(new Discord.MessageEmbed().setColor("GREEN").setTitle("Görev Tamamlandı!").setDescription(`<:moldup_evet:783582088346468384> Çıkış mesaj resmi başarıyla ayarlandı!`).setImage(resim))
 } else {
@@ -55,8 +55,6 @@ await karsilama.delete(`gçresim.cikis.${message.guild.id}`)
 
 **Not**
 Resminiz \`640x270\` boyutunda olmalıdır.`))
-}
-}
 }
 }
 }
