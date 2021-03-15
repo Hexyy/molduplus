@@ -14,10 +14,8 @@ module.exports = {
 */
 run: async (client , message ,args) => {
 
-  if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(new Discord.MessageEmbed().setColor("RED").setTitle('Hata').setDescription(`<:moldup_sinirli:783582342643056661> Bu komutu kullanmak için \`Yönetici\` iznine sahip olman gerekli.`))
-  if(!args[0]) return message.channel.send(new Discord.MessageEmbed()
-  .setTitle('Hata')
-  .setDescription(`<:moldup_hayir:783582180113907742> Sunucuya giren kişilere verilecek otomatik ismi girmelisin!
+  if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Yetersiz Yetki!").setColor("RED").setDescription(`**${message.author.username}** Bu komutu kullanmak için \`Yönetici\` iznine sahip olman gerekli.`))
+  if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`**${message.author.username}** Sunucuya giren kişilere verilecek otomatik ismi girmelisin!
   
   **Kullanabileceğiniz Değişkenler:**
   {kullanıcı}: Kullanıcı adını yazar
