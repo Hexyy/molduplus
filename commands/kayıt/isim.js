@@ -14,10 +14,10 @@ module.exports = {
 */
 run: async (client , message ,args) => {
   
-if (!message.member.hasPermission('MANAGE_NICKNAMES')) return message.channel.send(new Discord.MessageEmbed().setColor("RED").setTitle('Hata').setDescription(`<:moldup_sinirli:783582342643056661> Bu komutu kullanmak için \`Kullanıcı Adlarını Yönet\` iznine sahip olman gerekli.`))
-if(!args[0] || !message.mentions.members.first()) return message.channel.send(new Discord.MessageEmbed().setTitle('Hata').setColor("RED").setColor("RED").setDescription(`<:moldup_hayir:783582180113907742> Bir kullanıcı etiketleyerek tekrar deneyiniz.`)).then(a => a.delete({timeout: 10000}));
-if(!args[1]) return message.channel.send(new Discord.MessageEmbed().setTitle('Hata').setColor("RED").setDescription(`<:moldup_hayir:783582180113907742> Kullanıcının yeni ismini girerek tekrar deneyiniz.`)).then(a => a.delete({timeout: 10000})) 
-if (message.guild.members.cache.get(message.author.id).roles.highest.position <= message.mentions.members.first().roles.highest.position) return  message.channel.send(new Discord.MessageEmbed().setTitle('Hata').setColor("RED").setDescription(`<:moldup_hayir:783582180113907742> Senin gücün buna yetmez, ondan daha yüksek bir role sahip ol da öyle dene.`))
+if (!message.member.hasPermission('MANAGE_NICKNAMES')) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Yetersiz Yetki!").setColor("RED").setDescription(`**${message.author.username}** Bu komutu kullanmak için \`Kullanıcı Adlarını Yönet\` iznine sahip olman gerekli.`))
+if(!args[0] || !message.mentions.members.first()) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`**${message.author.username}** Bir kullanıcı etiketleyerek tekrar deneyiniz.`))
+if(!args[1]) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`**${message.author.username}** Kullanıcının yeni ismini girerek tekrar deneyiniz.`))
+if (message.guild.members.cache.get(message.author.id).roles.highest.position <= message.mentions.members.first().roles.highest.position) return  message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`**${message.author.username}** Senin gücün buna yetmez, ondan daha yüksek bir role sahip ol da öyle dene.`))
 const datas = await kayit.fetch(`tag.${message.guild.id}`);
               let user = message.mentions.users.first();
  
