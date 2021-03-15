@@ -48,7 +48,7 @@ isim = args.slice(1).join(' ');
 isim = member.user.username;
 }
 
-if(!args[0] || !message.mentions.members.first()) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Bir Kullanıcı Etiketlemen Gerekiyor!").setColor("RED").setDescription(`**${message.author.username}** Bir kullanıcı etiketleyerek tekrar deneyiniz.`))
+if(!args[0] || !message.mentions.members.first()) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`**${message.author.username}** Bir kullanıcı etiketleyerek tekrar deneyiniz.`))
 const n = await kayit.fetch(`tag.${message.guild.id}`);
 
   
