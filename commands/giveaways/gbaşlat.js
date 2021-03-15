@@ -27,10 +27,10 @@ run: async (client , message ,args) => {
 \`1d = 1 Gün | 1h = 1 Saat | 1m = 1 Dakika | 1s = 1 Saniye\`
     `)).then(a => a.delete({timeout: 5000}));
     let kazanan = args[1]
-    if(isNaN(kazanan) || (parseInt(kazanan) <= 0)) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('Hata').setDescription(` Lütfen kazanan sayısını belirtiniz!`)).then(a => a.delete({timeout: 5000}));
-    if (Number(kazanan) > 30) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('Hata').setDescription(` Maksimum 30 kazanan, lütfen.`)).then(a => a.delete({timeout: 5000}));
+    if(isNaN(kazanan) || (parseInt(kazanan) <= 0)) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Lütfen kazanan sayısını belirtiniz!`)).then(a => a.delete({timeout: 5000}));
+    if (Number(kazanan) > 30) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Maksimum 30 kazanan, lütfen.`)).then(a => a.delete({timeout: 5000}));
     let ödül = args.slice(2).join(' ')
-    if(!ödül) message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('Hata').setDescription(` Lütfen ödülü belirtiniz!`)).then(a => a.delete({timeout: 5000}));
+    if(!ödül) message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Lütfen ödülü belirtiniz!`)).then(a => a.delete({timeout: 5000}));
     
     message.delete()
     client.çekiliş.start(message.channel, {
@@ -63,13 +63,13 @@ run: async (client , message ,args) => {
             })
     } else {
     let süre = args[1]
-    if(!süre || isNaN(ms(süre))) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('Hata').setDescription(` Lütfen çekilişin sona ereceği zamanı belirtiniz!`)).then(a => a.delete({timeout: 5000}));
-    if (Date.now()+süre < Date.now()+"30s") return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('Hata').setDescription(` Minimum 30 saniyelik süre, lütfen.`)).then(a => a.delete({timeout: 5000}));
+    if(!süre || isNaN(ms(süre))) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Lütfen çekilişin sona ereceği zamanı belirtiniz!`)).then(a => a.delete({timeout: 5000}));
+    if (Date.now()+süre < Date.now()+"30s") return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Minimum 30 saniyelik süre, lütfen.`)).then(a => a.delete({timeout: 5000}));
     let kazanan = args[2]
-    if(isNaN(kazanan) || (parseInt(kazanan) <= 0)) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('Hata').setDescription(` Lütfen kazanan sayısını belirtiniz!`)).then(a => a.delete({timeout: 5000}));
-    if (Number(kazanan) > 30) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('Hata').setDescription(` Maksimum 30 kazanan, lütfen.`)).then(a => a.delete({timeout: 5000}));
+    if(isNaN(kazanan) || (parseInt(kazanan) <= 0)) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Lütfen kazanan sayısını belirtiniz!`)).then(a => a.delete({timeout: 5000}));
+    if (Number(kazanan) > 30) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Maksimum 30 kazanan, lütfen.`)).then(a => a.delete({timeout: 5000}));
     let ödül = args.slice(3).join(' ')
-    if(!ödül) message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('Hata').setDescription(` Lütfen ödülü belirtiniz!`)).then(a => a.delete({timeout: 5000}));
+    if(!ödül) message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Lütfen ödülü belirtiniz!`)).then(a => a.delete({timeout: 5000}));
     
     
             client.çekiliş.start(kanal, {
