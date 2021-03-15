@@ -13,12 +13,17 @@ module.exports = {
 run: async (client , message ,args) => {
 
 if(!message.guild) return
-if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(new Discord.MessageEmbed().setTitle('Hata').setColor("RED").setDescription(`<:moldup_sinirli:783582342643056661> Bu komutu kullanmak için \`Yönetici\` iznine sahip olman gerekli.`))
+const noperm = new Discord.MessageEmbed()
+    .setColor('RED')
+    .setDescription(`**${message.author.username}** bu komutu kullanabilmek için \`Sunucuyu Yönet\` yetkisine sahip olmalısın!`)
+    if(!message.guild.me.hasPermission(['SEND_MESSAGES','MANAGE_ROLES','EMBED_LINKS'])) return
+    if(!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send(noperm.setTitle('<:hata:813391295665930260> Yetersiz Yetki!'))
+
 let resim = args[0]
 let resmi = message.attachments.first()
   
-if (!resim && !resmi) return message.channel.send(new Discord.MessageEmbed()
-.setColor("RED").setTitle("Hata").setDescription(`<:moldup_hayir:783582180113907742> Lütfen bir resim linki gönderiniz veya dosya olarak ekleyiniz!
+if (!resim && !resmi) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('<:hata:813391295665930260> Mesaj Girmeyi Unuttun!')
+.setDescription(`**${message.author.username}** Lütfen bir resim linki gönderiniz veya dosya olarak ekleyiniz!
 
 **Not**
 Resminiz \`640x270\` boyutunda olmalıdır.`))
@@ -34,8 +39,8 @@ karsilama.delete(`gçresim.${message.guild.id}`)
     karsilama.set(`gçresim.${message.guild.id}`, resim)
   return message.channel.send(new Discord.MessageEmbed().setColor("GREEN").setTitle("Görev Tamamlandı!").setDescription(`<:moldup_evet:783582088346468384> Giriş çıkış mesaj resmi başarıyla ayarlandı!`).setImage(resim))
 } else {
-  return message.channel.send(new Discord.MessageEmbed()
-.setColor("RED").setTitle("Hata").setDescription(`<:moldup_hayir:783582180113907742> Lütfen bir resim linki gönderiniz veya dosya olarak ekleyiniz!
+  return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('<:hata:813391295665930260> Mesaj Girmeyi Unuttun!')
+.setDescription(`**${message.author.username}** Lütfen bir resim linki gönderiniz veya dosya olarak ekleyiniz!
 
 **Not**
 Resminiz \`640x270\` boyutunda olmalıdır.`))
