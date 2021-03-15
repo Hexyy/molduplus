@@ -24,7 +24,7 @@ run: async (client , message ,args) => {
       if(!giveaway) return message.channel.send(' Şu çekilişi bulamadım: `'+ args.join(' ') + '`.');
         client.çekiliş.edit(giveaway.messageID, { setEndTimestamp: Date.now() }).then(() => {
             message.channel.send(' Çekiliş `'+(client.çekiliş.options.updateCountdownEvery/1000)+' saniye` sonra sonlandırılacak.').then(a => a.delete({timeout: 5000}));;
-        }).catch((e) => { if(e.startsWith(`\`${giveaway.messageID}\` IDli bir çekiliş zaten bitmiş.`)){ message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`\`${ID}\` IDli bir çekiliş zaten bitmiş.`);
+        }).catch((e) => { if(e.startsWith(`\`${giveaway.messageID}\` IDli bir çekiliş zaten bitmiş.`)){ message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`\`${ID}\` IDli bir çekiliş zaten bitmiş.`));
             } else {
                 console.error(e);
             }
