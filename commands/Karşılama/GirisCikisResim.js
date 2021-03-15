@@ -58,3 +58,5 @@ Resminiz \`640x270\` boyutunda olmalıdır.`))
 }
 }
 }
+}
+}
