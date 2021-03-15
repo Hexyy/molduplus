@@ -42,7 +42,6 @@ client.çekiliş = cekilis
 const { player } = require('./settings/müzik')
 client.player = player
 
-const hatahook = new WebhookClient("819234440819507200", "hlSEN-R_9GYSTznweqmMCGMXFlEXnBKXReFrhEmOR0oqRTwrmArK-5jxWX7YwQEjUSB2")
 /**
  * --------------------------- Karşılama -------------------
  */
@@ -59,6 +58,7 @@ await member.roles.add(role)
 })
     
 client.on('guildMemberAdd' , async(member) => {
+const hatahook = new WebhookClient("819234440819507200", "hlSEN-R_9GYSTznweqmMCGMXFlEXnBKXReFrhEmOR0oqRTwrmArK-5jxWX7YwQEjUSB2")
 const { karsilama } = require('./database/KarşılamaDataBase')
 function kod(length) {
    var result           = '';
