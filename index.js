@@ -348,7 +348,7 @@ if (!await sistem.fetch(`sohbet_${msg.author.id}_${msg.channel.id}`)) return;
   })
        )
   .catch(e => {
-    msg.inlineReply("```Bir hata oluştu: ${e}```")
+    msg.inlineReply("```Bir hata oluştu: " + e + "```")
   });
 });
 
