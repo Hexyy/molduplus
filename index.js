@@ -10,6 +10,7 @@ logs(client)
 const chclient = new handler.Client()
 const cmd = new handler.CommandHandler(client,chclient);
 const { ayarlar } = require('./settings/ayarlar')
+const { mod } = require('./database/ModerasyonDataBase')
 const { karsilama } = require('./database/KarşılamaDataBase')
 const { sistem } = require('./database/SistemDataBase')
 const { log } = require('./database/LogDataBase')
