@@ -363,8 +363,20 @@ if(args[0].toLowerCase() === 'bot'||args[0].toLowerCase() === 'robot') {
 <:bot:809432681192357940> \`${ayarlar.prefix}komutlar\`
     
 
-<:degnek:809142151770275921> **Bota Oy Vermek İçin:**
-<:bot:809432681192357940> \`${ayarlar.prefix}oy\`
+<:degnek:809142151770275921> **Botun Sitesine Gitmek İçin:**
+<:bot:809432681192357940> \`${ayarlar.prefix}site\`
+
+
+<:degnek:809142151770275921> **Botun Durumunu Takip Etmek İçin:**
+<:bot:809432681192357940> \`${ayarlar.prefix}durum-takip\`
+
+
+<:degnek:809142151770275921> **Botun Dokümanlarına Gitmek İçin:**
+<:bot:809432681192357940> \`${ayarlar.prefix}doküman\`
+
+
+<:degnek:809142151770275921> **Sunucunuzun Bir Parçası Olduğu Shardın Bilgisini Almak İçin:**
+<:bot:809432681192357940> \`${ayarlar.prefix}shard-bilgi\`
 
 
 <:degnek:809142151770275921> **Botun Pingini Öğrenmek İçin:**
