@@ -56,7 +56,7 @@ if(!mesaj) return message.channel.send(new Discord.MessageEmbed().setColor('RED'
 **${message.guild.id}**                  
 `))
 
-message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384> **Kanal Mesaj** kanalı ${kanal} olarak ayarlandı!!`))
+message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384> **Kanal Mesaj** kanalı ${kanal}, mesaj\n\n${mesaj}\n\nolarak ayarlandı`))
 await karsilama.set(`kanalmesajkanal_${message.guild.id}` , kanal.id)
 await karsilama.set(`kanalmesaj_${message.guild.id}` , mesaj)
 }
