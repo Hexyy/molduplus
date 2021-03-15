@@ -35,7 +35,7 @@ if (!mutekisi) return message.channel.send(new Discord.MessageEmbed().setTitle("
   
  let tagm = message.mentions.members.map(user => message.guild.members.cache.get(user.id)).join(", ")
    
-  return message.channel.send("<:verified:803327894444441640> " + tagm + " susturulmaları kaldırıldı.")
+  return message.channel.send("<:verified:803327894444441640> " + tagm + " üyelerinin susturulmaları kaldırıldı.")
 
 }
 }
