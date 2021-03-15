@@ -35,9 +35,9 @@ if (!mutekisi) return message.channel.send(new Discord.MessageEmbed().setTitle("
   
  let tagm = message.mentions.members.map(user => message.guild.members.cache.get(user.id)).join(", ")
    
-mod.add(`işlem_${message.guild.id}`, 1)
+await mod.add(`işlem_${message.guild.id}`, 1)
  
- let işlem = mod.fetch(`işlem_${message.guild.id}`)
+ let işlem = await mod.fetch(`işlem_${message.guild.id}`)
  
   return message.channel.send("<:verified:803327894444441640> `İşlem #" + işlem + "` " + tagm + " üyelerinin susturulmaları kaldırıldı.")
 
