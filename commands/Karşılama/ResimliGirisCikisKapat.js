@@ -21,6 +21,7 @@ if(!await karsilama.fetch(`kanalmesajkanal_${message.guild.id}`)) return message
 
 message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription(`<:moldup_evet:783582088346468384> **Resimli Giriş Çıkış** sistemi bu sunucu için sıfırlandı!`))
 await karsilama.delete(`resimligiriscikiskanal_${message.guild.id}`)
-await karsilama.delete(`gçresim.${message.guild.id}`)
+await karsilama.delete(`gçresim.giris.${message.guild.id}`)
+await karsilama.delete(`gçresim.cikis.${message.guild.id}`)
 }
 }
