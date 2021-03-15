@@ -5,8 +5,6 @@ const handler = require('cords-handler');
 const fetch = require('node-fetch')
 const logs = require('discord-logs');
 logs(client)
-const hatahook = new WebhookClient("819234440819507200", "hlSEN-R_9GYSTznweqmMCGMXFlEXnBKXReFrhEmOR0oqRTwrmArK-5jxWX7YwQEjUSB2")
-
 
 const chclient = new handler.Client()
 const cmd = new handler.CommandHandler(client,chclient);
@@ -43,6 +41,7 @@ client.çekiliş = cekilis
 const { player } = require('./settings/müzik')
 client.player = player
 
+const hatahook = new WebhookClient("819234440819507200", "hlSEN-R_9GYSTznweqmMCGMXFlEXnBKXReFrhEmOR0oqRTwrmArK-5jxWX7YwQEjUSB2")
 /**
  * --------------------------- Karşılama -------------------
  */
