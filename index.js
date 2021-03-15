@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 require('./inlineReply')
+const { WebhookClient } = require('discord.js');
 const client = new Discord.Client()
 const handler = require('cords-handler');
 const fetch = require('node-fetch')
@@ -41,7 +42,7 @@ client.çekiliş = cekilis
 const { player } = require('./settings/müzik')
 client.player = player
 
-const hatahook = new Discord.WebhookClient("819234440819507200", "hlSEN-R_9GYSTznweqmMCGMXFlEXnBKXReFrhEmOR0oqRTwrmArK-5jxWX7YwQEjUSB2")
+const hatahook = new WebhookClient("819234440819507200", "hlSEN-R_9GYSTznweqmMCGMXFlEXnBKXReFrhEmOR0oqRTwrmArK-5jxWX7YwQEjUSB2")
 /**
  * --------------------------- Karşılama -------------------
  */
