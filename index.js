@@ -194,7 +194,7 @@ client.on("guildMemberRemove", async member => {
     Font = "Tahoma",
     path = require('path');
   
-let re = await karsilama.fetch(`gçresim.${member.guild.id}`)
+let re = await karsilama.fetch(`gçresim.cikis.${member.guild.id}`)
 
 if (!re || re === null) re = "https://i.imgur.com/2gKDB9w.png"
 
@@ -249,7 +249,7 @@ client.on("guildMemberAdd", async member => {
     Font = "Tahoma",
     path = require('path');
   
-let re = await karsilama.fetch(`gçresim.${member.guild.id}`)
+let re = await karsilama.fetch(`gçresim.giris.${member.guild.id}`)
 
 if (!re || re === null) re = "https://i.imgur.com/uMOveOe.png"
     
