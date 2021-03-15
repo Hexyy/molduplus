@@ -6,7 +6,7 @@ module.exports = {
   usage: ['oy'],
   
   run: async (client , message ,args) => {
-  message.channel.send(`<:upvote:795593731200778251> Top.gg: https://top.gg/bot/${client.user.id}/vote\n<:dboatsLogotext:615599474722734109> Discord Boats: https://discord.boats/bot/${client.user.id}/vote`)
+  message.channel.send(message.channel.send(new Discord.MessageEmbed().setAuthor("Moldup'a Destek Vermek Mi İstiyorsun?", message.author.displayAvatarURL({ dynamic: true })).setDescription("[Oy Verebilirsin](https://top.gg/bot/${client.user.id}/vote)\n[Yine Oy Verebilirsin](https://discord.boats/bot/${client.user.id}/vote)").setFooter(message.author.tag + " tarafından istendi").setTimestamp().setColor("BLUE"))
   
   }
 }
