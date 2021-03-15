@@ -2,9 +2,9 @@
   "name": "moldup",
   "version": "0.0.1",
   "description": "Moldup",
-  "main": "index.js",
+  "main": "shard.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node shard.js"
   },
   "author": "Hexy , AlpuTV",
   "license": "ISC",
