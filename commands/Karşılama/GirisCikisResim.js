@@ -22,7 +22,7 @@ const noperm = new Discord.MessageEmbed()
 let resim = args[0]
 let resmi = message.attachments.first()
   
-if (!resim && !resmi) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('<:hata:813391295665930260> Mesaj Girmeyi Unuttun!')
+if (!resim && !resmi) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('<:hata:813391295665930260> Resim Göndermeyi Unuttun!')
 .setDescription(`**${message.author.username}** Lütfen bir resim linki gönderiniz veya dosya olarak ekleyiniz!
 
 **Not**
@@ -39,7 +39,7 @@ karsilama.delete(`gçresim.${message.guild.id}`)
     karsilama.set(`gçresim.${message.guild.id}`, resim)
   return message.channel.send(new Discord.MessageEmbed().setColor("GREEN").setTitle("Görev Tamamlandı!").setDescription(`<:moldup_evet:783582088346468384> Giriş çıkış mesaj resmi başarıyla ayarlandı!`).setImage(resim))
 } else {
-  return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('<:hata:813391295665930260> Mesaj Girmeyi Unuttun!')
+  return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('<:hata:813391295665930260> Resim Göndermeyi Unuttun!')
 .setDescription(`**${message.author.username}** Lütfen bir resim linki gönderiniz veya dosya olarak ekleyiniz!
 
 **Not**
