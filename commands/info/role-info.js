@@ -97,6 +97,6 @@ let yetkilier = rol.permissions.toArray().join(' - ')
         .addField("Yetkileri", `Yönetici (bütün yetkiler)`,false)
 
     message.channel.send(si)
-  }
+}
 }
 }
