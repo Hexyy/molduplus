@@ -19,20 +19,20 @@ let create = (await now) - user.createdTimestamp
 let joined = (await now) - kullanıcı.joinedTimestamp
 const userembed = new Discord.MessageEmbed()
 .setColor(kullanıcı.displayHexColor)
-.addField('• ID' , user.id)
+.addField('<:nokta:821307638473293834> ID' , user.id)
 .setAuthor(`${user.tag} kullanıcısının bilgileri ` , user.avatarURL({dynamic: true}))
-.addField('• Tag' , '#'+user.discriminator)
-.addField('• Sunucuya Katılım Tarihi' , moment.duration(joined).format('Y [yıl], D [gün], H [saat], m [dakika],s [saniye]')+'önce')
-.addField('• Discorda Katılım Tarihi' , moment.duration(create).format('Y [yıl], D [gün], H [saat], m [dakika],s [saniye]')+'önce')
-.addField('• En Yüksek Rolü' ,'<@&'+kullanıcı.roles.highest.id+'>')
-.addField('• Avatar URL' , `[Tıkla](${user.displayAvatarURL({ format: 'png' , dynamic: true })})`)
+.addField('<:nokta:821307638473293834> Tag' , '#'+user.discriminator)
+.addField('<:nokta:821307638473293834> Sunucuya Katılım Tarihi' , moment.duration(joined).format('Y [yıl], D [gün], H [saat], m [dakika],s [saniye]')+' önce')
+.addField('<:nokta:821307638473293834> Discorda Katılım Tarihi' , moment.duration(create).format('Y [yıl], D [gün], H [saat], m [dakika],s [saniye]')+' önce')
+.addField('<:nokta:821307638473293834> En Yüksek Rolü' ,'<@&'+kullanıcı.roles.highest.id+'>')
+.addField('<:nokta:821307638473293834> Avatar URL' , `[Tıkla](${user.displayAvatarURL({ format: 'png' , dynamic: true })})`)
 .setThumbnail(user.displayAvatarURL({ format: 'png' , dynamic: true }))
 message.channel.send(userembed)
  const rolembed = new Discord.MessageEmbed()
 .setColor(kullanıcı.displayHexColor)
 .setDescription(`
-• Bütün Rolleri
-${message.guild.members.cache.get(user.id).roles.cache.filter(s => s.name !== '@everyone').map(s => `<@&${s.id}>`)}`)
+<:nokta:821307638473293834> Bütün Rolleri
+${message.guild.members.cache.get(user.id).roles.cache.filter(s => s.name !== '@everyone').map(s => `<@&${s.id}>`).join(", ")}`)
 message.channel.send(rolembed)
 }
 }
