@@ -20,6 +20,7 @@ let joined = (await now) - kullanıcı.joinedTimestamp
 const userembed = new Discord.MessageEmbed()
 .setColor(kullanıcı.displayHexColor)
 .addField('<:nokta:821307638473293834> ID' , user.id)
+.addField('<:nokta:821307638473293834> İsim', user.username)
 .setAuthor(`${user.tag} kullanıcısının bilgileri ` , user.avatarURL({dynamic: true}))
 .addField('<:nokta:821307638473293834> Tag' , '#'+user.discriminator)
 .addField('<:nokta:821307638473293834> Sunucuya Katılım Tarihi' , moment.duration(joined).format('Y [yıl], D [gün], H [saat], m [dakika],s [saniye]')+' önce')
