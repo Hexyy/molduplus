@@ -1,6 +1,6 @@
 const canvacord = require("canvacord");
 const Discord = require("discord.js");
-const e = require("../emojiler.json")
+const e = require("../../emojiler.json")
 const moment = require("moment")
 moment.locale('tr')
 module.exports = {
