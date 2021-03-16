@@ -33,7 +33,7 @@ message.channel.send(userembed)
 .setColor(kullanıcı.displayHexColor)
 .setDescription(`
 <:nokta:821307638473293834> Bütün Rolleri
-${message.guild.members.cache.get(user.id).roles.cache.filter(s => s.name !== '@everyone').map(s => `<@&${s.id}>`).join(", ")}`)
+${message.guild.members.cache.get(user.id).roles.cache.filter(s => s.name !== '@everyone').sort((a, b) => a.position - b.position).map(s => `<@&${s.id}>`).join(", ")}`)
 message.channel.send(rolembed)
 }
 }
