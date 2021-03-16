@@ -13,10 +13,10 @@ module.exports = {
 run: async (client , message ,args) => {
     const noperm = new Discord.MessageEmbed()
     .setColor('RED')
-    .setDescription(`**${message.author.username}** bu komutu kullanabilmek için \`Yönetici\` yetkisine veya \`Giveaways\` adında bir role sahip olmalısın!`)
-    if(!message.guild.me.hasPermission(['SEND_MESSAGES','MANAGE_ROLES','EMBED_LINKS'])) return
+    .setDescription(`**${message.author.username}** bu komutu kullanabilmek için \`Sunucuyu Yönet\` yetkisine veya \`Giveaways\` adında bir role sahip olmalısın!`)
+    if(!message.guild.me.hasPermission(['SEND_MESSAGES','EMBED_LINKS'])) return
     let rol = message.guild.roles.cache.find(role => role.name == "Giveaways");
-    if (!message.member.hasPermission('ADMINISTRATOR') && !message.member.roles.cache.has(rol.id)) return message.channel.send(noperm)
+    if (!message.member.hasPermission('MANAGE_SERVER') && !message.member.roles.cache.has(rol.id)) return message.channel.send(noperm)
     let kanal = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
     if(!kanal) {
     let süre = args[0]
