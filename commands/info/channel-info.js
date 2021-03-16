@@ -23,7 +23,7 @@ const embed = new Discord.MessageEmbed()
 .addField('<:nokta:821307638473293834> Kanal Adı' , kanal.name)
 .addField('<:nokta:821307638473293834> Kanal ID', kanal.id)
 .addField('<:nokta:821307638473293834> Son Mesaj' , `[${kanal.lastMessage.content}](${kanal.lastMessage.url})`)
-.addField('<:nokta:821307638473293834> Oluşturulma Tarihi' , moment.duration(created).format('Y [yıl], D [gün], H [saat], m [dakika],s [saniye]')+' önce')
+.addField('<:nokta:821307638473293834> Oluşturulma Tarihi' , moment.duration(created).format('Y [yıl], D [gün], H [saat], m [dakika], s [saniye]')+' önce')
 message.channel.send(embed)
 }
 }
