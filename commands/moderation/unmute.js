@@ -40,7 +40,7 @@ await mod.add(`işlem_${message.guild.id}`, 1)
  
  let işlem = await mod.fetch(`işlem_${message.guild.id}`)
  
-  return message.channel.send("<:tik:766402113185120336> `İşlem #" + işlem + "` " + tagm + " üyelerinin susturulmaları kaldırıldı.")
+  return message.channel.send("<:tik:766402113185120336> `İşlem #" + işlem + "` " + tagm + " un-mutelendi.")
 
 }
 }
