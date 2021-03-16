@@ -12,12 +12,13 @@ module.exports = {
 */
 run: async (client , message ,args) => {
   
-    const noperm = new Discord.MessageEmbed()
+const noperm = new Discord.MessageEmbed()
     .setColor('RED')
-    .setDescription(`**${message.author.username}** bu komutu kullanabilmek için \`Yönetici\` yetkisine veya \`Giveaways\` adında bir role sahip olmalısın!`)
-    if(!message.guild.me.hasPermission(['SEND_MESSAGES','MANAGE_ROLES','EMBED_LINKS'])) return
+    .setTitle('<:hata:813391295665930260> Yetersiz Yetki!')
+    .setDescription(`**${message.author.username}** bu komutu kullanabilmek için \`Sunucuyu Yönet\` yetkisine veya \`Giveaways\` adında bir role sahip olmalısın!`)
+    if(!message.guild.me.hasPermission(['SEND_MESSAGES','EMBED_LINKS'])) return
     let rol = message.guild.roles.cache.find(role => role.name == "Giveaways");
-    if (!message.member.hasPermission('ADMINISTRATOR') && !message.member.roles.cache.has(rol.id)) return message.channel.send(noperm)
+    if (!message.member.hasPermission('MANAGE_SERVER') && !message.member.roles.cache.has(rol.id)) return message.channel.send(noperm)
     let ID = args[0]
     if(!args[0] || isNaN(args[0])) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Lütfen geçerli bir çekiliş mesajı ID sini giriniz!`))
       let giveaway =  client.çekiliş.giveaways.find((g) => g.messageID === args[0]);
