@@ -3,7 +3,7 @@ const moment = require('moment');
 require('moment-duration-format');
 module.exports = {
  name: 'kanal-bilgi',
- aliases: ['kanalbilgi', 'channel-info','channel-info'] ,
+ aliases: ['kanalbilgi', 'channel-info','channel-info', 'kanal', 'channel'] ,
 description: 'Kanal hakkında bilgi alırsınız',
 usage: ['kanal-bilgi { #kanal }'],
 /** 
