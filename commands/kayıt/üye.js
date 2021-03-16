@@ -44,7 +44,7 @@ let kayıtsız = message.guild.roles.cache.get(kayıtsızroleID);
   if(!args[0] || !message.mentions.members.first()) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`**${message.author.username}** Bir kullanıcı etiketleyerek tekrar deneyiniz.`)).then(a => a.delete({timeout: 10000}));
 
 let isim;
-if(args.slice(1)) {
+if(args[1]) {
 isim = args.slice(1).join(' ');
 } else {
 isim = member.user.username;
