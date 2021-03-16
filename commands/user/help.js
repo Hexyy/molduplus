@@ -233,7 +233,7 @@ const jail = new MessageEmbed()
 
 
 <:degnek:809142151770275921> **Resimli Hoş Geldin Resmi Ayarlamak Veya Sıfırlamak İçin:**
-<:jail:809139843287482379> \`${ayarlar.prefix}giriş-çıkış-resim [ resim linki ]\` **|** \`${ayarlar.prefix}giriş-çıkış-resim sıfırla\`
+<:jail:809139843287482379> \`${ayarlar.prefix}giriş-çıkış-resim [ giriş/çıkış ] [ resim linki ]\` **|** \`${ayarlar.prefix}giriş-çıkış-resim sıfırla\`
 
 
 <:degnek:809142151770275921> **Ne İşe Yarar?**
