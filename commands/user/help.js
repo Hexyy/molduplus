@@ -37,7 +37,7 @@ const yardım = new MessageEmbed()
 
 
 <:degnek:809142151770275921> **${ayarlar.prefix}yardım çekiliş**
-<a:cekilis:798253124342513735> **Çekiliş** menüsünde ki komutları gösterir.
+<a:cekilis:822029668294721566> **Çekiliş** menüsünde ki komutları gösterir.
 
 
 <:degnek:809142151770275921> **${ayarlar.prefix}yardım moderasyon**
@@ -250,20 +250,20 @@ message.channel.send(jail)
 if(args[0].toLowerCase() === 'çekiliş'||args[0].toLowerCase() === 'giveaways') {
     const cekilis = new MessageEmbed()
     .setColor('BLUE')
-    .setTitle('<a:cekilis:798253124342513735> Moldup Çekiliş Menüsü')
+    .setTitle('<a:cekilis:822029668294721566> Moldup Çekiliş Menüsü')
     .setDescription(`
     \`\`\`                                                                                                         \`\`\`
     
 <:degnek:809142151770275921> **Çekiliş Başlatmak İçin:**
-<a:cekilis:798253124342513735> \`${ayarlar.prefix}gbaşlat [ #kanal ] [ süre ] [ kazanan sayısı ] [ ödül ]\`
+<a:cekilis:822029668294721566> \`${ayarlar.prefix}gbaşlat [ #kanal ] [ süre ] [ kazanan sayısı ] [ ödül ]\`
     
     
 <:degnek:809142151770275921> **Çekilişi Yeniden Çekmek İçin:**
-<a:cekilis:798253124342513735> \`${ayarlar.prefix}greroll [ çekiliş mesaj ID ]\`
+<a:cekilis:822029668294721566> \`${ayarlar.prefix}greroll [ çekiliş mesaj ID ]\`
     
     
 <:degnek:809142151770275921> **Çekilişi Bitirmek İçin:**
-<a:cekilis:798253124342513735> \`${ayarlar.prefix}gbitir [ çekiliş mesaj ID ]\`
+<a:cekilis:822029668294721566> \`${ayarlar.prefix}gbitir [ çekiliş mesaj ID ]\`
        
 
 \`\`\`                                                                                                         \`\`\`
