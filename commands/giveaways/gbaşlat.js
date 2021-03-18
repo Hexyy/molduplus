@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const ms = require('ms')
 module.exports = {
  name: 'gbaşlat',
- aliases: ['çekiliş-başlat', 'gstart', 'gcreate', 'çbaşlat'] ,
+ aliases: ['çekiliş-başlat', 'gstart', 'gcreate', 'çbaşlat'],
  description: 'Çekiliş başlatırsınız.',
     usage: ['gbaşlat { #kanal } [ süre ] [ kazanan sayısı ] [ ödül ]'],
 /** 
