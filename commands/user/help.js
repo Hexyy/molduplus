@@ -329,6 +329,10 @@ if(args[0].toLowerCase() === 'eğlence'||args[0].toLowerCase() === 'fun') {
 <:eglence:809143990276456529> \`${ayarlar.prefix}eject\` **|** \`${ayarlar.prefix}eject [ @kullanıcı ]\`                                                                                                         
 
 
+<:degnek:809142151770275921> **Tweet Atmak (Veya Attırmak) İçin:**
+<:eglence:809143990276456529> \`${ayarlar.prefix}tweet [ mesaj ]\` **|** \`${ayarlar.prefix}tweet { @kullanıcı } [ mesaj ]\`       
+
+
 <:degnek:809142151770275921> **Etiketlediğiniz Kişiyle İsminizi Birleştirmek İçin:**
 <:eglence:809143990276456529> \`${ayarlar.prefix}ship [ @kullanıcı ]\`
 
