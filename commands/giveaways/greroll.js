@@ -2,9 +2,9 @@ const { Client , Message , MessageEmbed } = require('discord.js');
 const Discord = require('discord.js')
 module.exports = {
  name: 'greroll',
- aliases: ['çekiliş-yeniden-çek'] ,
+ aliases: ['çekiliş-yeniden-çek', 'çyeniden', 'gyeniden'] ,
  description: 'Çekilişi yeniden çekersiniz.',
- usage: ['greroll [ çekiliş mesaj ID]'],
+ usage: ['greroll [ çekiliş mesaj ID ]'],
 /** 
 * @param {Client} client
 * @param {Message} message
