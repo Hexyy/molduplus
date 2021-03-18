@@ -34,7 +34,7 @@ const cekilis = new giveaway.GiveawaysManager(client, {
         exemptPermissions: [],
         embedColor: '#00FFC3',
         embedColorEnd: '#353940',
-        reaction: '822031631966535690'
+        reaction: '🎁'
     }  
 })
 client.çekiliş = cekilis
