@@ -28,6 +28,7 @@ module.exports = {
           let kisi = client.users.cache.get(uye.id)
           ctx.font = "italic 43px Arial"
           ctx.textalign = "center";
+          ctx.fillStyle = "Black"
         const background = await Canvas.loadImage('https://i.hizliresim.com/P7AYvQ.png');
         const { body } = await request.get(kisi.avatarURL({format: 'png'}) || kisi.defaultAvatarURL)
         const foto = await loadImage(body)
