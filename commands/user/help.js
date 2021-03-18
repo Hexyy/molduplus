@@ -2,7 +2,7 @@ const { Client , Message , MessageEmbed } = require('discord.js');
 const { ayarlar } = require('../../settings/ayarlar')
 module.exports = {
  name: 'yardım',
- aliases: ["help", "y", "h", "Help", "Yardım"] ,
+ aliases: ["help", "y", "h", "Help", "Yardım", "Y", "H"] ,
  description: 'Botta bulunan kategorileri ve o kategorilerin komutlarını gösterir.',
  usage: ['yardım'], 
 /** 
