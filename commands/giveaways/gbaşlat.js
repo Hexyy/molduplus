@@ -48,8 +48,7 @@ const noperm = new Discord.MessageEmbed()
                     embedFooter: "Moldup Çekiliş Sistemi",
                     winMessage: "Tebrikler {winners}, **{prize}** ödülünü kazandınız! <a:cekilis:798253124342513735>\n{messageURL}",
                     noWinner: "Herhangi Bir Kazanan Belirlenemedi <a:cekilis:798253124342513735>",
-                    hostedBy: `{user} tarafından yapıldı
-[Ekstra şans için oy verebilirsiniz](https://bot.moldup.tk/oy.html)`,
+                    hostedBy: "{user} tarafından yapıldı",
                     winners: "Kazanan(lar)",
                     endedAt: "Bitiş Tarihi",
                     
@@ -88,8 +87,7 @@ const noperm = new Discord.MessageEmbed()
                     embedFooter: "Bitiş Tarihi",
                     winMessage: "Tebrikler {winners}, **{prize}** ödülünü kazandınız! <a:cekilis:798253124342513735>",
                     noWinner: "Herhangi Bir Kazanan Belirlenemedi <a:cekilis:798253124342513735>",
-                    hostedBy: `{user} tarafından yapıldı
-[Ekstra şans için oy verebilirsiniz](https://bot.moldup.tk/oy.html)`,
+                    hostedBy: "{user} tarafından yapıldı",
                     winners: "kazanan(lar)",
                     endedAt: "Bittiği Tarih",
                     units: {
