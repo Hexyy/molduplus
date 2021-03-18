@@ -2,7 +2,7 @@ const { Client , Message , MessageEmbed } = require('discord.js');
 const Discord = require('discord.js')
 module.exports = {
  name: 'gbitir',
- aliases: ['çekiliş-bitir'] ,
+ aliases: ['çekiliş-bitir', 'gend', 'çbitir'] ,
  description: 'Çekilişi bitirirsiniz.',
  usage: ['gbitir [ çekiliş mesaj ID ]'],
 /** 
