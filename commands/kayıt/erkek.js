@@ -56,7 +56,7 @@ const n = await kayit.fetch(`tag.${message.guild.id}`);
 member.roles.add(erkek.id, `[ ${message.author.tag}: Erkek Kayıt Edildi ]`).catch(err => message.channel.send(`\`\`\`Bir hata oluştu: ${err}\`\`\``));
 if(isim && n) member.setNickname(n+" "+isim, `[ ${message.author.tag}: Erkek Kayıt Edildi ]`); 
 if(isim && !n) member.setNickname(isim, `[ ${message.author.tag}: Erkek Kayıt Edildi ]`);
-if(!isim && n) member.setNickname(nn+member.user.username, `[`[ ${message.author.tag}: Erkek Kayıt Edildi ]` ${message.author.tag}: Erkek Kayıt Edildi ]`);
+if(!isim && n) member.setNickname(nn+member.user.username, `[ ${message.author.tag}: Erkek Kayıt Edildi ]`);
 
 return message.channel.send(nn.setColor("#22BF41").setThumbnail(member.user.avatarURL() ? member.user.avatarURL({dynamic: true}) : client.user.avatarURL()).setTitle(`Görev Tamamlandı!`)
 .setDescription(`<:moldup_evet:783582088346468384> ${member} **başarıyla kayıt edildi.**
