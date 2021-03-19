@@ -26,7 +26,7 @@ run: async (client , message ,args) => {
                 error: 'Yeterli katılım yok! Çekiliş tekrardan çekilemedi.'
             }
         }).then(() => {
-      message.channel.send('Çekiliş kazananları yeniden belirlendi.').then(a => a.delete({timeout: 5000}));
-    }).catch(e => message.channel.send(`\`${ID}\` IDli bir çekiliş bulamadım veya o çekiliş henüz bitmemiş.`))
+      message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription('<:moldup_evet:783582088346468384> Çekiliş kazananları yeniden belirlendi.')).then(a => a.delete({timeout: 5000}));
+    }).catch(e => message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription('Belirttiğin çekilişi **bu sunucuda** bulamadım veya bu çekiliş henüz bitmemiş.')))
 }
 }
