@@ -26,7 +26,7 @@ run: async (client , message ,args) => {
                 error: 'Yeterli katılım yok! Çekiliş tekrardan çekilemedi.'
             }
         }).then(() => {
-      message.channel.send(' Çekiliş kazananları yeniden belirlendi.').then(a => a.delete({timeout: 5000}));
+      message.channel.send('Çekiliş kazananları yeniden belirlendi.').then(a => a.delete({timeout: 5000}));
     }).catch(e => message.channel.send(`\`${ID}\` IDli bir çekiliş bulamadım veya o çekiliş henüz bitmemiş.`))
 }
 }
