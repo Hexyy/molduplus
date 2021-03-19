@@ -22,12 +22,12 @@ const noperm = new Discord.MessageEmbed()
     let ID = args[0]
     if(!args[0] || isNaN(args[0])) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`Lütfen geçerli bir çekiliş mesajı ID sini giriniz!`))
       let giveaway =  client.çekiliş.giveaways.find((g) => g.messageID === args[0]);
-      if(!giveaway) return message.channel.send(' Şu çekilişi bulamadım: `'+ args.join(' ') + '`.');
+      if(!giveaway) return message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription('Belirttiğin çekilişi **bu sunucuda** bulamadım veya bu çekiliş zaten bitmiş.'));
         client.çekiliş.edit(giveaway.messageID, { setEndTimestamp: Date.now() }).then(() => {
-            message.channel.send(' Çekiliş `'+(client.çekiliş.options.updateCountdownEvery/1000)+' saniye` sonra sonlandırılacak.').then(a => a.delete({timeout: 5000}));;
-        }).catch((e) => { if(e.startsWith(`\`${giveaway.messageID}\` IDli bir çekiliş zaten bitmiş.`)){ message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription(`\`${ID}\` IDli bir çekiliş zaten bitmiş.`));
+            message.channel.send(new Discord.MessageEmbed().setTitle(`Görev Tamamlandı!`).setColor("#22BF41").setDescription('<:moldup_evet:783582088346468384> Çekiliş **'+(client.çekiliş.options.updateCountdownEvery/1000)+' saniye** sonra sonlandırılacak.')).then(a => a.delete({timeout: 5000}));;
+        }).catch((e) => { if(e.startsWith(`\`${giveaway.messageID}\` IDli bir çekiliş zaten bitmiş.`)){ message.channel.send(new Discord.MessageEmbed().setTitle("<:hata:813391295665930260> Hata!").setColor("RED").setDescription('Belirttiğin çekilişi **bu sunucuda** bulamadım veya bu çekiliş zaten bitmiş.'));
             } else {
-                console.error(e);
+                message.channel.send("```Bir hata oluştu: " + e + "```");
             }
         });
     }
