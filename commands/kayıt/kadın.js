@@ -50,10 +50,10 @@ if(!args[0] || !message.mentions.members.first()) return message.channel.send(ne
 const n = await kayit.fetch(`tag.${message.guild.id}`);
 
 if (!member.roles.cache.has(kayıtsızroleID) || !kayıtsız) {
-member.roles.add(kadın.id, `[ ${message.author.tag} - Kadın Kayıt Edildi ]`).catch(err => message.channel.send(`\`\`\`Bir hata oluştu: ${err}\`\`\``));
-if(isim && n) member.setNickname(n+" "+isim, `[ ${message.author.tag} - Kadın Kayıt Edildi ]`); 
-if(isim && !n) member.setNickname(isim, `[ ${message.author.tag} - Kadın Kayıt Edildi ]`);
-if(!isim && n) member.setNickname(nn+member.user.username, `[ ${message.author.tag} - Kadın Kayıt Edildi ]`);
+member.roles.add(kadın.id, `[ ${message.author.tag}: Kadın Kayıt Edildi ]`).catch(err => message.channel.send(`\`\`\`Bir hata oluştu: ${err}\`\`\``));
+if(isim && n) member.setNickname(n+" "+isim, `[ ${message.author.tag}: Kadın Kayıt Edildi ]`); 
+if(isim && !n) member.setNickname(isim, `[ ${message.author.tag}: Kadın Kayıt Edildi ]`);
+if(!isim && n) member.setNickname(nn+member.user.username, `[ ${message.author.tag}: Kadın Kayıt Edildi ]`);
 
 message.channel.send(nn.setColor("#22BF41").setThumbnail(member.user.avatarURL() ? member.user.avatarURL({dynamic: true}) : client.user.avatarURL()).setTitle(`Görev Tamamlandı!`)
 .setDescription(`<:moldup_evet:783582088346468384> ${member} **başarıyla kayıt edildi.**
@@ -62,11 +62,11 @@ message.channel.send(nn.setColor("#22BF41").setThumbnail(member.user.avatarURL()
 \`\`\`${isim} olarak kayıt ettim. \`\`\`
 `));
    } else {
-  member.roles.add(kadın.id, `[ ${message.author.tag} - Kadın Kayıt Edildi ]`).catch(err => message.channel.send(`\`\`\`Bir hata oluştu: ${err}\`\`\``));
-member.roles.remove(kayıtsız.id, `[ ${message.author.tag} - Kadın Kayıt Edildi ]`);
-if(isim && n) member.setNickname(n+" "+isim, `[ ${message.author.tag} - Kadın Kayıt Edildi ]`); 
-if(isim && !n) member.setNickname(isim, `[ ${message.author.tag} - Kadın Kayıt Edildi ]`);
-if(!isim && n) member.setNickname(nn+member.user.username, `[ ${message.author.tag} - Kadın Kayıt Edildi ]`);
+  member.roles.add(kadın.id, `[ ${message.author.tag}: Kadın Kayıt Edildi ]`).catch(err => message.channel.send(`\`\`\`Bir hata oluştu: ${err}\`\`\``));
+member.roles.remove(kayıtsız.id, `[ ${message.author.tag}: Kadın Kayıt Edildi ]`);
+if(isim && n) member.setNickname(n+" "+isim, `[ ${message.author.tag}: Kadın Kayıt Edildi ]`); 
+if(isim && !n) member.setNickname(isim, `[ ${message.author.tag}: Kadın Kayıt Edildi ]`);
+if(!isim && n) member.setNickname(nn+member.user.username, `[ ${message.author.tag}: Kadın Kayıt Edildi ]`);
 
 message.channel.send(nn.setColor("#22BF41").setThumbnail(member.user.avatarURL() ? member.user.avatarURL({dynamic: true}) : client.user.avatarURL()).setTitle(`Görev Tamamlandı!`)
 .setDescription(`<:moldup_evet:783582088346468384> ${member} **başarıyla kayıt edildi.**
