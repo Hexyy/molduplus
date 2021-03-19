@@ -54,7 +54,7 @@ const n = await kayit.fetch(`tag.${message.guild.id}`);
   
    if (!member.roles.cache.has(kayıtsızroleID) || !kayıtsız) {
 member.roles.add(erkek.id, `[ ${message.author.tag}: Erkek Kayıt Edildi ]`).catch(err => message.channel.send(`\`\`\`Bir hata oluştu: ${err}\`\`\``));
-if(isim && n) member.setNickname(+n+" "+isim, `[ ${message.author.tag}: Erkek Kayıt Edildi ]`); 
+if(isim && n) member.setNickname(n+" "+isim, `[ ${message.author.tag}: Erkek Kayıt Edildi ]`); 
 if(isim && !n) member.setNickname(isim, `[ ${message.author.tag}: Erkek Kayıt Edildi ]`);
 if(!isim && n) member.setNickname(nn+member.user.username, `[`[ ${message.author.tag}: Erkek Kayıt Edildi ]` ${message.author.tag}: Erkek Kayıt Edildi ]`);
 
