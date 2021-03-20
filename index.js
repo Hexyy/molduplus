@@ -209,7 +209,7 @@ if (!re || re === null) re = "https://i.imgur.com/2gKDB9w.png"
   ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
   ctx.fillStyle = `#010101`;
-  ctx.font = "37px Tahoma"
+  ctx.font = "37px Lilita One"
   ctx.textAlign = "center";
   ctx.fillText(`${member.user.username}`, 300, 230);
 
@@ -264,7 +264,7 @@ if (!re || re === null) re = "https://i.imgur.com/uMOveOe.png"
   ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
   ctx.fillStyle = `#010101`;
-  ctx.font = "37px Tahoma"
+  ctx.font = "37px Lilita One"
   ctx.textAlign = "center"
   ctx.fillText(`${member.user.username}`, 300, 230);
 
