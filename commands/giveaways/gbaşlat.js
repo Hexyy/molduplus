@@ -51,7 +51,6 @@ const noperm = new Discord.MessageEmbed()
                     hostedBy: "{user} tarafından yapıldı\n**[Ekstra katılım için oy verebilirsiniz](https://bot.moldup.tk/oy.html)**",
                     winners: "Kazanan(lar)",
                     endedAt: "Bitiş Tarihi",
-                    
                     units: {
                         seconds: "saniye",
                         minutes: "dakika",
