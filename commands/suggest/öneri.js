@@ -28,7 +28,7 @@ const embed = new Discord.MessageEmbed()
 .setTimestamp()
 const kanall = message.guild.channels.cache.get(await öneri.fetch(`önerikanal_${message.guild.id}`))
 kanall.send(embed).then(function(msg)  {
-    msg.react('798871896636522517')
+    msg.react('822885503333957693')
     msg.react('798871855058518076')
     }
     )
