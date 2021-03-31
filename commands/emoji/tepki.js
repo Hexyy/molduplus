@@ -19,7 +19,6 @@ run: async (client , message ,args) => {
 
 if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('<:hata:813391295665930260> Emoji Adı Girmeyi Unuttun!')
     .setDescription(`
-    
 **${message.author.username}** bir emoji adı unuttun!
     `))
 
