@@ -17,7 +17,12 @@ run: async (client , message ,args) => {
     if(!message.guild.me.hasPermission(['SEND_MESSAGES','MANAGE_EMOJIS','EMBED_LINKS','ADD_REACTIONS'])) return
     if(!message.member.hasPermission('ADD_REACTIONS')) return message.channel.send(noperm.setTitle('<:hata:813391295665930260> Yetersiz Yetki!'))
 
-if(!args[0]) return;
+if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setTitle('<:hata:813391295665930260> Emoji Adı Girmeyi Unuttun!')
+    .setDescription(`
+    
+**${message.author.username}** bir emoji adı unuttun!
+    `))
+
 
 const emoji = message.guild.emojis.cache.find(x => x.name === args.slice(0).join('-'));
 if(!emoji) return;
