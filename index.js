@@ -4,8 +4,8 @@ const { WebhookClient } = require('discord.js');
 const client = new Discord.Client()
 const handler = require('cords-handler');
 const fetch = require('node-fetch')
-const logs = require('discord-logs');
-logs(client)
+//const logs = require('discord-logs');
+//logs(client)
 
 const chclient = new handler.Client()
 const cmd = new handler.CommandHandler(client,chclient);
