@@ -1,9 +1,9 @@
+const Discord = require('discord.js');
 const request = require('node-superfetch');
      const Canvas = require('canvas'),
      Image = Canvas.Image,
      Font = "Tahoma",
      path = require('path');
-const Discord = require('discord.js');
 module.exports = {
     name: 'moldify',
     aliases: ['moldupla', 'm', 'mify'],
