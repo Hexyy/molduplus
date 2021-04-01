@@ -9,7 +9,7 @@ module.exports = (client) => {
 //setInterval(function() {
 
          //var random = Math.floor(Math.random()*(durumlar.length-0+1)+0);
-         client.user.setActivity('bot.moldup.tk | ?yardım', {"type": "STREAMING", "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"});
+         client.user.setActivity('bot.moldup.tk | ?yardım', {"type": "WATCHING"});
 
         //}, 2 * 5000);
     
