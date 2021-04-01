@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const { karsilama } = require('../../database/KarşılamaDataBase')
+const { karsilama } = require('../../database/GirişÇıkışResimDataBase')
 module.exports = {
  name: 'girişçıkışresim',
  aliases: ['giriş-çıkış-resim', 'gçr', 'g-ç-r'] ,
