@@ -181,7 +181,7 @@ client.on('messageUpdate' , async(old, newm) => {
 //çıkış
 
 client.on("guildMemberRemove", async member => {
-    
+    const { gc } = require('./database/GirişÇıkışResimDataBase')
  let kanal = await karsilama.fetch(`resimligiriscikiskanal_${member.guild.id}`)
  if (!kanal) return;
  var canvaskanal = member.guild.channels.cache.get(kanal);
@@ -193,7 +193,7 @@ client.on("guildMemberRemove", async member => {
     Font = "Tahoma",
     path = require('path');
   
-let re = await karsilama.fetch(`gçresim.cikis.${member.guild.id}`)
+let re = await gc.fetch(`gçresim.cikis.${member.guild.id}`)
 
 if (!re || re === null) re = "https://i.imgur.com/2gKDB9w.png"
 
@@ -237,6 +237,8 @@ if (!re || re === null) re = "https://i.imgur.com/2gKDB9w.png"
 
 //giriş
 client.on("guildMemberAdd", async member => {
+        const { gc } = require('./database/GirişÇıkışResimDataBase')
+
   let kanal = await karsilama.fetch(`resimligiriscikiskanal_${member.guild.id}`)
  if (!kanal) return;
  var canvaskanal = member.guild.channels.cache.get(kanal);
@@ -248,7 +250,7 @@ client.on("guildMemberAdd", async member => {
     Font = "Tahoma",
     path = require('path');
   
-let re = await karsilama.fetch(`gçresim.giris.${member.guild.id}`)
+let re = await gc.fetch(`gçresim.giris.${member.guild.id}`)
 
 if (!re || re === null) re = "https://i.imgur.com/uMOveOe.png"
     
