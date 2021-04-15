@@ -28,6 +28,10 @@ const yardım = new MessageEmbed()
 <:jail:809139843287482379> **Karşılama** menüsünde ki komutları gösterir.
 
 
+<:degnek:809142151770275921> **${ayarlar.prefix}yardım seviye**
+<:levelup:832221710559870987> **Seviye** menüsünde ki komutları gösterir.
+
+
 <:degnek:809142151770275921> **${ayarlar.prefix}yardım öneri**
 <:kayit:809140124621078598> **Öneri** menüsünde ki komutları gösterir.
 
